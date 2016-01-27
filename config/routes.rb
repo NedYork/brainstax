@@ -8,7 +8,4 @@ Links::Application.routes.draw do
   end
 
   root "static_pages#root"
-
-  # resources :links
-  # resources :comments, only: [:create, :destroy]
 end

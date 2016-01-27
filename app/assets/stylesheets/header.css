@@ -1,0 +1,134 @@
+/* --- HEADER --- */
+
+ .header {
+   background: black;
+   font-size: 14px;
+ }
+
+ .header a {
+   color: grey;
+ }
+
+ .header a:hover {
+   color: white;
+ }
+
+ .header-nav {
+   margin: auto;
+   width: 970px;
+ }
+
+ .header-logo {
+   float: left;
+   display: block;
+   /*width: 155px;*/
+   padding: 19px 20px;
+ }
+
+.header-list {
+  /*width: 710px;*/
+  float: left;
+  margin-top: 10px;
+}
+
+.header-list > li {
+  display: block;
+  float: left;
+  padding: 20px;
+  margin: auto;
+}
+
+.header-list > li > a {
+  /*width: 70px;*/
+}
+
+.header-begin {
+  float: left;
+  margin: 30px 30px;
+  display: block;
+}
+
+.header-begin > li {
+  float: left;
+  display: block;
+  padding-left: 30px;
+}
+
+.header-begin .get-started {
+  color: white;
+  /*display: block;*/
+  padding: 10px 20px;
+  background: #0F6C8F;
+  display: inline;
+  border-radius: 2px;
+}
+
+.header-begin .get-started:hover {
+  background: #29506D;
+  29506D
+}
+
+/* LOGGED-IN HEADER */
+
+.user-header a {
+  color: grey;
+}
+
+.user-header a:hover {
+  color: white;
+}
+
+.user-header-nav {
+  margin: auto;
+}
+
+.user-header-logo {
+  float: left;
+  display: block;
+  /*width: 155px;*/
+  padding: 19px 20px;
+}
+
+.user-header-list {
+ /*width: 710px;*/
+ float: left;
+ margin-top: 10px;
+}
+
+.user-header-list > li {
+ display: block;
+ float: left;
+ padding: 20px;
+ margin: auto;
+}
+
+.user-header-list > li > a {
+ /*width: 70px;*/
+}
+
+
+.user-header-profile {
+  float: right;
+  display: block;
+
+}
+
+.user-header-profile > h3{
+  float: left;
+  color: white;
+  margin: 30px 20px;
+
+}
+
+.user-header-profile > h3:hover {
+  cursor: pointer;
+  color: #5CB8D6;
+}
+.user-header-profile img {
+  display: block;
+  border: 1px solid white;
+  float: left;
+  margin: 10px 10px auto auto;
+  height: 58px;
+  width: 58px;
+}

@@ -175,11 +175,11 @@ DEPENDENCIES
   launchy
   newrelic_rpm
   pry-rails
-  rails (~> 4.2)
+  rails
   rails_12factor
   rspec-rails (~> 3.1.0)
   shoulda-matchers
   sqlite3
 
 BUNDLED WITH
-   1.10.6
+   1.11.2

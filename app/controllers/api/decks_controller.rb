@@ -1,4 +1,4 @@
-class DecksController < ApplicationController
+class Api::DecksController < ApplicationController
   def create
     @deck = Deck.new(deck_params)
     @deck.author_id = current_user.id

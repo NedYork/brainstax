@@ -19,4 +19,6 @@ var App = React.createClass({
   }
 });
 
-ReactDOM.render(<App/>, root);
+document.addEventListener("DOMContentLoaded", function() {
+  ReactDOM.render(<App/>, root);
+});

@@ -1,4 +1,4 @@
-class SubjectsController < ApplicationController
+class Api::SubjectsController < ApplicationController
 
   def create
     @subject = Subject.new(subject_params)
@@ -18,6 +18,9 @@ class SubjectsController < ApplicationController
 
   def show
     @subject = Subject.find(params[:id])
+  end
+
+  def index
   end
 
   private

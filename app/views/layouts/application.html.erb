@@ -3,18 +3,80 @@
 <head>
   <title>Links</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
+  <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
   <%= csrf_meta_tags %>
 </head>
 <body>
 
+
+
   <% if signed_in? %>
-    <%= current_user.username %>
-    <%= button_to "Sign Out", session_url, :method => :delete %>
+    <header class="header">
+      <nav class="user-header-nav group">
+
+        <div class="user-header-logo">
+          <a href="#"><img src="https://www.brainscape.com/assets/logo.svg"/></a>
+        </div>
+
+
+        <ul class="user-header-list group">
+          <li>
+            <a href="#"> <i class="fa fa-database fa-lg"></i> My Library</a>
+          </li>
+          <li><a href="#"><i class="fa fa-search fa-lg"></i> Market</a></li>
+          <li><a href="#"><i class="fa fa-area-chart fa-lg"></i> How It Works</a></li>
+          <li><a href="#"><i class="fa fa-info-circle fa-lg"></i> About</a></li>
+          <li><a href="#"><i class="fa fa-comment-o fa-lg"></i> Blog</a></li>
+        </ul>
+
+        <div class="user-header-profile">
+          <h3>
+            <%= current_user.username %>
+            <i class="fa fa-caret-down"></i>
+            <%= button_to "Sign Out", session_url, :method => :delete %>
+          </h3>
+          <a href="#"><img src="http://s3-us-west-2.amazonaws.com/aa-progress-tracker/students/avatars/000/001/023/original/edward-he.jpg?1449089662"/></a>
+        </div>
+        <!-- <ul class="user-header-begin group">
+          <li><a href="/session/new">Login</a></li>
+          <li><a href="/user/new" class="get-started">Get Started</a></li>
+        </ul> -->
+
+      </nav>
+    </header>
+
   <% else %>
-    <%= link_to "Sign In", new_session_url %>
-    <%= link_to "Sign Up", new_user_url %>
+
+  <header class="header">
+    <nav class="header-nav group">
+
+      <div class="header-logo">
+        <a href="#"><img src="https://www.brainscape.com/assets/logo.svg"/></a>
+      </div>
+
+      <ul class="header-list group">
+        <li>
+          <a href="#">How it Works</a>
+        </li>
+        <li><a href="#">Flashcards</a></li>
+        <li><a href="#">Educators</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+
+      <ul class="header-begin group">
+        <li><a href="/session/new">Login</a></li>
+        <li><a href="/user/new" class="get-started">Get Started</a></li>
+      </ul>
+
+    </nav>
+  </header>
   <% end %>
+
+
 
   <br>
 
