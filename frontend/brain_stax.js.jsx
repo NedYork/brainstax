@@ -4,22 +4,29 @@ var ReactRouter = require('react-router');
 var Router = ReactRouter.Router;
 var Route = ReactRouter.Route;
 var IndexRoute = ReactRouter.IndexRoute;
-var root = document.getElementById("content");
+var SubjectForm = require('./components/SubjectForm');
 
 var App = React.createClass({
   render: function() {
-    return this.props.children;
+    return (
+      <div>
+        <header><h1>brainSTAX</h1></header>
+        {this.props.children};
+      </div>
+    );
   }
 });
 
 var routes = (
-  <Router>
-    <Route path='/' component={App}>
-      <IndexRoute component={SubjectForm}/>
-    </Route>
-  </Router>
+  <Route path='/' component={App}>
+    <IndexRoute component={SubjectForm}/>
+  </Route>
 );
 
+
 document.addEventListener("DOMContentLoaded", function() {
-  ReactDOM.render(<App/>, root);
+  var root = document.getElementById("content");
+  ReactDOM.render(<Router>
+    {routes}
+  </Router>, root);
 });

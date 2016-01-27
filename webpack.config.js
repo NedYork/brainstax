@@ -3,7 +3,9 @@ module.exports = {
   entry: "./frontend/brain_stax.js.jsx",
   output: {
     path: "./app/assets/javascripts/",
-    filename: "bundle.js"
+    filename: "bundle.js",
+    devtoolModuleFilenameTemplate: '[resourcePath]',
+    devtoolFallbackModuleFilenameTemplate: '[resourcePath]?[hash]'
   },
   module: {
     loaders: [

@@ -1,6 +1,11 @@
 var ApiUtil = {
-  fetchSubjects: function() {
-    $.get("api/subjects", {}, function(subjects) {
+  createSubject: function(title) {
+    $.post("api/subjects", { title: title }, function(subjects) {
+      ApiActions.receiveAll(subjects);
+    });
+  },
+  fetchSubjects: function(id) {
+    $.get("api/subjects" + id, {}, function(subjects) {
       ApiActions.receiveAll(subjects);
     });
   }

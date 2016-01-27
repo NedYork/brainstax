@@ -4,11 +4,16 @@ var ApiUtil = require('../util/api_util');
 
 module.exports = React.createClass({
   getInitialState: function() {
-    return { subject: "" };
+    return { title: "" };
   },
   handleSubmit: function(e) {
     e.preventDefault();
-    ApiUtil.createSubject(this.state);
+    // current user
+    // ApiUtil.createSubject({author_id: current_user, title: this.state.title});
+    ApiUtil.createSubject(this.state.title);
+  },
+  handleChange: function(e) {
+    this.setState({ title: e.target.value });
   },
   render: function() {
     return (
@@ -16,7 +21,7 @@ module.exports = React.createClass({
         <h1>Make a new Subject!</h1>
         <form onSubmit={this.handleSubmit}>
           <label>Title: </label>
-          <input placeholder={'e.g. Biology 101'} />
+          <input type="text" placeholder={'e.g. Biology 101'} onChange={this.handleChange}/>
           <button>Save</button>
         </form>
       </div>
