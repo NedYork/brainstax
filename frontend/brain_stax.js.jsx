@@ -8,16 +8,17 @@ var root = document.getElementById("content");
 
 var App = React.createClass({
   render: function() {
-    return (
-      <div>
-        <header><h1>BrainSTAX</h1></header>
-        <p>
-          Hello World!
-        </p>
-      </div>
-    );
+    return this.props.children;
   }
 });
+
+var routes = (
+  <Router>
+    <Route path='/' component={App}>
+      <IndexRoute component={SubjectForm}/>
+    </Route>
+  </Router>
+);
 
 document.addEventListener("DOMContentLoaded", function() {
   ReactDOM.render(<App/>, root);

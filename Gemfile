@@ -7,6 +7,7 @@ gem 'annotate'
 gem 'bcrypt'
 gem 'jquery-rails'
 gem 'sqlite3'
+gem 'jbuilder', '~> 2.0'
 
 group :development do
   gem 'pry-rails'

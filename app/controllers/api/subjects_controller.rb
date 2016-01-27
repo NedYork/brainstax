@@ -20,8 +20,9 @@ class Api::SubjectsController < ApplicationController
     @subject = Subject.find(params[:id])
   end
 
-  def index
-  end
+  # def index
+  #   @subject = Subject.
+  # end
 
   private
   def subject_params
