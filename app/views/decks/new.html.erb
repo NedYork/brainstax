@@ -1,0 +1,12 @@
+<h2>Create A New Deck</h2>
+
+<form action="<%= decks_url %>" method="post">
+  <%= auth_token_input %>
+
+  <label>
+    Title
+    <input type="text" name="deck[name]" value="<%= @deck.name %>">
+  </label>
+
+  <input type="submit" value="Create New Deck">
+</form>

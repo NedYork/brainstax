@@ -1,0 +1,12 @@
+<h2>New Subject</h2>
+
+<form action="<%= subjects_url %>" method="post">
+  <%= auth_token_input %>
+
+  <label>
+    Title
+    <input type="text" name="subject[title]" value="<%= @subject.title %>" id="title">
+  </label>
+
+  <input type="submit" value="Create New Subject">
+</form>

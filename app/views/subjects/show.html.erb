@@ -1,0 +1,28 @@
+<h2><%= @subject.title %></h2>
+
+<h3>Decks</h3>
+<ul>
+  <% @subject.decks.each do |deck| %>
+    <li>
+      <%= deck.name %>
+      <%= button_to "Remove Deck", deck_url(deck), method: :delete %>
+    </li>
+  <% end %>
+</ul>
+
+<hr>
+
+<h3>Add Deck</h3>
+
+<form action="<%= decks_url %>" method="post">
+  <%= auth_token_input %>
+
+  <input type="hidden" name="deck[author_id]" value="<%= @subject.author_id %>">
+  <input type="hidden" name="deck[subject_id]" value="<%= @subject.id %>">
+
+  <label>Name
+    <input type="text" name="deck[name]" value="">
+  </label>
+
+  <input type="submit" value="Create New Deck">
+</form>
