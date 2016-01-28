@@ -1,16 +1,22 @@
 var React = require('react');
 var ApiUtil = require('../util/api_util');
+var History = require('react-router').History;
 
 
 module.exports = React.createClass({
+  mixins: [History],
+
   getInitialState: function() {
-    return { title: "", author_id: 5 };
+    return { title: "" };
   },
   handleSubmit: function(e) {
     e.preventDefault();
-    // current user
-    // ApiUtil.createSubject({author_id: current_user, title: this.state.title});
-    ApiUtil.createSubject(this.state);
+    ApiUtil.createSubject(this.state, function(id) {
+      this.history.pushState(null, "/users/" + id, {});
+    }.bind(this));
+
+    this.setState({ title: "" })
+
   },
   handleChange: function(e) {
     this.setState({ title: e.target.value });

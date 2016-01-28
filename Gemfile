@@ -22,5 +22,9 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.1.0'
   gem 'shoulda-matchers'
   gem 'newrelic_rpm'
+end
+
+
+group :production do
   gem 'rails_12factor'
 end

@@ -1,5 +1,5 @@
 var AppDispatcher = require('../dispatcher/dispatcher');
-var SubjectConstants = requrie('../constants/subject_constants');
+var SubjectConstants = require('../constants/subject_constants');
 
 var ApiActions = {
   // receiveAll: function(subjects) {

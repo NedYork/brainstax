@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postinstall": "./node_modules/.bin/webpack"
   },
   "keywords": [],
   "author": "",
@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "flux": "^2.1.1",
-    "history": "~1.17.0",
+    "history": "^1.17.0",
     "jquery": "^2.1.4",
     "react": "^0.14.2",
     "react-addons-linked-state-mixin": "^0.14.2",
@@ -25,10 +25,7 @@
     "react-router": "^1.0.0-rc4"
   },
   "engines": {
-  "node": "4.1.1",
-  "npm": "2.1.x"
-  },
-  "scripts": {
-    "postinstall": "./node_modules/.bin/webpack"
+    "node": "4.1.1",
+    "npm": "2.1.x"
   }
 }
