@@ -12,9 +12,16 @@ module.exports = React.createClass({
 
   render: function() {
     return (
-      <div>
-        {this.props.subject.title}
+      <div className="subject-nav-topic">
+        <a href="">
+          <h4>{this.props.subject.title}</h4>
+          <img src="" />
+        </a>
+
+        <div className="progress-bar">
+          // nothing here yet
+        </div>
       </div>
-    )
+    );
   }
 });

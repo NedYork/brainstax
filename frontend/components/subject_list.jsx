@@ -20,7 +20,7 @@ module.exports = React.createClass({
 
   render: function() {
     return (
-      <div className='subject-list'>
+      <div className='subject-nav-list'>
         {
           SubjectStore.all().map(function (subject) {
             return (<Subject key={subject.id} subject={subject}/>);

@@ -6,7 +6,7 @@ var SubjectStore = require('../stores/subject');
 module.exports = React.createClass({
   render: function() {
     return (
-      <div>
+      <div className="subject-nav">
         <SubjectList subjects={SubjectStore.all()} />
         <SubjectForm />
         {this.props.children}

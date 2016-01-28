@@ -60,3 +60,7 @@
    clear: both;
    display: block;
  }
+
+ .main {
+   background: white;
+ }

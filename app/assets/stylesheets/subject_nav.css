@@ -1,0 +1,24 @@
+.subject-nav {
+  float: left;
+  width: 200px;
+  border: 1px solid #ccc;
+  background: #eeeeee;
+}
+
+.subject-nav-add {
+/*doesn't exist yet*/
+}
+
+.subject-nav-list {
+
+}
+
+.subject-nav-topic {
+
+  border: 1px solid #grey;
+}
+
+.subject-nav-form {
+
+  border: 1px solid black;
+}

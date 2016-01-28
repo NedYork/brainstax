@@ -6,7 +6,7 @@ gem 'rails', '~> 4.2'
 gem 'annotate'
 gem 'bcrypt'
 gem 'jquery-rails'
-gem 'sqlite3'
+gem 'pg'
 gem 'jbuilder', '~> 2.0'
 
 group :development do

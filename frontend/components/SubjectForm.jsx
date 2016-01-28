@@ -20,10 +20,9 @@ module.exports = React.createClass({
   },
   render: function() {
     return (
-      <div className="subject-form">
-        <h1>Make a new Subject!</h1>
+      <div className="subject-nav-form">
+        <h1>New Subject</h1>
         <form onSubmit={this.handleSubmit}>
-          <label>Title: </label>
           <input type="text" placeholder={'e.g. Biology 101'} onChange={this.handleChange}/>
           <button>Save</button>
         </form>
