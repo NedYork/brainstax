@@ -18,14 +18,14 @@ var addSubjects = function(subject) {
   _subjects[payload.subject.id] = payload.subject;
 };
 
-SubjectStore.__onDispatch = function (payload) {
+SubjectStore.__onDispatch = function(payload) {
   switch(payload.actionType) {
     case SubjectConstants.SUBJECTS_RECEIVED:
     // calls a SubjectStore action which takes the payload
     resetSubjects(payload.subjects);
     SubjectStore.__emitChange();
     break;
-    
+
     case SubjectConstants.ADD_SUBJECT:
     addSubjects(payload.subjects);
     SubjectStore.__emitChange();

@@ -4,13 +4,13 @@ var ApiUtil = require('../util/api_util');
 
 module.exports = React.createClass({
   getInitialState: function() {
-    return { title: "" };
+    return { title: "", author_id: 5 };
   },
   handleSubmit: function(e) {
     e.preventDefault();
     // current user
     // ApiUtil.createSubject({author_id: current_user, title: this.state.title});
-    ApiUtil.createSubject(this.state.title);
+    ApiUtil.createSubject(this.state);
   },
   handleChange: function(e) {
     this.setState({ title: e.target.value });

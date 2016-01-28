@@ -78,3 +78,8 @@
 [01/27/16 18:01:29 -0500 Apps-Mac-mini-103.local (29861)] INFO : Doing deferred dependency-detection before Rack startup
 [01/27/16 18:01:33 -0500 Apps-Mac-mini-103.local (29861)] ERROR : Invalid license key, please contact support@newrelic.com
 [01/27/16 18:01:33 -0500 Apps-Mac-mini-103.local (29861)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[01/27/16 19:09:53 -0500 Apps-Mac-mini-103.local (29861)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: param is missing or the value is empty: subjects
+[01/27/16 19:09:59 -0500 Apps-Mac-mini-103.local (29861)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: param is missing or the value is empty: subjects
+[01/27/16 19:12:36 -0500 Apps-Mac-mini-103.local (29861)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: param is missing or the value is empty: subject
+[01/27/16 19:15:38 -0500 Apps-Mac-mini-103.local (29861)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: param is missing or the value is empty: subject
+[01/27/16 19:24:47 -0500 Apps-Mac-mini-103.local (29861)] INFO : Starting Agent shutdown

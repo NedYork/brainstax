@@ -2,7 +2,7 @@ class Api::SubjectsController < ApplicationController
 
   def create
     @subject = Subject.new(subject_params)
-    @subject.author_id = current_user.id
+    # @subject.author_id = current_user.id
     if @subject.save
       flash[:notice] = "You've created a new subject! Enjoy your accelerated learning experience."
       redirect_to user_url(current_user)
