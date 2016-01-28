@@ -12,11 +12,8 @@ module.exports = React.createClass({
   handleSubmit: function(e) {
     e.preventDefault();
     ApiUtil.createSubject(this.state, function(id) {
-      this.history.pushState(null, "/users/" + id, {});
+      this.setState({ title: "" });
     }.bind(this));
-
-    this.setState({ title: "" })
-
   },
   handleChange: function(e) {
     this.setState({ title: e.target.value });

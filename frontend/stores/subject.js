@@ -1,6 +1,6 @@
 var Store = require('flux/utils').Store;
 var AppDispatcher = require('../dispatcher/dispatcher');
-var _subjects = {};
+var _subjects = [];
 var SubjectStore = new Store(AppDispatcher);
 var SubjectConstants = require('../constants/subject_constants');
 
@@ -15,7 +15,6 @@ var resetSubjects = function(subjects) {
 
 var addSubjects = function(subject) {
   _subjects.push(subject);
-  _subjects[payload.subject.id] = payload.subject;
 };
 
 SubjectStore.__onDispatch = function(payload) {

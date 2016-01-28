@@ -3,16 +3,10 @@ var ApiActions = require('../actions/api_actions')
 
 var ApiUtil = {
   createSubject: function(subject, callback) {
-    // $.post("api/subjects", { title: title }, function(subject) {
-    //   ApiActions.addSubject(subject);
-    //   debugger;
-    // });
-
-    // ASK HOW TO GET AUTHOR_ID WHEN USER CREATES A NEW SUBJECT.
     $.ajax({
       url: "api/subjects",
-      dataType: "json",
       type: "POST",
+      dataType: "json",
       data: { subject: subject },
       success: function(subject) {
         ApiActions.addSubject(subject);
@@ -36,10 +30,16 @@ var ApiUtil = {
     });
   },
 
-  fetchSubjects: function(id) {
-    $.get("api/subjects" + id, {}, function(subjects) {
-      ApiActions.receiveAll(subjects);
+  fetchSubjects: function() {
+    $.ajax({
+      url: "/api/subjects",
+      type: "GET",
+      dataType: "json",
+      success: function(data) {
+        ApiActions.receiveAll(data);
+      }
     });
+
   }
 };
 
