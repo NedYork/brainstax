@@ -2,6 +2,7 @@ var React = require('react');
 var UserStore = require('../stores/user');
 var ApiUtil = require('../util/api_util');
 var SubjectList = require('./subject_list');
+var SubjectNav = require('./subjectnav');
 
 module.exports = React.createClass({
   getInitialState: function() {
@@ -26,8 +27,8 @@ module.exports = React.createClass({
   },
   render: function() {
     // console.log(this.props)
-    console.log("in render. id = " + this.props.params.id);
-    console.log("in render. user = ", this.state.user);
+    // console.log("in render. id = " + this.props.params.id);
+    // console.log("in render. user = ", this.state.user);
 
     if (!this.state.user) { return <div></div>; }
     return <SubjectList subjects={this.state.user.subjects} />;

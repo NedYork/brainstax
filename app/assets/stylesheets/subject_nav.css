@@ -19,12 +19,17 @@
 
 }
 
+
 /* EACH INDIVIDUAL SUBJECT*/
+
+.subject-nav-list li {
+  border: 2px solid #red;
+}
 
 .subject-nav-topic {
   display: block;
   /*not working for the border*/
-  border: 2px solid #red;
+
   margin-bottom: 10px;
 }
 

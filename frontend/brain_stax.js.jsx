@@ -30,15 +30,6 @@ var routes = (
 
   </Route>
 );
-//
-// var routes2 = (
-//   <Route path='mysubjects' component={SubjectList}>
-//     <Route path=':id' component={Subject}/>
-//   </Route>
-//
-//   <Route path='new' component={SubjectForm}/>
-// )
-
 
 
 document.addEventListener("DOMContentLoaded", function() {

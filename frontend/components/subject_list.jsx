@@ -25,8 +25,8 @@ module.exports = React.createClass({
           <ul>
             {SubjectStore.all().map(function (subject) {
               return (
-                <li>
-                  <Subject key={subject.id} subject={subject}/>
+                <li key={subject.id}>
+                  <Subject subject={subject}/>
                 </li>
               );
             })}
