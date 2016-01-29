@@ -1,0 +1,256 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+
+
+
+
+ /* --- RESET --- */
+
+
+ html, body, header, nav, h1, a, ul, li,
+ strong, main, section, img, div, h2, p,
+ form, fieldset, label, input, textarea,
+ button, article, footer, small {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   outline: 0;
+   font: inherit;
+   box-sizing: inherit;
+   text-align: inherit;
+   text-decoration: inherit;
+   vertical-align: inherit;
+   color: inherit;
+   background: transparent;
+   /*border: 1px solid red;*/
+ }
+
+ /* --- ELEMENTS --- */
+
+ body {
+   box-sizing: content-box;
+   font-family: sans-serif;
+   font-size: 16px;
+   line-height: 1.1666666666;
+   background: #eee;
+   color: #000;
+ }
+
+ ul {
+   list-style: none;
+ }
+
+ img {
+   display: block;
+   width: 100%;
+   height: auto;
+ }
+
+ /* --- CLEARFIX --- */
+
+ .group:after {
+   content: "";
+   clear: both;
+   display: block;
+ }
+
+ .main {
+   background: white;
+ }
+/* --- HEADER --- */
+
+
+ .header {
+   background: black;
+   font-size: 14px;
+ }
+
+ .header a {
+   color: grey;
+ }
+
+ .header a:hover {
+   color: white;
+ }
+
+ .header-nav {
+   margin: auto;
+   width: 970px;
+ }
+
+ .header-logo {
+   float: left;
+   display: block;
+   /*width: 155px;*/
+   padding: 19px 20px;
+ }
+
+.header-list {
+  /*width: 710px;*/
+  float: left;
+  margin-top: 10px;
+}
+
+.header-list > li {
+  display: block;
+  float: left;
+  padding: 20px;
+  margin: auto;
+}
+
+.header-list > li > a {
+  /*width: 70px;*/
+}
+
+.header-begin {
+  float: left;
+  margin: 30px 30px;
+  display: block;
+}
+
+.header-begin > li {
+  float: left;
+  display: block;
+  padding-left: 30px;
+}
+
+.header-begin .get-started {
+  color: white;
+  /*display: block;*/
+  padding: 10px 20px;
+  background: #0F6C8F;
+  display: inline;
+  border-radius: 2px;
+}
+
+.header-begin .get-started:hover {
+  background: #29506D;
+}
+
+/* LOGGED-IN HEADER */
+
+.user-header a {
+  color: grey;
+}
+
+.user-header a:hover {
+  color: white;
+}
+
+.user-header-nav {
+  margin: auto;
+}
+
+.user-header-logo {
+  float: left;
+  display: block;
+  /*width: 155px;*/
+  padding: 19px 20px;
+}
+
+.user-header-list {
+ /*width: 710px;*/
+ float: left;
+ margin-top: 10px;
+}
+
+.user-header-list > li {
+ display: block;
+ float: left;
+ padding: 20px;
+ margin: auto;
+}
+
+.user-header-list > li > a {
+ /*width: 70px;*/
+}
+
+
+.user-header-profile {
+  float: right;
+  display: block;
+
+}
+
+.user-header-profile > h3{
+  float: left;
+  color: white;
+  margin: 30px 20px;
+
+}
+
+.user-header-profile > h3:hover {
+  cursor: pointer;
+  color: #5CB8D6;
+}
+.user-header-profile img {
+  display: block;
+  border: 1px solid white;
+  float: left;
+  margin: 10px 10px auto auto;
+  height: 58px;
+  width: 58px;
+}
+
+.subject-nav {
+  float: left;
+  width: 200px;
+  border: 4px solid #ccc;
+  background: #eeeeee;
+}
+
+/* ADD BAR TO ACTIVATE SUBJECT FORM */
+
+.subject-nav-add {
+/*doesn't exist yet*/
+}
+
+
+/* TOTAL LIST OF SUBJECTS */
+
+.subject-nav-list {
+
+}
+
+/* EACH INDIVIDUAL SUBJECT*/
+
+.subject-nav-topic {
+  display: block;
+  /*not working for the border*/
+  border: 2px solid #red;
+  margin-bottom: 10px;
+}
+
+.subject-nav-topic img {
+
+  float: left;
+  display: block;
+  padding: 10px;
+  width: 50px;
+  height: 50px;
+}
+
+.subject-nav-topic h4 {
+  float: left;
+}
+
+.progress-bar {
+  float: right;
+}
+
+/* SUBJECT FORM TO ADD NEW SUBJECT */
+
+.subject-nav-form {
+
+  border: 1px solid black;
+}
+/*--- User Show ---*/
+
