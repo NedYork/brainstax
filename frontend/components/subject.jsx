@@ -12,16 +12,15 @@ module.exports = React.createClass({
 
   render: function() {
     return (
-      <div className="subject-nav-topic">
-        <a href="">
-          <h4>{this.props.subject.title}</h4>
-          <img src="" />
-        </a>
+      <a href="" className="subject-nav-topic group">
+        <img src="https://brainscape-prod.s3.amazonaws.com/images/avatar_generic_square.png" />
+        <h4>{this.props.subject.title}</h4>
+
 
         <div className="progress-bar">
           // nothing here yet
         </div>
-      </div>
+      </a>
     );
   }
 });

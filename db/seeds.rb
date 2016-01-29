@@ -21,7 +21,7 @@ FirstAmendment = User.create!(username: "FirstAmendment", password: "123456")
 Subject.destroy_all
 Math = Subject.create!(author_id: MathG33k.id, title: "Mathematics")
 Physics = Subject.create!(author_id: PhyZiX.id, title: "Physics")
-Orgo = Subject.create!(author_id: FriedelKrafts.id, title: "OrganicChemistry")
+Orgo = Subject.create!(author_id: FriedelKrafts.id, title: "Orgo")
 # Quantum = Subject.create!(author_id: QuantumTunnelBruh.id, title: "Quantum Mechanics")
 English = Subject.create!(title: "English")
 History = Subject.create!(author_id: FirstAmendment.id, title: "History")
