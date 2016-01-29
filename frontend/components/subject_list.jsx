@@ -23,13 +23,13 @@ module.exports = React.createClass({
       <div className='subject-nav-list'>
         {
           <ul>
-            SubjectStore.all().map(function (subject) {
+            {SubjectStore.all().map(function (subject) {
               return (
                 <li>
                   <Subject key={subject.id} subject={subject}/>
                 </li>
               );
-            })
+            })}
           </ul>
         }
         {this.props.children}
