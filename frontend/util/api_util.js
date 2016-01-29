@@ -30,6 +30,19 @@ var ApiUtil = {
     });
   },
 
+
+  fetchSingleSubject: function(id) {
+    $.ajax({
+      url: "/api/subjects/" + id,
+      type: "GET",
+      dataType: "json",
+      success: function(data) {
+        ApiActions.addSubject(data);
+      }
+    });
+  },
+
+
   fetchSubjects: function() {
     $.ajax({
       url: "/api/subjects",

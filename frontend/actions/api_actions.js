@@ -9,7 +9,6 @@ var ApiActions = {
     });
   },
 
-
   addSubject: function(subject) {
     AppDispatcher.dispatch({
       actionType: SubjectConstants.ADD_SUBJECT,

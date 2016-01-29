@@ -298,3 +298,30 @@
 [01/29/16 10:48:54 -0500 Users-MacBook-Pro.local (79730)] INFO : Doing deferred dependency-detection before Rack startup
 [01/29/16 10:50:10 -0500 Users-MacBook-Pro.local (79730)] ERROR : Invalid license key, please contact support@newrelic.com
 [01/29/16 10:50:10 -0500 Users-MacBook-Pro.local (79730)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[01/29/16 11:10:27 -0500 Users-MacBook-Pro.local (79730)] INFO : Starting Agent shutdown
+[01/29/16 11:48:14 -0500 Users-MacBook-Pro.local (80508)] INFO : Starting the New Relic agent in "development" environment.
+[01/29/16 11:48:14 -0500 Users-MacBook-Pro.local (80508)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[01/29/16 11:48:14 -0500 Users-MacBook-Pro.local (80508)] WARN : No configuration file found. Working directory = /Users/user/Desktop/brainstax-master
+[01/29/16 11:48:14 -0500 Users-MacBook-Pro.local (80508)] WARN : Looked in these locations (based on defaults): /Users/user/Desktop/brainstax-master/config/newrelic.yml, /Users/user/Desktop/brainstax-master/newrelic.yml, /Users/user/Desktop/brainstax-master/config/newrelic.yml, /Users/user/Desktop/brainstax-master/newrelic.yml, /Users/user/.newrelic/newrelic.yml, /Users/user/newrelic.yml
+[01/29/16 11:48:14 -0500 Users-MacBook-Pro.local (80508)] INFO : Environment: development
+[01/29/16 11:48:14 -0500 Users-MacBook-Pro.local (80508)] INFO : Dispatcher: webrick
+[01/29/16 11:48:14 -0500 Users-MacBook-Pro.local (80508)] INFO : Application: development
+[01/29/16 11:48:14 -0500 Users-MacBook-Pro.local (80508)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'.
+[01/29/16 11:48:14 -0500 Users-MacBook-Pro.local (80508)] INFO : Installing ActiveJob instrumentation
+[01/29/16 11:48:14 -0500 Users-MacBook-Pro.local (80508)] INFO : Installing ActiveRecord 4 instrumentation
+[01/29/16 11:48:14 -0500 Users-MacBook-Pro.local (80508)] INFO : Installing Net instrumentation
+[01/29/16 11:48:14 -0500 Users-MacBook-Pro.local (80508)] INFO : Installing deferred Rack instrumentation
+[01/29/16 11:48:14 -0500 Users-MacBook-Pro.local (80508)] INFO : Installing Rack::Builder middleware instrumentation
+[01/29/16 11:48:14 -0500 Users-MacBook-Pro.local (80508)] INFO : Installing Rails 3+ middleware instrumentation
+[01/29/16 11:48:14 -0500 Users-MacBook-Pro.local (80508)] INFO : Installing Rails 4 Controller instrumentation
+[01/29/16 11:48:15 -0500 Users-MacBook-Pro.local (80508)] INFO : Installing Rails 4 view instrumentation
+[01/29/16 11:48:15 -0500 Users-MacBook-Pro.local (80508)] INFO : Installing Rails 4 Error instrumentation
+[01/29/16 11:48:15 -0500 Users-MacBook-Pro.local (80508)] INFO : Finished instrumentation
+[01/29/16 11:48:15 -0500 Users-MacBook-Pro.local (80508)] INFO : Doing deferred dependency-detection before Rack startup
+[01/29/16 12:03:38 -0500 Users-MacBook-Pro.local (80508)] ERROR : Error establishing connection with New Relic Service at collector.newrelic.com:443:
+[01/29/16 12:03:38 -0500 Users-MacBook-Pro.local (80508)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error talking to collector.newrelic.com:443 after 2 attempts: getaddrinfo: nodename nor servname provided, or not known
+[01/29/16 12:03:38 -0500 Users-MacBook-Pro.local (80508)] INFO : Will re-attempt in 60 seconds
+[01/29/16 12:05:00 -0500 Users-MacBook-Pro.local (80508)] ERROR : Invalid license key, please contact support@newrelic.com
+[01/29/16 12:05:00 -0500 Users-MacBook-Pro.local (80508)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[01/29/16 12:16:26 -0500 Users-MacBook-Pro.local (80508)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Couldn't find User with 'id'=undefined
+[01/29/16 12:16:36 -0500 Users-MacBook-Pro.local (80508)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Couldn't find User with 'id'=undefined

@@ -6,6 +6,7 @@ var SubjectConstants = require('../constants/subject_constants');
 
 
 SubjectStore.all = function () {
+  // debugger;
   return _subjects.slice();
 };
 
@@ -13,8 +14,25 @@ var resetSubjects = function(subjects) {
   _subjects = subjects;
 };
 
-var addSubjects = function(subject) {
-  _subjects.push(subject);
+SubjectStore.find = function(id) {
+  return _subjects.find(function (subject) {
+    return subject.id == id;
+  });
+};
+
+var addSubjects = function(newSubject) {
+  var replaced = false;
+  _subjects.forEach(function(subject, idx) {
+    if (newSubject.id == subject.id) {
+      _subjects[idx] = newSubject;
+      replaced = true;
+    }
+  });
+
+  if (!replaced) {
+    _subjects.push(subject);
+  }
+
 };
 
 SubjectStore.__onDispatch = function(payload) {

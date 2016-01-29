@@ -8,7 +8,7 @@ class Api::SubjectsController < ApplicationController
     if @subject.save
       flash[:notice] = "You've created a new subject! Enjoy your accelerated learning experience."
       # redirect_to root_url
-      render json: @subject
+      render :show
       # user_url(current_user)
     else
       # flash.now[:errors] = @subject.errors.full_messages
@@ -25,7 +25,9 @@ class Api::SubjectsController < ApplicationController
   end
 
   def index
-    @subjects = Subject.all
+    # @subjects = Subject
+    # @subjects = current_user.subjects.includes(decks: [:cards])
+    @subjects = current_user.subjects.includes(:decks)
   end
 
   private

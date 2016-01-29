@@ -7,8 +7,9 @@ var IndexRoute = ReactRouter.IndexRoute;
 // var SubjectForm = require('./components/SubjectForm');
 // var SubjectList = require('./components/subject_list');
 // var Subject = require('./components/subject');
+var SubjectDetail = require('./components/subjects/subject_detail');
 
-var SubjectNav = require('./components/subjectnav');
+var SubjectNav = require('./components/subjects/subjectnav');
 var UserShow = require('./components/user_show');
 
 var App = React.createClass({
@@ -24,10 +25,11 @@ var App = React.createClass({
 
 var routes = (
   <Route path='/' component={App}>
-    <IndexRoute component={SubjectNav}/>
+    <IndexRoute component={UserShow}/>
 
-    <Route path='users/:id' component={UserShow}/>
-
+    <Route path='subjects' component={UserShow}>
+      <Route path=':id' component={SubjectDetail}/>
+    </Route>
   </Route>
 );
 
