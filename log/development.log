@@ -42852,3 +42852,383 @@ Processing by Api::SubjectsController#create as JSON
   [1m[35mSQL (0.3ms)[0m  INSERT INTO "subjects" ("title", "author_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["title", "23423444"], ["author_id", 7], ["created_at", "2016-01-29 14:19:42.379124"], ["updated_at", "2016-01-29 14:19:42.379124"]]
   [1m[36m (1.3ms)[0m  [1mCOMMIT[0m
 Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for ::1 at 2016-01-29 09:40:40 -0500
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.2ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "vfzZ0JTU0Kg6f7hTkHr7dw"]]
+  Rendered layouts/_errors.html.erb (0.7ms)
+Completed 200 OK in 187ms (Views: 183.7ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2016-01-29 09:40:40 -0500
+
+
+Started GET "/assets/header.css?body=1" for ::1 at 2016-01-29 09:40:40 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2016-01-29 09:40:40 -0500
+
+
+Started GET "/assets/subject_nav.css?body=1" for ::1 at 2016-01-29 09:40:40 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2016-01-29 09:40:40 -0500
+
+
+Started GET "/assets/user_show.css?body=1" for ::1 at 2016-01-29 09:40:40 -0500
+
+
+Started GET "/assets/bundle.js?body=1" for ::1 at 2016-01-29 09:40:41 -0500
+
+
+Started GET "/javascripts/bundle.js.map.js" for ::1 at 2016-01-29 09:40:41 -0500
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/bundle.js.map.js"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  newrelic_rpm (3.9.9.275) lib/new_relic/agent/instrumentation/middleware_tracing.rb:57:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  newrelic_rpm (3.9.9.275) lib/new_relic/agent/instrumentation/middleware_tracing.rb:57:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  newrelic_rpm (3.9.9.275) lib/new_relic/agent/instrumentation/middleware_tracing.rb:57:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  newrelic_rpm (3.9.9.275) lib/new_relic/agent/instrumentation/middleware_tracing.rb:57:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  newrelic_rpm (3.9.9.275) lib/new_relic/agent/instrumentation/middleware_tracing.rb:57:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  newrelic_rpm (3.9.9.275) lib/new_relic/agent/instrumentation/middleware_tracing.rb:57:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  newrelic_rpm (3.9.9.275) lib/new_relic/agent/instrumentation/middleware_tracing.rb:57:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  newrelic_rpm (3.9.9.275) lib/new_relic/agent/instrumentation/middleware_tracing.rb:57:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  newrelic_rpm (3.9.9.275) lib/new_relic/agent/instrumentation/middleware_tracing.rb:57:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  newrelic_rpm (3.9.9.275) lib/new_relic/agent/instrumentation/middleware_tracing.rb:57:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  newrelic_rpm (3.9.9.275) lib/new_relic/agent/instrumentation/middleware_tracing.rb:57:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/user/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/user/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/user/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/user/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/user/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.2ms)
+  Rendered /Users/user/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.8ms)
+  Rendered /Users/user/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/user/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (38.1ms)
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2016-01-29 09:40:41 -0500
+
+
+Started GET "/api/subjects" for ::1 at 2016-01-29 09:40:41 -0500
+Processing by Api::SubjectsController#index as JSON
+  [1m[36mSubject Load (2.8ms)[0m  [1mSELECT "subjects".* FROM "subjects"[0m
+  Rendered api/subjects/index.json.jbuilder (16.3ms)
+Completed 200 OK in 30ms (Views: 15.8ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-01-29 09:40:41 -0500
+
+
+Started DELETE "/session" for ::1 at 2016-01-29 09:40:43 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"DbdBACncqAbmHz1i/PcFQm2EY8SDZlhnM3Zq36QGRWDGr5X9yze2IIQW+6bJENjYNQBduni+H4QKfQVLz3u22A=="}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "vfzZ0JTU0Kg6f7hTkHr7dw"]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3  [["session_token", "0pf7FgS1Tn8KQ89eOqE0qg"], ["updated_at", "2016-01-29 14:40:43.535604"], ["id", 7]]
+  [1m[36m (1.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/session/new
+Completed 302 Found in 7ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/session/new" for ::1 at 2016-01-29 09:40:43 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.7ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1
+  Rendered layouts/_errors.html.erb (0.2ms)
+Completed 200 OK in 14ms (Views: 13.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/header.css?body=1" for ::1 at 2016-01-29 09:40:43 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2016-01-29 09:40:43 -0500
+
+
+Started GET "/assets/user_show.css?body=1" for ::1 at 2016-01-29 09:40:43 -0500
+
+
+Started GET "/assets/subject_nav.css?body=1" for ::1 at 2016-01-29 09:40:43 -0500
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2016-01-29 09:40:43 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2016-01-29 09:40:43 -0500
+
+
+Started GET "/javascripts/bundle.js.map.js" for ::1 at 2016-01-29 09:40:43 -0500
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/bundle.js.map.js"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  newrelic_rpm (3.9.9.275) lib/new_relic/agent/instrumentation/middleware_tracing.rb:57:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  newrelic_rpm (3.9.9.275) lib/new_relic/agent/instrumentation/middleware_tracing.rb:57:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  newrelic_rpm (3.9.9.275) lib/new_relic/agent/instrumentation/middleware_tracing.rb:57:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  newrelic_rpm (3.9.9.275) lib/new_relic/agent/instrumentation/middleware_tracing.rb:57:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  newrelic_rpm (3.9.9.275) lib/new_relic/agent/instrumentation/middleware_tracing.rb:57:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  newrelic_rpm (3.9.9.275) lib/new_relic/agent/instrumentation/middleware_tracing.rb:57:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  newrelic_rpm (3.9.9.275) lib/new_relic/agent/instrumentation/middleware_tracing.rb:57:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  newrelic_rpm (3.9.9.275) lib/new_relic/agent/instrumentation/middleware_tracing.rb:57:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  newrelic_rpm (3.9.9.275) lib/new_relic/agent/instrumentation/middleware_tracing.rb:57:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  newrelic_rpm (3.9.9.275) lib/new_relic/agent/instrumentation/middleware_tracing.rb:57:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  newrelic_rpm (3.9.9.275) lib/new_relic/agent/instrumentation/middleware_tracing.rb:57:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/user/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/user/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/user/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/user/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/user/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.2ms)
+  Rendered /Users/user/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /Users/user/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/user/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (32.9ms)
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2016-01-29 09:40:43 -0500
+
+
+Started GET "/session/new" for ::1 at 2016-01-29 09:40:45 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1[0m
+  Rendered layouts/_errors.html.erb (0.2ms)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2016-01-29 09:40:45 -0500
+
+
+Started GET "/assets/header.css?body=1" for ::1 at 2016-01-29 09:40:45 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2016-01-29 09:40:45 -0500
+
+
+Started GET "/assets/subject_nav.css?body=1" for ::1 at 2016-01-29 09:40:45 -0500
+
+
+Started GET "/assets/user_show.css?body=1" for ::1 at 2016-01-29 09:40:45 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2016-01-29 09:40:45 -0500
+
+
+Started GET "/javascripts/bundle.js.map.js" for ::1 at 2016-01-29 09:40:45 -0500
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/bundle.js.map.js"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  newrelic_rpm (3.9.9.275) lib/new_relic/agent/instrumentation/middleware_tracing.rb:57:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  newrelic_rpm (3.9.9.275) lib/new_relic/agent/instrumentation/middleware_tracing.rb:57:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  newrelic_rpm (3.9.9.275) lib/new_relic/agent/instrumentation/middleware_tracing.rb:57:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  newrelic_rpm (3.9.9.275) lib/new_relic/agent/instrumentation/middleware_tracing.rb:57:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  newrelic_rpm (3.9.9.275) lib/new_relic/agent/instrumentation/middleware_tracing.rb:57:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  newrelic_rpm (3.9.9.275) lib/new_relic/agent/instrumentation/middleware_tracing.rb:57:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  newrelic_rpm (3.9.9.275) lib/new_relic/agent/instrumentation/middleware_tracing.rb:57:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  newrelic_rpm (3.9.9.275) lib/new_relic/agent/instrumentation/middleware_tracing.rb:57:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  newrelic_rpm (3.9.9.275) lib/new_relic/agent/instrumentation/middleware_tracing.rb:57:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  newrelic_rpm (3.9.9.275) lib/new_relic/agent/instrumentation/middleware_tracing.rb:57:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  newrelic_rpm (3.9.9.275) lib/new_relic/agent/instrumentation/middleware_tracing.rb:57:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/user/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/user/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/user/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/user/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Users/user/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.6ms)
+  Rendered /Users/user/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /Users/user/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/user/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (37.0ms)
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2016-01-29 09:40:45 -0500
+
+
+Started GET "/assets/header.css?body=1" for ::1 at 2016-01-29 09:40:50 -0500
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2016-01-29 09:40:50 -0500
+
+
+Started GET "/assets/subject_nav.css?body=1" for ::1 at 2016-01-29 09:40:50 -0500
+
+
+Started GET "/assets/user_show.css?body=1" for ::1 at 2016-01-29 09:40:50 -0500
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-01-29 09:40:50 -0500
+
+
+Started POST "/session" for ::1 at 2016-01-29 09:41:07 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"PY3/LfpNX9petmezaqvUnFRqwv6n2pJoZpmfPk17Bxz2lSvQGKZB/Dy/oXdfTAkGDO78gFwC1YtfkvCqJgb0pA==", "user"=>{"username"=>"MathG33k", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1  [["username", "MathG33k"]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3  [["session_token", "-WmcLPJn43NwNtpsg5YpDw"], ["updated_at", "2016-01-29 14:41:07.859042"], ["id", 7]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 79ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2016-01-29 09:41:07 -0500
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.2ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "-WmcLPJn43NwNtpsg5YpDw"]]
+  Rendered layouts/_errors.html.erb (0.3ms)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/subject_nav.css?body=1" for ::1 at 2016-01-29 09:41:08 -0500
+
+
+Started GET "/assets/header.css?body=1" for ::1 at 2016-01-29 09:41:08 -0500
+
+
+Started GET "/assets/user_show.css?body=1" for ::1 at 2016-01-29 09:41:08 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2016-01-29 09:41:08 -0500
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2016-01-29 09:41:08 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2016-01-29 09:41:08 -0500
+
+
+Started GET "/javascripts/bundle.js.map.js" for ::1 at 2016-01-29 09:41:08 -0500
+
+ActionController::RoutingError (No route matches [GET] "/javascripts/bundle.js.map.js"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  newrelic_rpm (3.9.9.275) lib/new_relic/agent/instrumentation/middleware_tracing.rb:57:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  newrelic_rpm (3.9.9.275) lib/new_relic/agent/instrumentation/middleware_tracing.rb:57:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  newrelic_rpm (3.9.9.275) lib/new_relic/agent/instrumentation/middleware_tracing.rb:57:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  newrelic_rpm (3.9.9.275) lib/new_relic/agent/instrumentation/middleware_tracing.rb:57:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  newrelic_rpm (3.9.9.275) lib/new_relic/agent/instrumentation/middleware_tracing.rb:57:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  newrelic_rpm (3.9.9.275) lib/new_relic/agent/instrumentation/middleware_tracing.rb:57:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  newrelic_rpm (3.9.9.275) lib/new_relic/agent/instrumentation/middleware_tracing.rb:57:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  newrelic_rpm (3.9.9.275) lib/new_relic/agent/instrumentation/middleware_tracing.rb:57:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  newrelic_rpm (3.9.9.275) lib/new_relic/agent/instrumentation/middleware_tracing.rb:57:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  newrelic_rpm (3.9.9.275) lib/new_relic/agent/instrumentation/middleware_tracing.rb:57:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  newrelic_rpm (3.9.9.275) lib/new_relic/agent/instrumentation/middleware_tracing.rb:57:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/user/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/user/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/user/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/user/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/user/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.1ms)
+  Rendered /Users/user/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.2ms)
+  Rendered /Users/user/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/user/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (36.2ms)
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2016-01-29 09:41:08 -0500
+
+
+Started GET "/assets/bundle.js.map" for ::1 at 2016-01-29 09:41:08 -0500
+
+
+Started GET "/api/subjects" for ::1 at 2016-01-29 09:41:08 -0500
+Processing by Api::SubjectsController#index as JSON
+  [1m[36mSubject Load (0.5ms)[0m  [1mSELECT "subjects".* FROM "subjects"[0m
+  Rendered api/subjects/index.json.jbuilder (3.3ms)
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/api/subjects" for ::1 at 2016-01-29 09:41:21 -0500
+Processing by Api::SubjectsController#create as JSON
+  Parameters: {"subject"=>{"title"=>"123123"}}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "-WmcLPJn43NwNtpsg5YpDw"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (4.1ms)[0m  INSERT INTO "subjects" ("title", "author_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["title", "123123"], ["author_id", 7], ["created_at", "2016-01-29 14:41:21.233843"], ["updated_at", "2016-01-29 14:41:21.233843"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 9ms (Views: 0.3ms | ActiveRecord: 4.8ms)
+
+
+Started POST "/api/subjects" for ::1 at 2016-01-29 09:41:26 -0500
+Processing by Api::SubjectsController#create as JSON
+  Parameters: {"subject"=>{"title"=>"xzgsdfg"}}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "-WmcLPJn43NwNtpsg5YpDw"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "subjects" ("title", "author_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["title", "xzgsdfg"], ["author_id", 7], ["created_at", "2016-01-29 14:41:26.236371"], ["updated_at", "2016-01-29 14:41:26.236371"]]
+  [1m[36m (3.2ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 3.9ms)

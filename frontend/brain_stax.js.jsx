@@ -18,7 +18,7 @@ var App = React.createClass({
         <header><h1>brainSTAX</h1></header>
         {this.props.children};
       </div>
-    )
+    );
   }
 });
 

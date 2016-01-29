@@ -29,7 +29,7 @@ module.exports = React.createClass({
     console.log("in render. id = " + this.props.params.id);
     console.log("in render. user = ", this.state.user);
 
-    if (!this.state.user) { return <div></div> }
+    if (!this.state.user) { return <div></div>; }
     return <SubjectList subjects={this.state.user.subjects} />;
   }
 });

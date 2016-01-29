@@ -1,5 +1,5 @@
 var UserActions = require('../actions/user');
-var ApiActions = require('../actions/api_actions')
+var ApiActions = require('../actions/api_actions');
 
 var ApiUtil = {
   createSubject: function(subject, callback) {
