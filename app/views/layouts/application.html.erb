@@ -11,8 +11,16 @@
 <body>
 
 
+  <%= render "layouts/errors" %>
 
-  <% if signed_in? %>
+  <%= yield %>
+
+  <%= javascript_include_tag "application" %>
+</body>
+</html>
+
+
+  <!-- <% if signed_in? %>
     <header class="header">
       <nav class="user-header-nav group">
 
@@ -63,7 +71,7 @@
         </ul>
 
         <ul class="header-begin group">
-          <li><a href="/session/new">Login</a></li>
+          <li><a href="/#/login">Login</a></li>
           <li><a href="/user/new" class="get-started">Get Started</a></li>
         </ul>
 
@@ -71,12 +79,4 @@
     </header>
   <% end %>
 
-  <br>
-
-  <%= render "layouts/errors" %>
-
-  <%= yield %>
-
-  <%= javascript_include_tag "application" %>
-</body>
-</html>
+  <br> -->

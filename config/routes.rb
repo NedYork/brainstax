@@ -7,6 +7,7 @@ Links::Application.routes.draw do
   namespace :api, defaults: {format: :json} do
     resources :subjects
     resources :users, only: [:show]
+    resource :session, only: [:create, :destroy, :show]
     resources :decks, only: [:create, :destroy, :new, :index, :show]
   end
 end

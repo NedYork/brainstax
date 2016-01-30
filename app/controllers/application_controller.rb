@@ -24,6 +24,9 @@ class ApplicationController < ActionController::Base
   end
 
   def require_signed_in!
-    redirect_to new_session_url unless signed_in?
+    unless current_user
+      # redirect_to new_session_url unless signed_in?
+      render json: ["Nope."]
+    end
   end
 end

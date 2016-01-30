@@ -4,41 +4,52 @@ var ReactRouter = require('react-router');
 var Router = ReactRouter.Router;
 var Route = ReactRouter.Route;
 var IndexRoute = ReactRouter.IndexRoute;
-var SubjectDetail = require('./components/subjects/subject_detail');
-var StudyShow = require('./study/study_show');
 
+var SubjectDetail = require('./components/subjects/subject_detail');
+var StudyShow = require('./components/study/study_show');
+var SessionForm = require('./components/session/new');
 var SubjectNav = require('./components/subjects/subjectnav');
 var UserShow = require('./components/user_show');
+var App = require('./components/app');
+var CurrentUserStore = require('./stores/current_user_store');
+var HomePage = require('./components/homepage');
+var SessionsApiUtil = require('./util/sessions_api_util');
 
-var App = React.createClass({
-  render: function() {
-    return (
-      <div>
-        <header><h1>brainSTAX</h1></header>
-        {this.props.children};
-      </div>
-    );
+
+
+function _ensureLoggedIn(nextState, replace, callback) {
+  if (CurrentUserStore.userHasBeenFetched()) {
+    _redirectIfNotLoggedIn(); // this function below
+  } else {
+    SessionsApiUtil.fetchCurrentUser(_redirectIfNotLoggedIn);
   }
-});
+
+  function _redirectIfNotLoggedIn() {
+    if (!CurrentUserStore.isLoggedIn()) {
+      replace({}, "/login");
+    }
+    callback();
+  }
+};
 
 var routes = (
-  <Route path='/' component={App}>
-    <IndexRoute component={UserShow}/>
+  <Router>
+    <Route path='/' component={App}>
+      <IndexRoute component={ HomePage }/>
+      <Route path="login" component={ SessionForm }/>
+      <Route path="user/:id" component={ UserShow } onEnter={_ensureLoggedIn}/>
 
-    <Route path='subjects' component={UserShow}>
-      <Route path=':id' component={SubjectDetail}/>
-      <Route path='decks/:id' component={StudyShow}>
+      <Route path='subjects' component={UserShow}>
+        <Route path=':id' component={SubjectDetail}/>
+        <Route path='decks/:id' component={StudyShow}/>
+      </Route>
     </Route>
-
-
-  </Route>
+  </Router>
 );
 
 
 
 document.addEventListener("DOMContentLoaded", function() {
   var root = document.getElementById("content");
-  ReactDOM.render(<Router>
-    {routes}
-  </Router>, root);
+  ReactDOM.render(routes, root);
 });

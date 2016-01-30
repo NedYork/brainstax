@@ -3,6 +3,7 @@ var UserStore = require('../stores/user');
 var ApiUtil = require('../util/api_util');
 var SubjectList = require('./subjects/subject_list');
 var SubjectNav = require('./subjects/subjectnav');
+var Navbar = require('./nav/logged_in_nav');
 
 module.exports = React.createClass({
   getInitialState: function() {
@@ -30,10 +31,10 @@ module.exports = React.createClass({
     // console.log(this.props)
     // console.log("in render. id = " + this.props.params.id);
     // console.log("in render. user = ", this.state.user);
-
     if (!this.state.user) { return <div></div>; }
     return (
       <div>
+        <Navbar user={this.state.user}></Navbar>
         <SubjectNav subjects={this.state.user.subjects} />;
         {this.props.children}
       </div>
