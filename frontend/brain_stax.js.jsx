@@ -4,10 +4,8 @@ var ReactRouter = require('react-router');
 var Router = ReactRouter.Router;
 var Route = ReactRouter.Route;
 var IndexRoute = ReactRouter.IndexRoute;
-// var SubjectForm = require('./components/SubjectForm');
-// var SubjectList = require('./components/subject_list');
-// var Subject = require('./components/subject');
 var SubjectDetail = require('./components/subjects/subject_detail');
+var StudyShow = require('./study/study_show');
 
 var SubjectNav = require('./components/subjects/subjectnav');
 var UserShow = require('./components/user_show');
@@ -29,9 +27,13 @@ var routes = (
 
     <Route path='subjects' component={UserShow}>
       <Route path=':id' component={SubjectDetail}/>
+      <Route path='decks/:id' component={StudyShow}>
     </Route>
+
+
   </Route>
 );
+
 
 
 document.addEventListener("DOMContentLoaded", function() {
