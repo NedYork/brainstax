@@ -30,7 +30,7 @@ var addSubjects = function(newSubject) {
   });
 
   if (!replaced) {
-    _subjects.push(subject);
+    _subjects.push(newSubject);
   }
 
 };

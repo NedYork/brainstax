@@ -14,7 +14,7 @@ module.exports = React.createClass({
     ApiUtil.createSubject(this.state, function(id) {
       this.setState({ title: "" });
     }.bind(this));
-    
+
   },
   handleChange: function(e) {
     this.setState({ title: e.target.value });

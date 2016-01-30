@@ -34,16 +34,30 @@ module.exports = React.createClass({
   render: function() {
     if (!(this.state.subject && this.state.subject.decks)) { return <div></div>; }
     return (
-      <div className="subject-detail-main">
-        <Subject className="title" subject={this.state.subject} />
+      <div className="subject-detail-main group">
 
-        <div className="decklist">
+
+
+        <div className="subject-detail-main group">
+          <img src="https://brainscape-prod.s3.amazonaws.com/images/avatar_generic_square.png" />
+          <a href={"#/subjects/" + this.state.subject.id} className="title">
+            {this.state.subject.title}
+          </a>
+
+          <div className="progress-bar">
+            // nothing here yet
+          </div>
+
+        </div>
+
+
+        <div className="decklist group">
           <h5>DECKS</h5>
           <ul>
             {this.state.subject.decks.map(function(deck) {
               return (
                 <li key={deck.id} className="deck">
-                  <a href="">{deck.name}</a>
+                  <a href={"/#/subject/" + deck.id}>{deck.name}</a>
                 </li>
               );
             }.bind(this))}
