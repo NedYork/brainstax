@@ -23,7 +23,6 @@ var App = React.createClass({
 
     return (
       <div>
-        <header><h1>brainSTAX coming from App.jsx</h1></header>
         {this.props.children}
       </div>
     );

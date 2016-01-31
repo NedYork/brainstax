@@ -1,8 +1,12 @@
 var React = require('react');
+var History = require('react-router').History;
 var CurrentUserStore = require('../../stores/current_user_store');
 var SessionsApiUtil = require('../../util/sessions_api_util');
 
+
 var Navbar = React.createClass({
+  mixins: [History],
+
   handleSubmit: function (e) {
     e.preventDefault();
     SessionsApiUtil.logout(function () {

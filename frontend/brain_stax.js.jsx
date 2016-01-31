@@ -12,7 +12,7 @@ var SubjectNav = require('./components/subjects/subjectnav');
 var UserShow = require('./components/user_show');
 var App = require('./components/app');
 var CurrentUserStore = require('./stores/current_user_store');
-var HomePage = require('./components/homepage');
+var HomePage = require('./components/home_page/home_page');
 var SessionsApiUtil = require('./util/sessions_api_util');
 
 
@@ -26,7 +26,7 @@ function _ensureLoggedIn(nextState, replace, callback) {
 
   function _redirectIfNotLoggedIn() {
     if (!CurrentUserStore.isLoggedIn()) {
-      replace({}, "/login");
+      replace({}, "/home");
     }
     callback();
   }
@@ -35,15 +35,17 @@ function _ensureLoggedIn(nextState, replace, callback) {
 var routes = (
   <Router>
     <Route path='/' component={App}>
-      <IndexRoute component={ HomePage }/>
+      <IndexRoute component={ UserShow } onEnter={_ensureLoggedIn}/>
+      <Route path="home" component={ HomePage }/>
       <Route path="login" component={ SessionForm }/>
       <Route path="user/:id" component={ UserShow } onEnter={_ensureLoggedIn}/>
 
-      <Route path='subjects' component={UserShow}>
+      <Route path='subject' component={UserShow}>
         <Route path=':id' component={SubjectDetail}/>
-        <Route path='decks/:id' component={StudyShow}/>
       </Route>
-    </Route>
+
+      <Route path='deck/:id' component={StudyShow}/>
+      </Route>
   </Router>
 );
 

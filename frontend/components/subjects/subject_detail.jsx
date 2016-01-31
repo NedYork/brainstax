@@ -57,7 +57,7 @@ module.exports = React.createClass({
             {this.state.subject.decks.map(function(deck) {
               return (
                 <li key={deck.id} className="deck">
-                  <a href={"/#/subject/deck/" + deck.id}>{deck.name}</a>
+                  <a href={"/#/deck/" + deck.id}>{deck.name}</a>
                 </li>
               );
             }.bind(this))}

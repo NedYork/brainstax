@@ -25,21 +25,25 @@
    padding: 19px 20px;
  }
 
-.header-list {
-  /*width: 710px;*/
-  float: left;
-  margin-top: 10px;
-}
+.header-list { display: none; }
 
-.header-list > li {
-  display: block;
-  float: left;
-  padding: 20px;
-  margin: auto;
-}
+@media (min-width: 600px) {
+  .header-list {
+    display: block;
+    float: left;
+    margin-top: 10px;
+  }
 
-.header-list > li > a {
-  /*width: 70px;*/
+  .header-list > li {
+    display: block;
+    float: left;
+    padding: 20px;
+    margin: auto;
+  }
+
+  .header-list > li > a {
+    /*width: 70px;*/
+  }
 }
 
 .header-begin {

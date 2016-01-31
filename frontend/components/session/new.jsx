@@ -3,7 +3,7 @@ var History = require('react-router').History;
 var SessionsApiUtil = require('./../../util/sessions_api_util');
 var LinkedStateMixin = require('react-addons-linked-state-mixin');
 var Navbar = require('../nav/home_page_nav');
-
+var Footer = require('../footer/footer');
 var SessionForm = React.createClass({
   mixins: [History, LinkedStateMixin],
 
@@ -15,6 +15,14 @@ var SessionForm = React.createClass({
     e.preventDefault();
 
     SessionsApiUtil.login(this.state, function () {
+    this.history.pushState({}, "/user/:id");
+  }.bind(this));
+  },
+
+  loginDemoUser: function (e) {
+    e.preventDefault();
+    var demoUser = { username: "MathG33k", password: "123456" }
+    SessionsApiUtil.login(demoUser, function () {
     this.history.pushState({}, "/user/:id");
   }.bind(this));
   },
@@ -49,9 +57,10 @@ var SessionForm = React.createClass({
           </div>
 
 
-          <button>Log In!</button>
+          <button>Sign In</button>
+          <button onClick={this.loginDemoUser}>Sign In As Demo User </button>
         </form>
-
+        <Footer></Footer>
       </div>
     );
   },

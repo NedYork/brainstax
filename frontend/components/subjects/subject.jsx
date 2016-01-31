@@ -13,7 +13,7 @@ module.exports = React.createClass({
 
   render: function() {
     return (
-        <a href={"#/subjects/" + this.props.subject.id} className="subject-nav-topic group">
+        <a href={"#/subject/" + this.props.subject.id} className="subject-nav-topic group">
           <img src="https://brainscape-prod.s3.amazonaws.com/images/avatar_generic_square.png" />
           <h4>{this.props.subject.title}</h4>
 

@@ -18,12 +18,6 @@ class Api::SessionsController < ApplicationController
       params[:username],
       params[:password]
     )
-
-    # user = User.find_by_credentials(
-    #   params[:username],
-    #   params[:password]
-    # )
-
     if @user
       sign_in(@user)
       flash[:success] = "Welcome back!"
@@ -35,8 +29,6 @@ class Api::SessionsController < ApplicationController
 
   def destroy
     sign_out
-    flash[:success] = "Thank you, come again."
-    # redirect_to new_session_url
-    render "#"
+    render json: {}
   end
 end

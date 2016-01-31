@@ -1,5 +1,6 @@
 var React = require('react');
 var CurrentUserStore = require('../../stores/current_user_store');
+var LoginModal = require('../session/login_modal');
 
 var Navbar = React.createClass({
   render: function() {
@@ -22,8 +23,8 @@ var Navbar = React.createClass({
           </ul>
 
           <ul className="header-begin group">
-            <li><a href="/#/login">Login</a></li>
-            <li><a href="/user/new" className="get-started">Get Started</a></li>
+            <li><a href="/#/login" >Login</a></li>
+            <li><a href="//new" className="get-started">Get Started</a></li>
           </ul>
 
         </nav>
