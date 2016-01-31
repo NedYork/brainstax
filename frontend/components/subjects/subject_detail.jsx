@@ -1,7 +1,7 @@
 var React = require('react');
 var ApiUtil = require('../../util/api_util');
-var Subject = require('./subject');
-var SubjectNav = require('./subjectnav');
+var SubjectItem = require('./subject_item');
+var SubjectNav = require('./subject_nav');
 var SubjectList = require("./subject_list");
 var SubjectStore = require("../../stores/subject");
 
@@ -39,10 +39,11 @@ module.exports = React.createClass({
 
 
         <div className="subject-detail-main group">
-          <img src="https://brainscape-prod.s3.amazonaws.com/images/avatar_generic_square.png" />
+
           <a href={"#/subjects/" + this.state.subject.id} className="title">
             {this.state.subject.title}
           </a>
+          <img src="https://brainscape-prod.s3.amazonaws.com/images/avatar_generic_square.png" />
 
           <div className="progress-bar">
             // nothing here yet

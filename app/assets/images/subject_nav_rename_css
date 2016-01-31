@@ -1,0 +1,67 @@
+.subject-nav { display:none; }
+
+@media (min-width: 700px) {
+
+  .subject-nav {
+    margin: auto;
+    display: block;
+    float: left;
+    width: 20%;
+    min-width: 200px;
+    max-width: 250px;
+    border: 4px solid #ccc;
+    background: #eeeeee;
+  }
+
+  /* ADD BAR TO ACTIVATE SUBJECT FORM */
+
+  .subject-nav-add {
+  /*doesn't exist yet*/
+  }
+
+
+  /* TOTAL LIST OF SUBJECTS */
+
+  .subject-nav-list {
+
+  }
+
+
+  /* EACH INDIVIDUAL SUBJECT*/
+
+  .subject-nav-list li {
+    /*border: 2px solid #red;*/
+  }
+
+  .subject-nav-topic {
+    display: block;
+    /*not working for the border*/
+
+    margin-bottom: 10px;
+  }
+
+  .subject-nav-topic img {
+
+    float: left;
+    display: block;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .subject-nav-topic h4 {
+    float: left;
+  }
+
+  .progress-bar {
+    float: right;
+  }
+
+  /* SUBJECT FORM TO ADD NEW SUBJECT */
+
+  .subject-nav-form {
+
+    border: 1px solid black;
+  }
+
+}

@@ -1,5 +1,5 @@
 var React = require('react');
-var Subject = require('./subject');
+var SubjectItem = require('./subject_item');
 var SubjectStore = require('../../stores/subject');
 
 
@@ -30,7 +30,7 @@ module.exports = React.createClass({
             {this.state.subjects.map(function (subject) {
               return (
                 <li key={subject.id}>
-                  <Subject subject={subject}/>
+                  <SubjectItem subject={subject}/>
                 </li>
               );
             })}

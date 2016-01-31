@@ -1,22 +1,19 @@
 .subject-nav { display:none; }
 
-@media (min-width: 700px) {
+@media (min-width: 900px) {
 
   .subject-nav {
-    margin: auto;
     display: block;
     float: left;
-    width: 20%;
-    min-width: 200px;
-    max-width: 250px;
-    border: 4px solid #ccc;
-    background: #eeeeee;
+    width: 15%;
+    /*height: 80%;*/
+    border-right: 1px solid #ccc;
+    padding: 20px;
   }
 
   /* ADD BAR TO ACTIVATE SUBJECT FORM */
 
   .subject-nav-add {
-  /*doesn't exist yet*/
   }
 
 
@@ -30,38 +27,64 @@
   /* EACH INDIVIDUAL SUBJECT*/
 
   .subject-nav-list li {
-    border: 2px solid #red;
+    display: block;
+    height: 90px;
+    padding: 10px;
+    /*background: #3498db;*/
+    /*border: 1px solid red;*/
   }
 
   .subject-nav-topic {
     display: block;
-    /*not working for the border*/
-
-    margin-bottom: 10px;
   }
 
   .subject-nav-topic img {
-
     float: left;
-    display: block;
-    padding: 10px;
-    width: 50px;
     height: 50px;
+    width: 50px;
+    padding-right: 10px;
   }
 
   .subject-nav-topic h4 {
-    float: left;
+
   }
 
+
   .progress-bar {
-    float: right;
+    /*display: block;*/
   }
 
   /* SUBJECT FORM TO ADD NEW SUBJECT */
 
   .subject-nav-form {
+    background: #eee;
+    padding: 10px;
+    border-radius: 10px;
+    width: 80%;
+    font-size: 12px;
+    /*margin: auto;*/
+  }
 
-    border: 1px solid black;
+  .subject-nav-form > h1 {
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 14px;
+  }
+
+  .subject-nav-form button {
+    display: block;
+    padding: 5px 10px;
+    margin: 5px auto;
+    background: #2980b9;
+    border-radius: 5px;
+    color: white;
+  }
+
+  .subject-nav-form input {
+    /*background: white;*/
+    padding: 10px;
+    margin: auto;
+
   }
 
 }

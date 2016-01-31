@@ -8,7 +8,7 @@ var IndexRoute = ReactRouter.IndexRoute;
 var SubjectDetail = require('./components/subjects/subject_detail');
 var StudyShow = require('./components/study/study_show');
 var SessionForm = require('./components/session/new');
-var SubjectNav = require('./components/subjects/subjectnav');
+var SubjectNav = require('./components/subjects/subject_nav');
 var UserShow = require('./components/user_show');
 var App = require('./components/app');
 var CurrentUserStore = require('./stores/current_user_store');
@@ -34,17 +34,17 @@ function _ensureLoggedIn(nextState, replace, callback) {
 
 var routes = (
   <Router>
-    <Route path='/' component={App}>
-      <IndexRoute component={ UserShow } onEnter={_ensureLoggedIn}/>
+    <Route path='/' component={ App }>
+      <IndexRoute component={ UserShow } onEnter={ _ensureLoggedIn }/>
       <Route path="home" component={ HomePage }/>
       <Route path="login" component={ SessionForm }/>
-      <Route path="user/:id" component={ UserShow } onEnter={_ensureLoggedIn}/>
+      <Route path="user/:id" component={ UserShow } onEnter={ _ensureLoggedIn }/>
 
-      <Route path='subject' component={UserShow}>
-        <Route path=':id' component={SubjectDetail}/>
+      <Route path='subject' component={ UserShow }>
+        <Route path=':id' component={ SubjectDetail }/>
       </Route>
 
-      <Route path='deck/:id' component={StudyShow}/>
+      <Route path='deck/:id' component={ StudyShow }/>
       </Route>
   </Router>
 );

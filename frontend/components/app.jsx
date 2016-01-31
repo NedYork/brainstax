@@ -1,5 +1,4 @@
 var React = require('react'),
-    Header = require("./header"),
     SessionsApiUtil = require('./../util/sessions_api_util'),
     CurrentUserStore = require("./../stores/current_user_store");
 
@@ -26,7 +25,7 @@ var App = React.createClass({
         {this.props.children}
       </div>
     );
-  },
+  }
 
 });
 

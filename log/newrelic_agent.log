@@ -398,3 +398,21 @@
 [01/30/16 11:42:22 -0500 Users-MacBook-Pro.local (89752)] INFO : Doing deferred dependency-detection before Rack startup
 [01/30/16 11:42:25 -0500 Users-MacBook-Pro.local (89752)] ERROR : Invalid license key, please contact support@newrelic.com
 [01/30/16 11:42:25 -0500 Users-MacBook-Pro.local (89752)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[01/30/16 23:24:16 -0500 Users-MacBook-Pro.local (98844)] INFO : Starting the New Relic agent in "development" environment.
+[01/30/16 23:24:16 -0500 Users-MacBook-Pro.local (98844)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[01/30/16 23:24:16 -0500 Users-MacBook-Pro.local (98844)] WARN : No configuration file found. Working directory = /Users/user/Desktop/brainstax-master
+[01/30/16 23:24:16 -0500 Users-MacBook-Pro.local (98844)] WARN : Looked in these locations (based on defaults): /Users/user/Desktop/brainstax-master/config/newrelic.yml, /Users/user/Desktop/brainstax-master/newrelic.yml, /Users/user/Desktop/brainstax-master/config/newrelic.yml, /Users/user/Desktop/brainstax-master/newrelic.yml, /Users/user/.newrelic/newrelic.yml, /Users/user/newrelic.yml
+[01/30/16 23:24:16 -0500 Users-MacBook-Pro.local (98844)] INFO : Environment: development
+[01/30/16 23:24:16 -0500 Users-MacBook-Pro.local (98844)] INFO : No known dispatcher detected.
+[01/30/16 23:24:16 -0500 Users-MacBook-Pro.local (98844)] INFO : Application: development
+[01/30/16 23:24:16 -0500 Users-MacBook-Pro.local (98844)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'.
+[01/30/16 23:24:16 -0500 Users-MacBook-Pro.local (98844)] INFO : Installing ActiveJob instrumentation
+[01/30/16 23:24:16 -0500 Users-MacBook-Pro.local (98844)] INFO : Installing ActiveRecord 4 instrumentation
+[01/30/16 23:24:16 -0500 Users-MacBook-Pro.local (98844)] INFO : Installing Net instrumentation
+[01/30/16 23:24:16 -0500 Users-MacBook-Pro.local (98844)] INFO : Installing deferred Rack instrumentation
+[01/30/16 23:24:16 -0500 Users-MacBook-Pro.local (98844)] INFO : Installing Rack::Builder middleware instrumentation
+[01/30/16 23:24:16 -0500 Users-MacBook-Pro.local (98844)] INFO : Installing Rails 3+ middleware instrumentation
+[01/30/16 23:24:16 -0500 Users-MacBook-Pro.local (98844)] INFO : Installing Rails 4 Controller instrumentation
+[01/30/16 23:24:17 -0500 Users-MacBook-Pro.local (98844)] INFO : Installing Rails 4 view instrumentation
+[01/30/16 23:24:17 -0500 Users-MacBook-Pro.local (98844)] INFO : Installing Rails 4 Error instrumentation
+[01/30/16 23:24:17 -0500 Users-MacBook-Pro.local (98844)] INFO : Finished instrumentation
