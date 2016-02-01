@@ -46,7 +46,7 @@ module.exports = React.createClass({
           <img src="https://brainscape-prod.s3.amazonaws.com/images/avatar_generic_square.png" />
 
           <div className="progress-bar">
-            // nothing here yet
+            
           </div>
 
         </div>

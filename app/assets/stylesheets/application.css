@@ -41,6 +41,11 @@
    line-height: 1.1666666666;
    background: #eee;
    color: #000;
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
  }
 
  ul {
@@ -59,8 +64,4 @@
    content: "";
    clear: both;
    display: block;
- }
-
- .main {
-   background: white;
  }

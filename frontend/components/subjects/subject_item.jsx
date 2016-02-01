@@ -19,7 +19,7 @@ module.exports = React.createClass({
 
 
           <div className="progress-bar">
-            // nothing here yet
+            
           </div>
         </a>
     );

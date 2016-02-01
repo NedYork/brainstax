@@ -18,8 +18,21 @@ class User < ActiveRecord::Base
     primary_key: :id
   )
 
-  # has_many :links
-  # has_many :decks
+  has_many :decks
+
+  has_many(
+    :ratings,
+    class_name: "UserCardRating",
+    foreign_key: :user_id,
+    id: id
+  )
+
+  has_many(
+    :cards,
+    through: :ratings,
+    source: :card
+  )
+
 
   after_initialize :ensure_session_token
 

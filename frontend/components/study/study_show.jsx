@@ -5,7 +5,7 @@ var StudyShowMain = require('./study_show_main');
 module.exports = React.createClass({
   render: function() {
     return(
-      <div className="study">
+      <div className="study group">
         <StudyShowNav />
         <StudyShowMain />
         {this.props.children}
