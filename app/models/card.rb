@@ -4,8 +4,8 @@ class Card < ActiveRecord::Base
   has_many(
     :ratings,
     class_name: "UserCardRating",
-    foreign_key: card_id,
-    id: id
+    foreign_key: :card_id,
+    primary_key: :id
   )
 
   has_many(

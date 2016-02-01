@@ -2,6 +2,18 @@ var UserActions = require('../actions/user');
 var ApiActions = require('../actions/api_actions');
 
 var ApiUtil = {
+  updateEf: function(rating, cardId) {
+    $.ajax({
+      url: "/api/usercardratings",
+      dataType: "json",
+      data: { rating: rating, cardId: cardId },
+      type: "PATCH",
+      success: function(data) {
+        console.log(data);
+      }
+    });
+
+  },
   createSubject: function(subject, callback) {
     $.ajax({
       url: "api/subjects",

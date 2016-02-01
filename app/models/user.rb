@@ -24,7 +24,7 @@ class User < ActiveRecord::Base
     :ratings,
     class_name: "UserCardRating",
     foreign_key: :user_id,
-    id: id
+    primary_key: :id
   )
 
   has_many(
