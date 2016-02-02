@@ -3,13 +3,16 @@
   height: 100%;*/
 }
 /*enclosing container for left panel*/
-.study-show-nav {
-  /*float: left;*/
+.study-show-nav { display:none; }
 
-  position: absolute;
-  top: 0;
-  bottom: 0;
+@media (min-width: 500px) {
+  .study-show-nav {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
 
+  }
 }
 
 /*LEFT SIDE*/
