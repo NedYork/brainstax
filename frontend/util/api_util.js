@@ -6,7 +6,7 @@ var ApiUtil = {
     $.ajax({
       url: "/api/usercardratings",
       dataType: "json",
-      data: { rating: rating, cardId: cardId },
+      data: { rating: rating, card_id: cardId },
       type: "PATCH",
       success: function(data) {
         console.log(data);
@@ -15,13 +15,13 @@ var ApiUtil = {
   },
   // fix this ajax request
   // by doing the json jbuilder
-  fetchCards: function(deck_id) {
+  fetchCards: function(deckId) {
     $.ajax({
       url: "/api/decks/" + deckId,
       dataType: "json",
       type: "GET",
-      success: function(cards) {
-        ApiActions.retrieveCards(cards);
+      success: function(deck) {
+        ApiActions.retrieveCards(deck.cards);
       }
     });
   },

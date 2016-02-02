@@ -1,6 +1,6 @@
 var AppDispatcher = require('../dispatcher/dispatcher');
 var SubjectConstants = require('../constants/subject_constants');
-var CardConstants = require('../contsants/card_constants');
+var CardConstants = require('../constants/card_constants');
 
 var ApiActions = {
   retrieveCards: function(cards) {

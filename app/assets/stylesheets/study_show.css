@@ -116,3 +116,9 @@
   margin: 5% auto auto 10%;
   border-radius: 10px;
 }
+
+.rating li {
+  float: left;
+  padding 20%;
+
+}

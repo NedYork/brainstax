@@ -1,0 +1,15 @@
+defaults: &defaults
+  FACEBOOK_KEY: "786480081479872"
+  FACEBOOK_SECRET: "118667e587dc27a7f2e67b54fb9a5b05"
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+  email: test@example.com
+
+production:
+  <<: *defaults
+  email: info@example.com
+  secret: 321oof

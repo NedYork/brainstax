@@ -9,6 +9,8 @@ gem 'jquery-rails'
 gem 'pg'
 gem 'jbuilder', '~> 2.0'
 gem 'uglifier'
+gem 'omniauth-facebook'
+gem 'figaro'
 
 group :development do
   gem 'pry-rails'
