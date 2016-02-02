@@ -12,8 +12,20 @@ var ApiUtil = {
         console.log(data);
       }
     });
-
   },
+  // fix this ajax request
+  // by doing the json jbuilder
+  fetchCards: function(deck_id) {
+    $.ajax({
+      url: "/api/decks/" + deckId,
+      dataType: "json",
+      type: "GET",
+      success: function(cards) {
+        ApiActions.retrieveCards(cards);
+      }
+    });
+  },
+
   createSubject: function(subject, callback) {
     $.ajax({
       url: "api/subjects",

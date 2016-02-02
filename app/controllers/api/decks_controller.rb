@@ -14,6 +14,10 @@ class Api::DecksController < ApplicationController
     @deck = Deck.new
   end
 
+  def show
+    @deck = Deck.find(params[:id])
+  end
+
   def destroy
     deck = Deck.find(params[:id])
     deck.destroy

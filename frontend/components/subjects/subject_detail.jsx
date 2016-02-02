@@ -2,8 +2,8 @@ var React = require('react');
 var ApiUtil = require('../../util/api_util');
 var SubjectItem = require('./subject_item');
 var SubjectNav = require('./subject_nav');
-var SubjectList = require("./subject_list");
-var SubjectStore = require("../../stores/subject");
+var SubjectList = require('./subject_list');
+var SubjectStore = require('../../stores/subject_store');
 
 module.exports = React.createClass({
   getStateFromStore: function() {
@@ -46,7 +46,7 @@ module.exports = React.createClass({
           <img src="https://brainscape-prod.s3.amazonaws.com/images/avatar_generic_square.png" />
 
           <div className="progress-bar">
-            
+
           </div>
 
         </div>

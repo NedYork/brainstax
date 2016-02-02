@@ -1,6 +1,5 @@
 class Api::UserCardRatingsController < ApplicationController
   def update
-    debugger;
     user_id = current_user.id
     card_id = params[:cardId]
     rating = params[:rating]

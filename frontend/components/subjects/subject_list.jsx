@@ -1,6 +1,6 @@
 var React = require('react');
 var SubjectItem = require('./subject_item');
-var SubjectStore = require('../../stores/subject');
+var SubjectStore = require('../../stores/subject_store');
 
 
 module.exports = React.createClass({
