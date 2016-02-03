@@ -7,7 +7,7 @@ module.exports = React.createClass({
   mixins: [LinkedStateMixin],
 
   getInitialState: function() {
-    return { front: "", back: "", deck_id: this.props.deckId };
+    return { front: "", back: "", cardFile: null, deck_id: this.props.deckId };
   },
 
   handleSubmit: function(e) {
@@ -20,6 +20,31 @@ module.exports = React.createClass({
 
   handleChange: function(e) {
     this.setState({ title: e.target.value });
+  },
+
+  handleUpload: function(e) {
+    e.preventDefault();
+    var formData = new FormData();
+
+    formData.append("cards[file]", this.state.cardFile);
+    formData.append("deck_id", this.state.deck_id);
+
+    ApiUtil.massCreateCards(formData);
+  },
+
+  changeFile: function(e) {
+    var reader = new FileReader();
+    var file = e.currentTarget.files[0];
+
+    reader.onloadend = function() {
+      this.setState({ cardFile: file });
+    }.bind(this);
+
+    if (file) {
+      reader.readAsDataURL(file);
+    } else {
+      this.setState({ cardFile: null });
+    }
   },
 
   render: function() {
@@ -36,6 +61,19 @@ module.exports = React.createClass({
           </label>
 
           <button>Save</button>
+
+        </form>
+        <hr></hr>
+
+        <form onSubmit={this.handleUpload}>
+          <label>
+            <h1>Upload cards</h1>
+          </label>
+
+          <input type="file" onChange={this.changeFile} />
+
+
+          <button>Submit</button>
         </form>
       </div>
     );

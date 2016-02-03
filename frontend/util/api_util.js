@@ -2,6 +2,20 @@ var UserActions = require('../actions/user');
 var ApiActions = require('../actions/api_actions');
 
 var ApiUtil = {
+  massCreateCards: function(formData) {
+    $.ajax({
+      url: "/api/cards/mass_create",
+      type: "POST",
+      processData: false,
+      contentType: false,
+      dataType: "json",
+      data: formData,
+      success: function(data) {
+        // update CardStore from after the ajax request
+        console.log("upload success");
+      }
+    });
+  },
   createCard: function(card, callback) {
     $.ajax({
       url: "/api/cards",

@@ -11,7 +11,7 @@ Links::Application.routes.draw do
     resources :decks, only: [:create, :destroy, :new, :index, :show]
     resources :cards, only: [:create, :destroy, :new] do
       collection do
-        get 'mass_create'
+        post 'mass_create', to: "cards#mass_create"
       end
     end
     patch '/usercardratings', to: 'user_card_ratings#update'

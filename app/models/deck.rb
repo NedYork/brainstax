@@ -20,13 +20,10 @@ class Deck < ActiveRecord::Base
   has_many :cards
 
   def create_cards_from_file(file)
-    CSV.read(file).map do |entry|
+    CSV.read(file.tempfile).map do |entry|
       self.cards.create!(front: entry.first, back: entry.last)
     end
   end
-
-
-
 
   # has_attached_file :cardlist
   # # validates_attachment_content_type :csv, content_type: /\Aimage\/.*\Z/
