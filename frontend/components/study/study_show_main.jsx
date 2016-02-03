@@ -18,6 +18,7 @@ module.exports = React.createClass({
   },
 
   handleUpdate: function() {
+    // ApiUtil.fetchCards(this.props.deckId);
     this.setState({ currentCard: CardStore.currentCard(), front: true });
   },
 
@@ -89,7 +90,6 @@ module.exports = React.createClass({
 
       );
     }
-
 
     return(
       <div className="study-show-main group">

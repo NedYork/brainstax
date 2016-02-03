@@ -1,4 +1,5 @@
 var React = require('react');
+var CardForm = require('../card/card_form.jsx');
 
 module.exports = React.createClass({
   render: function() {
@@ -18,8 +19,9 @@ module.exports = React.createClass({
         <div className="progress-panel group">
 
           <div className="mastery-header">
-            Studying:
+            Now Studying ...
           </div>
+          <CardForm deckId={this.props.deckId} />
 
           <a href="">Done</a>
 

@@ -3,6 +3,12 @@ var SubjectConstants = require('../constants/subject_constants');
 var CardConstants = require('../constants/card_constants');
 
 var ApiActions = {
+  addCard: function(card) {
+    AppDispatcher.dispatch({
+      actionType: CardConstants.ADD_CARD,
+      card: card
+    });
+  },
   retrieveCards: function(cards) {
     AppDispatcher.dispatch({
       actionType: CardConstants.CARDS_RECEIVED,

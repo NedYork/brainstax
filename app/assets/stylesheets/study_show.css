@@ -160,3 +160,36 @@
 .ratebar a:hover {
   color: #ccc;
 }
+
+
+/*add Card form*/
+.add-card-form {
+  background: #eee;
+  padding: 10px;
+  border-radius: 10px;
+  width: 80%;
+  font-size: 12px;
+  margin: auto;
+}
+
+.add-card-form > h1 {
+  margin-left: 10%;
+  margin-right: 10%;
+  font-size: 14px;
+}
+
+.add-card-form button {
+  display: block;
+  padding: 5px 10px;
+  margin: 5px auto;
+  background: #2980b9;
+  border-radius: 5px;
+  color: white;
+}
+
+.add-card-form input {
+  /*background: white;*/
+  padding: 10px;
+  margin: auto;
+
+}

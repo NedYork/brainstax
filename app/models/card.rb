@@ -14,4 +14,5 @@ class Card < ActiveRecord::Base
     source: :user
   )
 
+
 end

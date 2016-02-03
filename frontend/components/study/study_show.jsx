@@ -13,7 +13,7 @@ module.exports = React.createClass({
   render: function() {
     return(
       <div className="study group" onClick={ this.toggleState }>
-        <StudyShowNav />
+        <StudyShowNav deckId={this.props.params.id} />
         <StudyShowMain deckId={this.props.params.id} />
         {this.props.children}
       </div>

@@ -2,6 +2,18 @@ var UserActions = require('../actions/user');
 var ApiActions = require('../actions/api_actions');
 
 var ApiUtil = {
+  createCard: function(card, callback) {
+    $.ajax({
+      url: "/api/cards",
+      dataType: "json",
+      data: { card: card },
+      type: "POST",
+      success: function(data) {
+        ApiActions.addCard(data);
+        callback && callback();
+      }
+    });
+  },
   updateEf: function(rating, card_id) {
     $.ajax({
       url: "/api/usercardratings",
@@ -21,6 +33,7 @@ var ApiUtil = {
       dataType: "json",
       type: "GET",
       success: function(deck) {
+        console.log("retreived cards!")
         ApiActions.retrieveCards(deck.cards);
       }
     });

@@ -21,7 +21,7 @@ var SessionForm = React.createClass({
 
   loginDemoUser: function (e) {
     e.preventDefault();
-    var demoUser = { username: "MathG33k", password: "123456" }
+    var demoUser = { username: "JSAddict", password: "123456" };
     SessionsApiUtil.login(demoUser, function () {
     this.history.pushState({}, "/user/:id");
   }.bind(this));

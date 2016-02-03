@@ -13,6 +13,10 @@ var resetCards = function(cards) {
   _cards = cards;
 };
 
+var addCard = function(card) {
+  _cards.push(card);
+};
+
 var updateEf = function(fam) {
   var ff;
   if (fam <= 1) {
@@ -37,14 +41,19 @@ CardStore.rate = function(rating) {
 CardStore.next = function() {
   var currentStack = CardStore.all();
   var first = currentStack.shift();
-  var index = first.ef_value * 3;
-  if (index > currentStack.length - 1) {
-    currentStack.push(first);
+  if (first.ef_value >= 5) {
+    console.log("should be popped")
   } else {
-    currentStack.splice(index, 0, first);
+    var index = first.ef_value * 3;
+    if (index > currentStack.length - 1) {
+      currentStack.push(first);
+    } else {
+      currentStack.splice(index, 0, first);
+    }
   }
   resetCards(currentStack);
 };
+
 
 CardStore.currentCard = function() {
   return CardStore.all()[0];
@@ -56,18 +65,21 @@ CardStore.find = function(id) {
   });
 };
 
+CardStore.removeCard = function() {
+  CardStore.all.shift();
+};
+
 CardStore.__onDispatch = function(payload) {
   switch(payload.actionType) {
     case CardConstants.CARDS_RECEIVED:
-    // calls a SubjectStore action which takes the payload
-
     resetCards(payload.cards);
     CardStore.__emitChange();
     break;
-
     case CardConstants.UPDATE_CARD_EF:
-
-
+    CardStore.__emitChange();
+    break;
+    case CardConstants.ADD_CARD:
+    addCard(payload.card);
     CardStore.__emitChange();
     break;
   }

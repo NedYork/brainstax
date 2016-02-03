@@ -11,6 +11,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'uglifier'
 gem 'omniauth-facebook'
 gem 'figaro'
+gem 'paperclip'
+gem 'aws-sdk', '~> 1.6'
 
 group :development do
   gem 'pry-rails'

@@ -22,6 +22,7 @@ var SessionsApiUtil = {
       type: "DELETE",
       url: "api/session",
       success: function () {
+        CurrentUserActions.logout();
         callback && callback();
       },
       error: function(error) {

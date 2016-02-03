@@ -39,7 +39,7 @@ var Navbar = React.createClass({
 
 
               <button onClick={ this.handleSubmit }>
-                LogOut
+                Log Out
                 <i className="fa fa-caret-down"></i>
               </button>
 
