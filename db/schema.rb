@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160201214658) do
+ActiveRecord::Schema.define(version: 20160203005615) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,11 +49,11 @@ ActiveRecord::Schema.define(version: 20160201214658) do
   add_index "subjects", ["title"], name: "index_subjects_on_title", using: :btree
 
   create_table "user_card_ratings", force: :cascade do |t|
-    t.integer  "user_id",                null: false
-    t.integer  "card_id",                null: false
-    t.integer  "ef",         default: 1, null: false
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.integer  "user_id",                  null: false
+    t.integer  "card_id",                  null: false
+    t.float    "ef",         default: 1.0, null: false
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
   create_table "users", force: :cascade do |t|

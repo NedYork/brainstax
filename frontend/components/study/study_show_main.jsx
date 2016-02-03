@@ -4,17 +4,13 @@ var CardStore = require('../../stores/card_store');
 
 module.exports = React.createClass({
   // taken from subject store.
-  resetToInitialState: function() {
-    this.setState({ currentCard: CardStore.currentCard(), front: true });
-  },
-
   getInitialState: function() {
     return { currentCard: CardStore.currentCard(), front: true };
   },
 
   componentWillMount: function() {
     this.StoreListener = CardStore.addListener(this.handleUpdate);
-    ApiUtil.fetchCards(69);
+    ApiUtil.fetchCards(this.props.deckId);
   },
 
   componentWillUnmount: function() {
@@ -22,23 +18,19 @@ module.exports = React.createClass({
   },
 
   handleUpdate: function() {
-    this.setState({ currentCard: CardStore.currentCard() });
+    this.setState({ currentCard: CardStore.currentCard(), front: true });
   },
 
   flip: function() {
-    this.setState( {front: !this.state.front });
+    this.setState({front: !this.state.front });
   },
 
-  // dbRegister: function(rating) {
-  //   ApiUtil.updateEf(rating, this.state.current_card);
-  // },
-
   rateCard: function(rating) {
-    CardStore.rate(rating);
+    var efVal = CardStore.rate(rating);
     // Update EF Value in Database
-    ApiUtil.updateEf(rating, CardStore.currentCard().id);
+    ApiUtil.updateEf(efVal, CardStore.currentCard().id);
     CardStore.next();
-    this.resetToInitialState();
+    this.handleUpdate();
   },
 
   render: function() {
@@ -46,59 +38,73 @@ module.exports = React.createClass({
     var side = "";
     if (this.state.currentCard) {
       if (this.state.front) {
-        side = "Front";
+        side = "Q.";
         cardText = this.state.currentCard.front;
       } else {
-        side = "Back";
+        side = "A.";
         cardText = this.state.currentCard.back;
       }
     }
 
     var rating;
     if (!this.state.front) {
-      rating = (<ul>
-        <li>
-          <button className="rating group" onClick={this.rateCard.bind(this, 1)}>
-            1
-          </button>
-        </li>
-        <li>
-          <button className="rating group" onClick={this.rateCard.bind(this, 2)}>
-            2
-          </button>
-        </li>
-        <li>
-          <button className="rating group" onClick={this.rateCard.bind(this, 3)}>
-            3
-          </button>
-        </li>
-        <li>
-          <button className="rating group" onClick={this.rateCard.bind(this, 4)}>
-            4
-          </button>
-        </li>
-        <li>
-          <button className="rating group" onClick={this.rateCard.bind(this, 5)}>
-            5
-          </button>
-        </li>
-      </ul>);
+      ratingbar = (
+        <div className="ratebar">
+          <ul>
+            <li>
+              <a onClick={this.rateCard.bind(this, 1)}>
+                1
+              </a>
+            </li>
+            <li>
+              <a onClick={this.rateCard.bind(this, 2)}>
+                2
+              </a>
+            </li>
+            <li>
+              <a onClick={this.rateCard.bind(this, 3)}>
+                3
+              </a>
+            </li>
+            <li>
+              <a onClick={this.rateCard.bind(this, 4)}>
+                4
+              </a>
+            </li>
+            <li>
+              <a onClick={this.rateCard.bind(this, 5)}>
+                5
+              </a>
+            </li>
+          </ul>
+        </div>
+        );
     } else {
-      rating = (<button className="rating group" onClick={this.flip}>
-      Reveal Answer
-      </button>);
+      ratingbar = (
+        <div className="reveal">
+          <button>
+            Reveal Answer
+          </button>
+        </div>
+
+      );
     }
 
 
     return(
       <div className="study-show-main group">
-        <h3>{side}</h3>
+
 
         <div className="flashcard group" onClick={this.flip}>
-          {cardText}
+          <h4>{side}</h4>
+          <h3>{cardText}</h3>
         </div>
 
-        {rating}
+
+        <div className="rating-container group" onClick={this.flip}>
+          {ratingbar}
+        </div>
+
       </div>
     );
   }

@@ -2,11 +2,11 @@ var UserActions = require('../actions/user');
 var ApiActions = require('../actions/api_actions');
 
 var ApiUtil = {
-  updateEf: function(rating, cardId) {
+  updateEf: function(rating, card_id) {
     $.ajax({
       url: "/api/usercardratings",
       dataType: "json",
-      data: { rating: rating, card_id: cardId },
+      data: { rating: rating, card_id: card_id },
       type: "PATCH",
       success: function(data) {
         console.log(data);
@@ -15,9 +15,9 @@ var ApiUtil = {
   },
   // fix this ajax request
   // by doing the json jbuilder
-  fetchCards: function(deckId) {
+  fetchCards: function(deck_id) {
     $.ajax({
-      url: "/api/decks/" + deckId,
+      url: "/api/decks/" + deck_id,
       dataType: "json",
       type: "GET",
       success: function(deck) {

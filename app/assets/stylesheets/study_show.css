@@ -106,19 +106,57 @@
   border-radius: 10px;
 }
 
-.rating {
-  /*margin-left: 10%;*/
+.flashcard h4 {
+  color: #ccc;
+  font-weight: lighter;
+  font-size: 12px;
+  margin: 5px;
+}
+
+.flashcard h3 {
+  font-weight: bold;
+  font-size: 18px;
+  color: #292929;
+  text-align: center;
+  margin-top: 20%;
+}
+
+.reveal {
+  color: white;
   float: left;
-  margin: auto;
-  background: red;
+  padding-top: 20px;
+  background: #0b8ff2;
   height: 40px;
   width: 60%;
   margin: 5% auto auto 10%;
+  text-align: center;
   border-radius: 10px;
 }
 
-.rating li {
+.ratebar {
+  color: white;
   float: left;
-  padding 20%;
+  padding-top: 20px;
+  background: #0b8ff2;
+  height: 40px;
+  width: 60%;
+  margin: 5% auto auto 10%;
+  text-align: center;
+  border-radius: 10px;
+}
 
+.ratebar ul {
+  padding-left: 70px;
+}
+
+.ratebar a {
+  float: left;
+  display: block;
+  padding-left: 8%;
+  padding-right: 8%;
+  color: white;
+}
+
+.ratebar a:hover {
+  color: #ccc;
 }

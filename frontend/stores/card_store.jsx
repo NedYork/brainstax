@@ -30,7 +30,8 @@ var updateEf = function(fam) {
 };
 
 CardStore.rate = function(rating) {
-  CardStore.currentCard.ef_value *= updateEf(rating);
+  CardStore.currentCard().ef_value *= updateEf(rating);
+  return CardStore.currentCard().ef_value;
 };
 
 CardStore.next = function() {
