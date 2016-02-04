@@ -30,6 +30,7 @@ module.exports = React.createClass({
     formData.append("deck_id", this.state.deck_id);
 
     ApiUtil.massCreateCards(formData);
+    ApiUtil.fetchCards(this.props.deckId);
   },
 
   changeFile: function(e) {

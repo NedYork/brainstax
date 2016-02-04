@@ -2,6 +2,19 @@ var UserActions = require('../actions/user');
 var ApiActions = require('../actions/api_actions');
 
 var ApiUtil = {
+  addDeck: function(deck, subjectId, callback) {
+    $.ajax({
+      url: "/api/decks",
+      type: "POST",
+      dataType: "json",
+      data: { deck: deck, subjectId: subjectId},
+      success: function(deck) {
+        ApiAction.addDeck();
+        callback && callback();
+      }
+    });
+  },
+
   massCreateCards: function(formData) {
     $.ajax({
       url: "/api/cards/mass_create",

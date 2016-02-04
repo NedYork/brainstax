@@ -6,7 +6,7 @@ class Api::DecksController < ApplicationController
       redirect_to subject_url(@deck.subject_id)
     else
       flash.now[:errors] = @deck.errors.full_messages
-      render :new
+      
     end
   end
 

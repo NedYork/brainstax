@@ -4,6 +4,7 @@ var SubjectItem = require('./subject_item');
 var SubjectNav = require('./subject_nav');
 var SubjectList = require('./subject_list');
 var SubjectStore = require('../../stores/subject_store');
+var DeckForm = require('../deck/deck_form');
 
 module.exports = React.createClass({
   getStateFromStore: function() {
@@ -66,7 +67,7 @@ module.exports = React.createClass({
         </div>
 
         {this.props.children}
-
+        <DeckForm></DeckForm>
       </div>
     );
   }
