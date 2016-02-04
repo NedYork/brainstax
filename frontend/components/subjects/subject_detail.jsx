@@ -32,6 +32,10 @@ module.exports = React.createClass({
     this.subjectListener.remove();
   },
 
+  deleteDeck: function(deck) {
+    ApiUtil.deleteDeck(deck);
+  },
+
   render: function() {
     if (!(this.state.subject && this.state.subject.decks)) { return <div></div>; }
     return (
@@ -60,6 +64,7 @@ module.exports = React.createClass({
               return (
                 <li key={deck.id} className="deck">
                   <a href={"/#/deck/" + deck.id}>{deck.name}</a>
+                  <button onClick={this.deleteDeck.bind(this, deck)}>Delete</button>
                 </li>
               );
             }.bind(this))}

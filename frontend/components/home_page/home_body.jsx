@@ -10,7 +10,9 @@ module.exports = React.createClass({
           <h2>Find, create, and share adaptive flashcards on any device</h2>
         </div>
 
-        <a>Get Started</a>
+        <div className="get-started">
+          <a>Get Started</a>
+        </div>
 
       </div>
     );

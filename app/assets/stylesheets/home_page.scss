@@ -1,0 +1,45 @@
+.background {
+  background: image-url("background.jpeg") no-repeat;
+  background-size: cover;
+  background-position: 25% 75%;
+  height: 900px;
+}
+
+.welcome {
+  width: 300px;
+  position: relative;
+  top: 30%;
+  left: 60%;
+}
+
+.welcome hr {
+
+  width: 85%;
+}
+
+.welcome h1 {
+  color: #6ea6a4;
+  font-size: 45px;
+}
+
+.welcome h2 {
+  margin: auto;
+  width: 200px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.get-started {
+  position: relative;
+  left: 60%;
+  top: 33%;
+}
+
+.get-started a {
+  color: #ebebeb;
+  font-size: 30px;
+  padding: 10px 70px;
+  background: #3ca0e7;
+  border-radius: 5px;
+  width: 300px;
+}

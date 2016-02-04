@@ -17,7 +17,7 @@ var LoginModal = React.createClass({
   toggleModal: function() {
     this.setState({ modalIsOpen: !this.state.modalIsOpen });
   },
-  
+
   handleSubmit: function (e) {
     e.preventDefault();
 

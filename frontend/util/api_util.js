@@ -2,6 +2,16 @@ var UserActions = require('../actions/user');
 var ApiActions = require('../actions/api_actions');
 
 var ApiUtil = {
+  deleteDeck: function(deck) {
+    $.ajax({
+      url: "/api/decks/" + deck.id,
+      type: "DELETE",
+      success: function(data) {
+        ApiActions.removeDeck(data, data.subject_id);
+      }
+    });
+  },
+
   addDeck: function(deck, subjectId, callback) {
     $.ajax({
       url: "/api/decks",
@@ -10,7 +20,7 @@ var ApiUtil = {
       data: { deck: deck, subject_id: subjectId },
       success: function(deck) {
         // something like this below. fix this
-        ApiAction.addDeck(deck);
+        ApiActions.addDeck(deck, subjectId);
         callback && callback();
       }
     });

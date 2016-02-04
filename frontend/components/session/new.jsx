@@ -31,35 +31,37 @@ var SessionForm = React.createClass({
   render: function() {
 
     return (
-      <div>
+      <div className="log-in-main">
         <Navbar></Navbar>
-        <form onSubmit={ this.handleSubmit }>
+        <div className="login-box">
+          <form onSubmit={ this.handleSubmit }>
+            <h1>Login</h1>
+            <hr></hr>
+            
+            <div>
+              <label>Username</label>
+                <input
+                  valueLink={this.linkState('username')}
+                  type="text"
+                  name="username"
+                  placeholder="Username" />
+            </div>
 
-          <h1>Login</h1>
-
-          <div>
-            <label>Username</label>
-              <input
-                valueLink={this.linkState('username')}
-                type="text"
-                name="username"
-                placeholder="Username" />
-          </div>
+            <div>
+              <label>Password</label>
+                <input
+                  valueLink={this.linkState('password')}
+                  type="password"
+                  name="password"
+                  placeholder="******" />
+            </div>
 
 
-          <div>
-            <label>Password</label>
-              <input
-                valueLink={this.linkState('password')}
-                type="password"
-                name="password"
-                placeholder="******" />
-          </div>
+            <button>Sign In</button>
+            <button onClick={this.loginDemoUser}>Sign In As Demo User </button>
+          </form>
+        </div>
 
-
-          <button>Sign In</button>
-          <button onClick={this.loginDemoUser}>Sign In As Demo User </button>
-        </form>
         <Footer></Footer>
       </div>
     );

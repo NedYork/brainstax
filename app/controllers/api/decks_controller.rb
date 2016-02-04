@@ -8,7 +8,8 @@ class Api::DecksController < ApplicationController
       render :show
     else
       flash.now[:errors] = @deck.errors.full_messages
-
+      debugger
+      render :show
     end
   end
 
@@ -21,8 +22,9 @@ class Api::DecksController < ApplicationController
   end
 
   def destroy
-    deck = Deck.find(params[:id])
-    deck.destroy
+    @deck = Deck.find(params[:id])
+    @deck.destroy
+    render :show
   end
 
   def index

@@ -12,6 +12,7 @@ class Subject < ActiveRecord::Base
     :decks,
     class_name: "Deck",
     foreign_key: :subject_id,
-    primary_key: :id
+    primary_key: :id,
+    dependent: :destroy
   )
 end

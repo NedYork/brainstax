@@ -3,10 +3,19 @@ var SubjectConstants = require('../constants/subject_constants');
 var CardConstants = require('../constants/card_constants');
 
 var ApiActions = {
-  addDeck: function(deck) {
+  addDeck: function(deck, subjectId) {
     AppDispatcher.dispatch({
       actionType: SubjectConstants.ADD_DECK,
-      deck: deck
+      deck: deck,
+      subjectId: subjectId
+    });
+  },
+
+  removeDeck: function(deck, subjectId) {
+    AppDispatcher.dispatch({
+      actionType: SubjectConstants.REMOVE_DECK,
+      deck: deck,
+      subjectId: subjectId
     });
   },
 

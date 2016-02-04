@@ -35,10 +35,30 @@ var addSubjects = function(newSubject) {
 
 };
 
+var addDeck = function(payload) {
+  SubjectStore.find(payload.subjectId).decks.push(payload.deck);
+};
+
+var removeDeck = function(payload) {
+  var subject = SubjectStore.find(payload.subjectId);
+  for (var i = 0; i < subject.decks.length; i++) {
+    if (subject.decks[i].id === payload.deck.id) {
+      subject.decks.splice(i, 1);
+      break;
+    }
+  }
+};
+
 SubjectStore.__onDispatch = function(payload) {
   switch(payload.actionType) {
     case SubjectConstants.ADD_DECK:
-    
+    addDeck(payload);
+    SubjectStore.__emitChange();
+    break;
+
+    case SubjectConstants.REMOVE_DECK:
+    removeDeck(payload);
+    SubjectStore.__emitChange();
     break;
 
     case SubjectConstants.SUBJECTS_RECEIVED:

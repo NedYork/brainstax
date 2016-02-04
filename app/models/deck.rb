@@ -17,12 +17,17 @@ class Deck < ActiveRecord::Base
     primary_key: :id
   )
 
-  has_many :cards
+  has_many :cards, dependent: :destroy
 
   def create_cards_from_file(file)
-    CSV.read(file.tempfile).map do |entry|
-      self.cards.create!(front: entry.first, back: entry.last)
+    # CSV.read(file.tempfile).map do |entry|
+    #   self.cards.create!(front: entry.first, back: entry.last)
+    # end
+    entries = CSV.read(file.tempfile).map do |entry|
+      {front: entry.first, back: entry.last, deck_id: self.id}
     end
+
+    Card.create(entries)
   end
 
   # has_attached_file :cardlist
