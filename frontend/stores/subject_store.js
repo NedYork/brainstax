@@ -37,8 +37,11 @@ var addSubjects = function(newSubject) {
 
 SubjectStore.__onDispatch = function(payload) {
   switch(payload.actionType) {
+    case SubjectConstants.ADD_DECK:
+    
+    break;
+
     case SubjectConstants.SUBJECTS_RECEIVED:
-    // calls a SubjectStore action which takes the payload
     resetSubjects(payload.subjects);
     SubjectStore.__emitChange();
     break;

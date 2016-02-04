@@ -7,9 +7,10 @@ var ApiUtil = {
       url: "/api/decks",
       type: "POST",
       dataType: "json",
-      data: { deck: deck, subjectId: subjectId},
+      data: { deck: deck, subject_id: subjectId },
       success: function(deck) {
-        ApiAction.addDeck();
+        // something like this below. fix this
+        ApiAction.addDeck(deck);
         callback && callback();
       }
     });

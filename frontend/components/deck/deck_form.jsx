@@ -1,13 +1,17 @@
 var React = require('react');
-
+var ApiUtil = require('../../util/api_util');
 
 module.exports = React.createClass({
   getInitialState: function() {
-    return { title: "" };
+    return { name: "" };
   },
 
   resetDefaultState: function() {
-    this.setState({ title: "" });
+    this.setState({ name: "" });
+  },
+
+  handleChange: function(e) {
+    this.setState({ name: e.target.value });
   },
 
   handleSubmit: function(e) {

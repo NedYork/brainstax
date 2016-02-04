@@ -67,7 +67,7 @@ module.exports = React.createClass({
         </div>
 
         {this.props.children}
-        <DeckForm></DeckForm>
+        <DeckForm subjectId={this.state.subject.id}></DeckForm>
       </div>
     );
   }
