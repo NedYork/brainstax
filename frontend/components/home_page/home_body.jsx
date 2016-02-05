@@ -6,7 +6,7 @@ module.exports = React.createClass({
   render: function() {
     return (
       <div className="background">
-        <div className="flip-container" ontouchstart="this.classList.toggle('hover');">
+        <div className="flip-container group" ontouchstart="this.classList.toggle('hover');">
         	<div className="flipper">
         		<div className="front">
               <div className="welcome">
@@ -20,8 +20,8 @@ module.exports = React.createClass({
         		</div>
         		<div className="back">
               <div className="get-started">
-                <HomeLogin></HomeLogin>
                 <HomePageSignUp></HomePageSignUp>
+                <HomeLogin></HomeLogin>
               </div>
         		</div>
         	</div>

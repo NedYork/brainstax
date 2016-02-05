@@ -1,6 +1,6 @@
 .flip-container {
   position: absolute;
-  left: 40%;
+  left: 45%;
 	perspective: 1000;
 }
 	/* flip the pane when hovered */
@@ -9,15 +9,15 @@
 	}
 
 .flip-container, .front, .back {
-	width: 600px;
-	height: 600px;;
+	/*width: 520px;*/
+  width: 50%;
+	height: 600px;
 }
 
 /* flip speed goes here */
 .flipper {
 	transition: 0.6s;
 	transform-style: preserve-3d;
-
 	position: relative;
 }
 

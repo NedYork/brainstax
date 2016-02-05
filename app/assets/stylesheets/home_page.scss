@@ -41,13 +41,57 @@
   width: 300px;
 }
 
+/*SIGNUP ANIMATION HOMEPAGE*/
 
-/*THE ANIMATION ON HOMEPAGE*/
-
-.home-login {
+.home-signup {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  float: left;
   background:#7f7f7f;
   background:rgba(0,0,0,0.1);
-  height: 300px;
+  height: 250px;
+  width: 180px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.home-signup h1 {
+  opacity: 1;
+  position: relative;
+  font-weight: bold;
+}
+
+.home-signup .username {
+  padding-top: 10px;
+}
+
+.home-signup .password {
+  padding-top: 10px;
+}
+
+.home-signup input {
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  background: white;
+  padding: 3px;
+}
+
+.home-signup button {
+  color: #ebebeb;
+  padding: 10px 50px;
+  background: #3ca0e7;
+  border-radius: 5px;
+  width: 60px;
+  margin: 5px;
+}
+
+/*LOGIN ANIMATION HOMEPAGE*/
+
+.home-login {
+  float: left;
+  background:#7f7f7f;
+  background:rgba(0,0,0,0.1);
+  height: 250px;
   width: 180px;
   padding: 20px;
   border-radius: 10px;
@@ -82,35 +126,3 @@
   width: 50px;
   margin: 5px;
 }
-
-
-/*
-<div className="home-login">
-  <form onSubmit={ this.handleSubmit }>
-    <h1>Login</h1>
-
-    <div className="username">
-      <label>Username
-        <input
-          valueLink={this.linkState('username')}
-          type="text"
-          name="username"
-          placeholder="Username" />
-      </label>
-    </div>
-
-    <div className="password">
-      <label>Password
-        <input
-          valueLink={this.linkState('password')}
-          type="password"
-          name="password"
-          placeholder="******" />
-      </label>
-    </div>
-
-
-    <button>Sign In</button>
-    <button onClick={this.loginDemoUser}>Sign In As Demo User </button>
-  </form>
-</div>*/

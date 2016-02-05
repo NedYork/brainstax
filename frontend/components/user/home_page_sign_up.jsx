@@ -23,7 +23,7 @@ var HomePageSignUp = React.createClass({
   render: function() {
 
     return (
-      <div className="home-login">
+      <div className="home-signup">
         <form onSubmit={ this.handleSubmit }>
           <h1>Sign Up</h1>
 
@@ -43,6 +43,14 @@ var HomePageSignUp = React.createClass({
                 valueLink={this.linkState('password')}
                 type="password"
                 name="password"
+                placeholder="******" />
+            </label>
+          </div>
+
+          <div className="password">
+            <label>Password Confirm
+              <input
+                type="password"
                 placeholder="******" />
             </label>
           </div>
