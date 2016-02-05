@@ -22,7 +22,7 @@
 
 /* hide cardback of pane during swap */
 .cardfront {
-  background: white;
+  background: #fcd9e7;
   border-radius: 10px;
 	backface-visibility: hidden;
 	position: absolute;
@@ -31,7 +31,7 @@
 }
 
 .cardback {
-  background: white;
+  background: #fde7f0;
   border-radius: 10px;
 	backface-visibility: hidden;
 

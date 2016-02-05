@@ -38,9 +38,9 @@ module.exports = React.createClass({
   render: function() {
     var frontSide, backSide, frontCardText, backCardText;
     if (this.state.currentCard) {
-      frontSide = "Q.";
+      frontSide = "FRONT: Q.";
       frontCardText = this.state.currentCard.front;
-      backSide = "A.";
+      backSide = "BACK: A.";
       backCardText = this.state.currentCard.back;
     }
 

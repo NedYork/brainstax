@@ -12,7 +12,7 @@ module.exports = React.createClass({
               <div className="welcome">
                 <h1>The <i>Ultimate</i> Learning Accelerator</h1>
                 <hr></hr>
-                <h2>Study how <i>you</i> study best with Dynamic-Sequence Flashcards technology.</h2>
+                <h2>Maximize your return with our <i>dynamic-sequence technology</i>.</h2>
               </div>
               <div className="get-started">
                 <a>Get Started</a>
