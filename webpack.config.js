@@ -16,7 +16,7 @@ module.exports = {
         query: {
           presets: ['react']
         }
-      }
+      }, { test: /\.less$/, loader: "style!css!less" }
     ]
   },
   devtool: 'source-maps',

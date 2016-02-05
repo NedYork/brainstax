@@ -15,6 +15,8 @@ gem 'paperclip'
 gem 'aws-sdk', '~> 1.6'
 gem 'sass'
 
+
+
 group :development do
   gem 'pry-rails'
   gem 'better_errors'
