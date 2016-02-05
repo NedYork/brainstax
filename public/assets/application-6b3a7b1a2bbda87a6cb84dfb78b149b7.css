@@ -66,56 +66,6 @@
    clear: both;
    display: block;
  }
-.flip-container {
-  position: absolute;
-  left: 40%;
-	perspective: 1000;
-}
-	/* flip the pane when hovered */
-	.flip-container:hover .flipper, .flip-container.hover .flipper {
-		transform: rotateY(180deg);
-	}
-
-.flip-container, .front, .back {
-	/*width: 520px;*/
-  width: 600px;
-	height: 500px;
-}
-
-/* flip speed goes here */
-.flipper {
-	transition: 0.6s;
-	transform-style: preserve-3d;
-	position: relative;
-}
-
-/* hide back of pane during swap */
-.front {
-	backface-visibility: hidden;
-	position: absolute;
-	top: 100px;
-	left: 0;
-}
-
-.back {
-	backface-visibility: hidden;
-
-	position: absolute;
-	top: 100px;
-	left: 100px;
-}
-
-/* front pane, placed above back */
-.front {
-	z-index: 2;
-	/* for firefox 31 */
-	transform: rotateY(0deg);
-}
-
-/* back, initially hidden pane */
-.back {
-	transform: rotateY(180deg);
-}
 
 footer {
   position: relative;
@@ -234,7 +184,8 @@ footer {
 
 .header-begin {
   float: left;
-  margin: 20px 40px;
+  margin-top: 30px;
+  margin-left: 40px;
   display: block;
 }
 
@@ -323,7 +274,7 @@ footer {
   width: 58px;
 }
 .background {
-  background: url("https://images.unsplash.com/reserve/8S64npOgTu2eWTZIXEfy_DSC_0955.JPG");
+  background: url("https://images.unsplash.com/reserve/8S64npOgTu2eWTZIXEfy_DSC_0955.JPG?crop=entropy&fit=crop&fm=jpg&h=725&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1200");
   background-size: cover;
   background-position: 25% 75%;
   height: 900px; }
@@ -429,8 +380,58 @@ footer {
   border-radius: 5px;
   width: 50px;
   margin: 5px; }
+.flip-container {
+  position: absolute;
+  left: 40%;
+	perspective: 1000;
+}
+	/* flip the pane when hovered */
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateY(180deg);
+	}
+
+.flip-container, .front, .back {
+	/*width: 520px;*/
+  width: 600px;
+	height: 500px;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front {
+	backface-visibility: hidden;
+	position: absolute;
+	top: 100px;
+	left: 0;
+}
+
+.back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 100px;
+	left: 100px;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+}
 .background {
-  background: url("https://images.unsplash.com/reserve/8S64npOgTu2eWTZIXEfy_DSC_0955.JPG");
+  background: url("https://images.unsplash.com/reserve/8S64npOgTu2eWTZIXEfy_DSC_0955.JPG?crop=entropy&fit=crop&fm=jpg&h=725&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1200");
   background-size: cover;
   background-position: 25% 75%;
   height: 900px; }
@@ -565,7 +566,6 @@ footer {
 }
 
 .flashcard {
-  background: white;
   height: 400px;
   width: 60%;
   float: left;
@@ -586,7 +586,7 @@ footer {
   font-size: 18px;
   color: #292929;
   text-align: center;
-  margin-top: 20%;
+  margin-top: 30%;
 }
 
 .reveal {
@@ -595,7 +595,7 @@ footer {
   padding-top: 20px;
   background: #0b8ff2;
   height: 40px;
-  width: 60%;
+  width: 565px;
   margin: 5% auto auto 10%;
   text-align: center;
   border-radius: 10px;
@@ -607,7 +607,7 @@ footer {
   padding-top: 20px;
   background: #0b8ff2;
   height: 40px;
-  width: 60%;
+  width: 565px;
   margin: 5% auto auto 10%;
   text-align: center;
   border-radius: 10px;
@@ -660,6 +660,59 @@ footer {
   padding: 10px;
   margin: auto;
 
+}
+.flashcard {
+
+	perspective: 1000;
+}
+	/* flip the pane when hovered */
+	.flashcard.flipped .card-flipper {
+		transform: rotateY(180deg);
+	}
+
+.flashcard, .cardfront, .cardback {
+	/*width: 520px;*/
+  width: 560px;
+	height: 400px;
+}
+
+/* flip speed goes here */
+.card-flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+	position: relative;
+}
+
+/* hide cardback of pane during swap */
+.cardfront {
+  background: #fcd9e7;
+  border-radius: 10px;
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.cardback {
+  background: #fde7f0;
+  border-radius: 10px;
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* cardfront pane, placed above cardback */
+.cardfront {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* cardback, initially hidden pane */
+.cardback {
+	transform: rotateY(180deg);
 }
 /*.subject-detail-background {
   background: #ebf9f9;
