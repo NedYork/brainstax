@@ -39,40 +39,37 @@ module.exports = React.createClass({
   render: function() {
     if (!(this.state.subject && this.state.subject.decks)) { return <div></div>; }
     return (
-      <div className="subject-detail-main group">
-
-
-
+      <div className="subject-detail-background group">
         <div className="subject-detail-main group">
+          <div className="subject-detail-main group">
+            <a href={"#/subjects/" + this.state.subject.id} className="title">
+              {this.state.subject.title}
+            </a>
+            <img src={window.images.check}/>
 
-          <a href={"#/subjects/" + this.state.subject.id} className="title">
-            {this.state.subject.title}
-          </a>
-          <img src="https://brainscape-prod.s3.amazonaws.com/images/avatar_generic_square.png" />
-
-          <div className="progress-bar">
-
+            <div className="progress-bar">
+            </div>
           </div>
 
+
+          <div className="decklist group">
+            <h5>DECKS</h5>
+            <ul>
+              {this.state.subject.decks.map(function(deck) {
+                return (
+                  <li key={deck.id} className="deck">
+                    <a href={"/#/deck/" + deck.id}>{deck.name}</a>
+                    <button className="delete-button" onClick={this.deleteDeck.bind(this, deck)}>Delete</button>
+                  </li>
+                );
+              }.bind(this))}
+            </ul>
+            <DeckForm subjectId={this.state.subject.id}></DeckForm>
+          </div>
+
+          {this.props.children}
+
         </div>
-
-
-        <div className="decklist group">
-          <h5>DECKS</h5>
-          <ul>
-            {this.state.subject.decks.map(function(deck) {
-              return (
-                <li key={deck.id} className="deck">
-                  <a href={"/#/deck/" + deck.id}>{deck.name}</a>
-                  <button onClick={this.deleteDeck.bind(this, deck)}>Delete</button>
-                </li>
-              );
-            }.bind(this))}
-          </ul>
-        </div>
-
-        {this.props.children}
-        <DeckForm subjectId={this.state.subject.id}></DeckForm>
       </div>
     );
   }

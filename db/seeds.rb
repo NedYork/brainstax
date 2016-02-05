@@ -33,8 +33,8 @@ Language = Subject.create!(author_id: LanguageBro.id, title: "Language")
 
 # Decks
 Deck.destroy_all
-GrePart1 = Deck.create!(name: "GrePart1", subject_id: TestPrep.id, author_id: JSAddict.id)
-GrePart2 = Deck.create!(name: "GrePart2", subject_id: TestPrep.id, author_id: JSAddict.id)
+GrePart1 = Deck.create!(name: "GRE Vocab Part 1", subject_id: TestPrep.id, author_id: JSAddict.id)
+GrePart2 = Deck.create!(name: "GRE Vocab Part 2", subject_id: TestPrep.id, author_id: JSAddict.id)
 
 Algebra = Deck.create!(name: "Algebra", subject_id: Math.id, author_id: HyperbolicParabola.id)
 Geometry = Deck.create!(name: "Geometry", subject_id: Math.id, author_id: HyperbolicParabola.id)

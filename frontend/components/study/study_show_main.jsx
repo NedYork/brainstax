@@ -93,14 +93,10 @@ module.exports = React.createClass({
 
     return(
       <div className="study-show-main group">
-
-
         <div className="flashcard group" onClick={this.flip}>
           <h4>{side}</h4>
           <h3>{cardText}</h3>
         </div>
-
-
         <div className="rating-container group" onClick={this.flip}>
           {ratingbar}
         </div>

@@ -33,13 +33,13 @@ var Footer = React.createClass({
           <ul className="footer-nav">
             <h5>CONNECT</h5>
             <li>
-              <a target="_blank" href="">
+              <a target="_blank" href="https://github.com/NedYork">
                 GitHub
               </a>
             </li>
 
             <li>
-              <a target="_blank" href="">
+              <a target="_blank" href="https://www.linkedin.com/in/edward-he-3423b5b8">
                 LinkedIn
               </a>
             </li>

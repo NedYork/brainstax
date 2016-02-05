@@ -1,9 +1,14 @@
-.subject-detail-main {
+/*.subject-detail-background {
   background: #ebf9f9;
-  border-radius: 10px;
+  float: left;
+  position:relative;
+}*/
+
+.subject-detail-main {
+  border-left: 1px solid #ccc;
+  background: #ebf9f9;
   float: left;
   width: 50%;
-  border-right: 1px solid #ccc;
   padding: 10px;
 }
 
@@ -13,9 +18,9 @@
   font-weight: bold;
 }
 
-.subject-detail-main img { display:none; }
+/*.subject-detail-main img { display:none; }
 
-@media (min-width: 500px) {
+@media (min-width: 500px) {*/
 
   .subject-detail-main img {
     display: block;
@@ -23,10 +28,11 @@
     height: 250px;
     width: 250px;
   }
-}
+/*}*/
 
 .subject-detail-main decklist {
   padding: 10px;
+  float: right;
 }
 
 .subject-detail-main h5 {
@@ -42,4 +48,43 @@
 }
 
 .subject-detail-main .deck:first-child {
+}
+
+
+.deck-form {
+  background: #eee;
+  padding: 10px;
+  border-radius: 10px;
+  width: 200px;
+  font-size: 12px;
+  float: left;
+}
+
+.delete-button {
+  color: #454545;
+  padding: 5px 8px;
+  margin: 10px;
+  background: #f56172;
+  border-radius: 5px;
+}
+
+.deck-form > h1 {
+  margin-left: 10%;
+  margin-right: 10%;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.deck-form button {
+  display: block;
+  padding: 5px 10px;
+  margin: 5px auto;
+  background: #2980b9;
+  border-radius: 5px;
+  color: white;
+}
+
+.deck-form input {
+  padding: 10px;
+  margin: auto;
 }

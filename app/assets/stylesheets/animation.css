@@ -1,6 +1,6 @@
 .flip-container {
   position: absolute;
-  left: 45%;
+  left: 40%;
 	perspective: 1000;
 }
 	/* flip the pane when hovered */
@@ -10,8 +10,8 @@
 
 .flip-container, .front, .back {
 	/*width: 520px;*/
-  width: 50%;
-	height: 600px;
+  width: 600px;
+	height: 500px;
 }
 
 /* flip speed goes here */
@@ -22,12 +22,19 @@
 }
 
 /* hide back of pane during swap */
-.front, .back {
+.front {
+	backface-visibility: hidden;
+	position: absolute;
+	top: 100px;
+	left: 0;
+}
+
+.back {
 	backface-visibility: hidden;
 
 	position: absolute;
-	top: 0;
-	left: 0;
+	top: 100px;
+	left: 100px;
 }
 
 /* front pane, placed above back */

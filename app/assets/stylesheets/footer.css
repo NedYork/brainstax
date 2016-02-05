@@ -12,7 +12,7 @@ footer {
 
 }
 
-section.footer-wrapper {
+.footer section.footer-wrapper {
   width: 100%;
   min-width: 970px;
   display: table;
@@ -20,7 +20,7 @@ section.footer-wrapper {
   margin: auto;
 }
 
-a.logo {
+.footer a.logo {
   /*background: asset-url("logo.png") no-repeat 0 0;*/
   background-image: url(image-path("logo.png"));
   background-size: contain;
@@ -34,31 +34,31 @@ a.logo {
   opacity: 0.5;
 }
 
-a.logo:hover {
+.footer a.logo:hover {
   opacity: 1;
 }
 
-ul.footer-nav {
+.footer ul.footer-nav {
   display: table-cell;
   padding: 0;
   list-style: none;
   color: #ccc;
 }
 
-li {
+.footer li {
   margin: 10px 0;
 }
 
-h5 {
+.footer h5 {
   margin-bottom: 15px;
 }
 
-a {
+.footer a {
   color: #999;
   font-size: 14px;
   font-weight: 300;
 }
 
-a:hover {
+.footer a:hover {
   color: white;
 }

@@ -7,7 +7,6 @@
     float: left;
     width: 15%;
     /*height: 80%;*/
-    border-right: 1px solid #ccc;
     padding: 20px;
   }
 
@@ -81,10 +80,7 @@
   }
 
   .subject-nav-form input {
-    /*background: white;*/
     padding: 10px;
     margin: auto;
-
   }
-
 }

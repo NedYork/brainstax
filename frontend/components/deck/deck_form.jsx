@@ -20,8 +20,8 @@ module.exports = React.createClass({
   },
   render: function() {
     return(
-      <div className="subject-nav-form">
-        <h1>Add A Deck</h1>
+      <div className="deck-form">
+        <h1>Create New Deck</h1>
         <form onSubmit={this.handleSubmit}>
           <input type="text" placeholder={'e.g. Genetics'} onChange={this.handleChange}/>
           <button>Save</button>

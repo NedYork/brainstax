@@ -1,6 +1,6 @@
 var React = require('react');
-var HomeLogin = require('../session/home_login');
-var HomePageSignUp = require('../user/home_page_sign_up');
+var HomeLogin = require('./home_login');
+var HomePageSignUp = require('./home_page_sign_up');
 
 module.exports = React.createClass({
   render: function() {
