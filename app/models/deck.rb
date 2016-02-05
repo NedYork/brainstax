@@ -1,4 +1,4 @@
-require "CSV"
+require "csv"
 
 class Deck < ActiveRecord::Base
   validates :author_id, :name, presence: true
