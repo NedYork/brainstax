@@ -30,7 +30,7 @@ function _ensureLoggedIn(nextState, replace, callback) {
     }
     callback();
   }
-};
+}
 
 var routes = (
   <Router>
