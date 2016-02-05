@@ -1166,3 +1166,87 @@
 [02/05/16 10:14:51 -0500 Users-MBP (96394)] INFO : Doing deferred dependency-detection before Rack startup
 [02/05/16 10:14:56 -0500 Users-MBP (96394)] ERROR : Invalid license key, please contact support@newrelic.com
 [02/05/16 10:14:56 -0500 Users-MBP (96394)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[02/05/16 12:50:46 -0500 Users-MBP (96394)] INFO : Starting Agent shutdown
+[02/05/16 12:50:51 -0500 Users-MacBook-Pro.local (99144)] INFO : Starting the New Relic agent in "development" environment.
+[02/05/16 12:50:51 -0500 Users-MacBook-Pro.local (99144)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[02/05/16 12:50:51 -0500 Users-MacBook-Pro.local (99144)] WARN : No configuration file found. Working directory = /Users/user/Desktop/brainstax-master
+[02/05/16 12:50:51 -0500 Users-MacBook-Pro.local (99144)] WARN : Looked in these locations (based on defaults): /Users/user/Desktop/brainstax-master/config/newrelic.yml, /Users/user/Desktop/brainstax-master/newrelic.yml, /Users/user/Desktop/brainstax-master/config/newrelic.yml, /Users/user/Desktop/brainstax-master/newrelic.yml, /Users/user/.newrelic/newrelic.yml, /Users/user/newrelic.yml
+[02/05/16 12:50:51 -0500 Users-MacBook-Pro.local (99144)] INFO : Environment: development
+[02/05/16 12:50:51 -0500 Users-MacBook-Pro.local (99144)] INFO : Dispatcher: webrick
+[02/05/16 12:50:51 -0500 Users-MacBook-Pro.local (99144)] INFO : Application: development
+[02/05/16 12:50:51 -0500 Users-MacBook-Pro.local (99144)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'.
+[02/05/16 12:50:51 -0500 Users-MacBook-Pro.local (99144)] INFO : Installing ActiveJob instrumentation
+[02/05/16 12:50:51 -0500 Users-MacBook-Pro.local (99144)] INFO : Installing ActiveRecord 4 instrumentation
+[02/05/16 12:50:51 -0500 Users-MacBook-Pro.local (99144)] INFO : Installing Net instrumentation
+[02/05/16 12:50:51 -0500 Users-MacBook-Pro.local (99144)] INFO : Installing deferred Rack instrumentation
+[02/05/16 12:50:51 -0500 Users-MacBook-Pro.local (99144)] INFO : Installing Rack::Builder middleware instrumentation
+[02/05/16 12:50:51 -0500 Users-MacBook-Pro.local (99144)] INFO : Installing Rails 3+ middleware instrumentation
+[02/05/16 12:50:51 -0500 Users-MacBook-Pro.local (99144)] INFO : Installing Rails 4 Controller instrumentation
+[02/05/16 12:50:52 -0500 Users-MacBook-Pro.local (99144)] INFO : Installing Rails 4 view instrumentation
+[02/05/16 12:50:52 -0500 Users-MacBook-Pro.local (99144)] INFO : Installing Rails 4 Error instrumentation
+[02/05/16 12:50:52 -0500 Users-MacBook-Pro.local (99144)] INFO : Finished instrumentation
+[02/05/16 12:50:52 -0500 Users-MacBook-Pro.local (99144)] INFO : Doing deferred dependency-detection before Rack startup
+[02/05/16 12:51:14 -0500 Users-MacBook-Pro.local (99144)] ERROR : Invalid license key, please contact support@newrelic.com
+[02/05/16 12:51:14 -0500 Users-MacBook-Pro.local (99144)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[02/05/16 13:22:59 -0500 Users-MacBook-Pro.local (99144)] INFO : Starting Agent shutdown
+[02/05/16 13:23:04 -0500 Users-MacBook-Pro.local (99647)] INFO : Starting the New Relic agent in "development" environment.
+[02/05/16 13:23:04 -0500 Users-MacBook-Pro.local (99647)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[02/05/16 13:23:04 -0500 Users-MacBook-Pro.local (99647)] WARN : No configuration file found. Working directory = /Users/user/Desktop/brainstax-master
+[02/05/16 13:23:04 -0500 Users-MacBook-Pro.local (99647)] WARN : Looked in these locations (based on defaults): /Users/user/Desktop/brainstax-master/config/newrelic.yml, /Users/user/Desktop/brainstax-master/newrelic.yml, /Users/user/Desktop/brainstax-master/config/newrelic.yml, /Users/user/Desktop/brainstax-master/newrelic.yml, /Users/user/.newrelic/newrelic.yml, /Users/user/newrelic.yml
+[02/05/16 13:23:04 -0500 Users-MacBook-Pro.local (99647)] INFO : Environment: development
+[02/05/16 13:23:04 -0500 Users-MacBook-Pro.local (99647)] INFO : Dispatcher: webrick
+[02/05/16 13:23:04 -0500 Users-MacBook-Pro.local (99647)] INFO : Application: development
+[02/05/16 13:23:04 -0500 Users-MacBook-Pro.local (99647)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'.
+[02/05/16 13:23:04 -0500 Users-MacBook-Pro.local (99647)] INFO : Installing ActiveJob instrumentation
+[02/05/16 13:23:04 -0500 Users-MacBook-Pro.local (99647)] INFO : Installing ActiveRecord 4 instrumentation
+[02/05/16 13:23:04 -0500 Users-MacBook-Pro.local (99647)] INFO : Installing Net instrumentation
+[02/05/16 13:23:04 -0500 Users-MacBook-Pro.local (99647)] INFO : Installing deferred Rack instrumentation
+[02/05/16 13:23:04 -0500 Users-MacBook-Pro.local (99647)] INFO : Installing Rack::Builder middleware instrumentation
+[02/05/16 13:23:04 -0500 Users-MacBook-Pro.local (99647)] INFO : Installing Rails 3+ middleware instrumentation
+[02/05/16 13:23:04 -0500 Users-MacBook-Pro.local (99647)] INFO : Installing Rails 4 Controller instrumentation
+[02/05/16 13:23:04 -0500 Users-MacBook-Pro.local (99647)] INFO : Installing Rails 4 view instrumentation
+[02/05/16 13:23:04 -0500 Users-MacBook-Pro.local (99647)] INFO : Installing Rails 4 Error instrumentation
+[02/05/16 13:23:04 -0500 Users-MacBook-Pro.local (99647)] INFO : Finished instrumentation
+[02/05/16 13:23:04 -0500 Users-MacBook-Pro.local (99647)] INFO : Doing deferred dependency-detection before Rack startup
+[02/05/16 13:23:11 -0500 Users-MacBook-Pro.local (99647)] ERROR : Invalid license key, please contact support@newrelic.com
+[02/05/16 13:23:11 -0500 Users-MacBook-Pro.local (99647)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[02/05/16 13:24:25 -0500 Users-MacBook-Pro.local (99692)] INFO : Starting the New Relic agent in "development" environment.
+[02/05/16 13:24:25 -0500 Users-MacBook-Pro.local (99692)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[02/05/16 13:24:25 -0500 Users-MacBook-Pro.local (99692)] WARN : No configuration file found. Working directory = /Users/user/Desktop/brainstax-master
+[02/05/16 13:24:25 -0500 Users-MacBook-Pro.local (99692)] WARN : Looked in these locations (based on defaults): /Users/user/Desktop/brainstax-master/config/newrelic.yml, /Users/user/Desktop/brainstax-master/newrelic.yml, /Users/user/Desktop/brainstax-master/config/newrelic.yml, /Users/user/Desktop/brainstax-master/newrelic.yml, /Users/user/.newrelic/newrelic.yml, /Users/user/newrelic.yml
+[02/05/16 13:24:25 -0500 Users-MacBook-Pro.local (99692)] INFO : Environment: development
+[02/05/16 13:24:25 -0500 Users-MacBook-Pro.local (99692)] INFO : No known dispatcher detected.
+[02/05/16 13:24:25 -0500 Users-MacBook-Pro.local (99692)] INFO : Application: development
+[02/05/16 13:24:25 -0500 Users-MacBook-Pro.local (99692)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'.
+[02/05/16 13:24:25 -0500 Users-MacBook-Pro.local (99692)] INFO : Installing ActiveJob instrumentation
+[02/05/16 13:24:25 -0500 Users-MacBook-Pro.local (99692)] INFO : Installing ActiveRecord 4 instrumentation
+[02/05/16 13:24:25 -0500 Users-MacBook-Pro.local (99692)] INFO : Installing Net instrumentation
+[02/05/16 13:24:25 -0500 Users-MacBook-Pro.local (99692)] INFO : Installing deferred Rack instrumentation
+[02/05/16 13:24:25 -0500 Users-MacBook-Pro.local (99692)] INFO : Installing Rack::Builder middleware instrumentation
+[02/05/16 13:24:25 -0500 Users-MacBook-Pro.local (99692)] INFO : Installing Rails 3+ middleware instrumentation
+[02/05/16 13:24:25 -0500 Users-MacBook-Pro.local (99692)] INFO : Installing Rails 4 Controller instrumentation
+[02/05/16 13:24:25 -0500 Users-MacBook-Pro.local (99692)] INFO : Installing Rails 4 view instrumentation
+[02/05/16 13:24:25 -0500 Users-MacBook-Pro.local (99692)] INFO : Installing Rails 4 Error instrumentation
+[02/05/16 13:24:25 -0500 Users-MacBook-Pro.local (99692)] INFO : Finished instrumentation
+[02/05/16 13:45:20 -0500 Users-MacBook-Pro.local (99647)] INFO : Starting Agent shutdown
+[02/05/16 13:45:28 -0500 Users-MacBook-Pro.local (135)] INFO : Starting the New Relic agent in "development" environment.
+[02/05/16 13:45:28 -0500 Users-MacBook-Pro.local (135)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[02/05/16 13:45:28 -0500 Users-MacBook-Pro.local (135)] WARN : No configuration file found. Working directory = /Users/user/Desktop/brainstax-master
+[02/05/16 13:45:28 -0500 Users-MacBook-Pro.local (135)] WARN : Looked in these locations (based on defaults): /Users/user/Desktop/brainstax-master/config/newrelic.yml, /Users/user/Desktop/brainstax-master/newrelic.yml, /Users/user/Desktop/brainstax-master/config/newrelic.yml, /Users/user/Desktop/brainstax-master/newrelic.yml, /Users/user/.newrelic/newrelic.yml, /Users/user/newrelic.yml
+[02/05/16 13:45:28 -0500 Users-MacBook-Pro.local (135)] INFO : Environment: development
+[02/05/16 13:45:28 -0500 Users-MacBook-Pro.local (135)] INFO : Dispatcher: webrick
+[02/05/16 13:45:28 -0500 Users-MacBook-Pro.local (135)] INFO : Application: development
+[02/05/16 13:45:28 -0500 Users-MacBook-Pro.local (135)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'.
+[02/05/16 13:45:28 -0500 Users-MacBook-Pro.local (135)] INFO : Installing ActiveJob instrumentation
+[02/05/16 13:45:28 -0500 Users-MacBook-Pro.local (135)] INFO : Installing ActiveRecord 4 instrumentation
+[02/05/16 13:45:28 -0500 Users-MacBook-Pro.local (135)] INFO : Installing Net instrumentation
+[02/05/16 13:45:28 -0500 Users-MacBook-Pro.local (135)] INFO : Installing deferred Rack instrumentation
+[02/05/16 13:45:28 -0500 Users-MacBook-Pro.local (135)] INFO : Installing Rack::Builder middleware instrumentation
+[02/05/16 13:45:28 -0500 Users-MacBook-Pro.local (135)] INFO : Installing Rails 3+ middleware instrumentation
+[02/05/16 13:45:28 -0500 Users-MacBook-Pro.local (135)] INFO : Installing Rails 4 Controller instrumentation
+[02/05/16 13:45:28 -0500 Users-MacBook-Pro.local (135)] INFO : Installing Rails 4 view instrumentation
+[02/05/16 13:45:28 -0500 Users-MacBook-Pro.local (135)] INFO : Installing Rails 4 Error instrumentation
+[02/05/16 13:45:28 -0500 Users-MacBook-Pro.local (135)] INFO : Finished instrumentation
+[02/05/16 13:45:28 -0500 Users-MacBook-Pro.local (135)] INFO : Doing deferred dependency-detection before Rack startup
+[02/05/16 13:45:30 -0500 Users-MacBook-Pro.local (135)] ERROR : Invalid license key, please contact support@newrelic.com
+[02/05/16 13:45:30 -0500 Users-MacBook-Pro.local (135)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.

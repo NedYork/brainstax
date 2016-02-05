@@ -8,7 +8,6 @@ class Api::DecksController < ApplicationController
       render :show
     else
       flash.now[:errors] = @deck.errors.full_messages
-      debugger
       render :show
     end
   end
