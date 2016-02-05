@@ -1,6 +1,7 @@
 var React = require('react');
 var CardForm = require('../card/card_form.jsx');
 var History = require('react-router').History;
+var ProgressBar = require('./study_show_progress');
 
 module.exports = React.createClass({
   render: function() {

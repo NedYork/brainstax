@@ -1110,3 +1110,37 @@
 [02/04/16 23:06:03 -0500 Users-MacBook-Pro.local (63584)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `subjects' for nil:NilClass
 [02/04/16 23:08:56 -0500 Users-MacBook-Pro.local (63584)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `subjects' for nil:NilClass
 [02/04/16 23:13:58 -0500 Users-MacBook-Pro.local (63584)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: undefined method `subjects' for nil:NilClass
+[02/05/16 00:19:25 -0500 Users-MacBook-Pro.local (63584)] WARN : The error reporting queue has reached 20. The error detail for this and subsequent errors will not be transmitted to New Relic until the queued errors have been sent: Missing template api/users/new, application/new with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder]}. Searched in:
+  * "/Users/user/Desktop/brainstax-master/app/views"
+
+[02/05/16 01:04:41 -0500 Users-MacBook-Pro.local (63584)] INFO : Starting Agent shutdown
+[02/05/16 01:04:45 -0500 Users-MacBook-Pro.local (93184)] INFO : Starting the New Relic agent in "development" environment.
+[02/05/16 01:04:45 -0500 Users-MacBook-Pro.local (93184)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[02/05/16 01:04:45 -0500 Users-MacBook-Pro.local (93184)] WARN : No configuration file found. Working directory = /Users/user/Desktop/brainstax-master
+[02/05/16 01:04:45 -0500 Users-MacBook-Pro.local (93184)] WARN : Looked in these locations (based on defaults): /Users/user/Desktop/brainstax-master/config/newrelic.yml, /Users/user/Desktop/brainstax-master/newrelic.yml, /Users/user/Desktop/brainstax-master/config/newrelic.yml, /Users/user/Desktop/brainstax-master/newrelic.yml, /Users/user/.newrelic/newrelic.yml, /Users/user/newrelic.yml
+[02/05/16 01:04:45 -0500 Users-MacBook-Pro.local (93184)] INFO : Environment: development
+[02/05/16 01:04:45 -0500 Users-MacBook-Pro.local (93184)] INFO : Dispatcher: webrick
+[02/05/16 01:04:45 -0500 Users-MacBook-Pro.local (93184)] INFO : Application: development
+[02/05/16 01:04:45 -0500 Users-MacBook-Pro.local (93184)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'.
+[02/05/16 01:04:46 -0500 Users-MacBook-Pro.local (93184)] INFO : Installing ActiveJob instrumentation
+[02/05/16 01:04:46 -0500 Users-MacBook-Pro.local (93184)] INFO : Installing ActiveRecord 4 instrumentation
+[02/05/16 01:04:46 -0500 Users-MacBook-Pro.local (93184)] INFO : Installing Net instrumentation
+[02/05/16 01:04:46 -0500 Users-MacBook-Pro.local (93184)] INFO : Installing deferred Rack instrumentation
+[02/05/16 01:04:46 -0500 Users-MacBook-Pro.local (93184)] INFO : Installing Rack::Builder middleware instrumentation
+[02/05/16 01:04:46 -0500 Users-MacBook-Pro.local (93184)] INFO : Installing Rails 3+ middleware instrumentation
+[02/05/16 01:04:46 -0500 Users-MacBook-Pro.local (93184)] INFO : Installing Rails 4 Controller instrumentation
+[02/05/16 01:04:46 -0500 Users-MacBook-Pro.local (93184)] INFO : Installing Rails 4 view instrumentation
+[02/05/16 01:04:46 -0500 Users-MacBook-Pro.local (93184)] INFO : Installing Rails 4 Error instrumentation
+[02/05/16 01:04:46 -0500 Users-MacBook-Pro.local (93184)] INFO : Finished instrumentation
+[02/05/16 01:04:46 -0500 Users-MacBook-Pro.local (93184)] INFO : Doing deferred dependency-detection before Rack startup
+[02/05/16 01:05:49 -0500 Users-MacBook-Pro.local (93184)] ERROR : Error establishing connection with New Relic Service at collector.newrelic.com:443:
+[02/05/16 01:05:49 -0500 Users-MacBook-Pro.local (93184)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error talking to collector.newrelic.com:443 after 2 attempts: getaddrinfo: nodename nor servname provided, or not known
+[02/05/16 01:05:49 -0500 Users-MacBook-Pro.local (93184)] INFO : Will re-attempt in 60 seconds
+[02/05/16 01:07:50 -0500 Users-MacBook-Pro.local (93184)] ERROR : Error establishing connection with New Relic Service at collector.newrelic.com:443:
+[02/05/16 01:07:50 -0500 Users-MacBook-Pro.local (93184)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error talking to collector.newrelic.com:443 after 2 attempts: getaddrinfo: nodename nor servname provided, or not known
+[02/05/16 01:07:50 -0500 Users-MacBook-Pro.local (93184)] INFO : Will re-attempt in 120 seconds
+[02/05/16 01:10:50 -0500 Users-MacBook-Pro.local (93184)] ERROR : Error establishing connection with New Relic Service at collector.newrelic.com:443:
+[02/05/16 01:10:50 -0500 Users-MacBook-Pro.local (93184)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error talking to collector.newrelic.com:443 after 2 attempts: getaddrinfo: nodename nor servname provided, or not known
+[02/05/16 01:10:50 -0500 Users-MacBook-Pro.local (93184)] INFO : Will re-attempt in 180 seconds
+[02/05/16 01:52:13 -0500 Users-MacBook-Pro.local (93184)] ERROR : Invalid license key, please contact support@newrelic.com
+[02/05/16 01:52:13 -0500 Users-MacBook-Pro.local (93184)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.

@@ -10,9 +10,9 @@ module.exports = React.createClass({
         	<div className="flipper">
         		<div className="front">
               <div className="welcome">
-                <h1>The Smartest Way to Study</h1>
+                <h1>The <i>Ultimate</i> Learning Accelerator</h1>
                 <hr></hr>
-                <h2>Find, create, and share adaptive flashcards on any device</h2>
+                <h2>Study how <i>you</i> study best with Dynamic-Sequence Flashcards technology.</h2>
               </div>
               <div className="get-started">
                 <a>Get Started</a>
