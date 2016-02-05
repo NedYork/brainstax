@@ -97,7 +97,6 @@
 }
 
 .flashcard {
-  background: white;
   height: 400px;
   width: 60%;
   float: left;
@@ -127,7 +126,7 @@
   padding-top: 20px;
   background: #0b8ff2;
   height: 40px;
-  width: 60%;
+  width: 565px;
   margin: 5% auto auto 10%;
   text-align: center;
   border-radius: 10px;
@@ -139,7 +138,7 @@
   padding-top: 20px;
   background: #0b8ff2;
   height: 40px;
-  width: 60%;
+  width: 565px;
   margin: 5% auto auto 10%;
   text-align: center;
   border-radius: 10px;

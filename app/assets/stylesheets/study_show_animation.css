@@ -1,0 +1,53 @@
+.flashcard {
+
+	perspective: 1000;
+}
+	/* flip the pane when hovered */
+	.flashcard.flipped .card-flipper {
+		transform: rotateY(180deg);
+	}
+
+.flashcard, .cardfront, .cardback {
+	/*width: 520px;*/
+  width: 560px;
+	height: 400px;
+}
+
+/* flip speed goes here */
+.card-flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+	position: relative;
+}
+
+/* hide cardback of pane during swap */
+.cardfront {
+  background: white;
+  border-radius: 10px;
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.cardback {
+  background: white;
+  border-radius: 10px;
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* cardfront pane, placed above cardback */
+.cardfront {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* cardback, initially hidden pane */
+.cardback {
+	transform: rotateY(180deg);
+}

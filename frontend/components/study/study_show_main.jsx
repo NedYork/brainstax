@@ -23,6 +23,7 @@ module.exports = React.createClass({
   },
 
   flip: function() {
+    $(".flashcard").toggleClass("flipped");
     this.setState({front: !this.state.front });
   },
 
@@ -35,16 +36,12 @@ module.exports = React.createClass({
   },
 
   render: function() {
-    var cardText = "";
-    var side = "";
+    var frontSide, backSide, frontCardText, backCardText;
     if (this.state.currentCard) {
-      if (this.state.front) {
-        side = "Q.";
-        cardText = this.state.currentCard.front;
-      } else {
-        side = "A.";
-        cardText = this.state.currentCard.back;
-      }
+      frontSide = "Q.";
+      frontCardText = this.state.currentCard.front;
+      backSide = "A.";
+      backCardText = this.state.currentCard.back;
     }
 
     var rating;
@@ -93,10 +90,23 @@ module.exports = React.createClass({
 
     return(
       <div className="study-show-main group">
+
         <div className="flashcard group" onClick={this.flip}>
-          <h4>{side}</h4>
-          <h3>{cardText}</h3>
+          <div className="card-flipper">
+            <div className="cardfront">
+              <h4>{frontSide}</h4>
+              <h3>{frontCardText}</h3>
+            </div>
+
+            <div className="cardback">
+              <h4>{backSide}</h4>
+              <h3>{backCardText}</h3>
+            </div>
+
+          </div>
         </div>
+
+
         <div className="rating-container group" onClick={this.flip}>
           {ratingbar}
         </div>
