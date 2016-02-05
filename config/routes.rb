@@ -16,4 +16,5 @@ Links::Application.routes.draw do
     end
     patch '/usercardratings', to: 'user_card_ratings#update'
   end
+  get '/auth/facebook/callback', to: 'sessions#facebook_omniauth'
 end

@@ -59,6 +59,7 @@ var SessionForm = React.createClass({
           <button>Sign In</button>
           <button onClick={this.loginDemoUser}>Demo</button>
         </form>
+        <a id="fb-auth" href="/auth/facebook">LOG IN WITH FACEBOOK</a> 
       </div>
     );
   },

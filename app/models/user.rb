@@ -36,6 +36,21 @@ class User < ActiveRecord::Base
 
   after_initialize :ensure_session_token
 
+  def self.find_or_create_by_auth_hash(auth_hash)
+   provider = auth_hash[:provider]
+   uid = auth_hash[:uid]
+
+   user = User.find_by(provider: provider, uid: uid)
+   return user if user
+
+   User.create(
+     provider: provider,
+     uid: uid,
+     username: auth_hash[:info][:name],
+     password: SecureRandom.urlsafe_base64(16)
+   )
+ end
+
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)
     return nil unless user && user.valid_password?(password)
