@@ -3,6 +3,12 @@ var SubjectConstants = require('../constants/subject_constants');
 var CardConstants = require('../constants/card_constants');
 
 var ApiActions = {
+  signInAfterSignUp: function(currentUser) {
+    AppDispatcher.dispatch({
+        actionType: current_user_constants.RECEIVE_CURRENT_USER,
+        currentUser: currentUser
+    });
+  },
   addDeck: function(deck, subjectId) {
     AppDispatcher.dispatch({
       actionType: SubjectConstants.ADD_DECK,

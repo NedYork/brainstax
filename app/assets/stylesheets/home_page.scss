@@ -13,7 +13,6 @@
 }
 
 .welcome hr {
-
   width: 85%;
 }
 
@@ -30,9 +29,7 @@
 }
 
 .get-started {
-  position: relative;
-  left: 60%;
-  top: 33%;
+
 }
 
 .get-started a {
@@ -43,3 +40,77 @@
   border-radius: 5px;
   width: 300px;
 }
+
+
+/*THE ANIMATION ON HOMEPAGE*/
+
+.home-login {
+  background:#7f7f7f;
+  background:rgba(0,0,0,0.1);
+  height: 300px;
+  width: 180px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.home-login h1 {
+  opacity: 1;
+  position: relative;
+  font-weight: bold;
+}
+
+.home-login .username {
+  padding-top: 10px;
+}
+
+.home-login .password {
+  padding-top: 10px;
+}
+
+.home-login input {
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  background: white;
+  padding: 3px;
+}
+
+.home-login button {
+  color: #ebebeb;
+  padding: 10px 60px;
+  background: #3ca0e7;
+  border-radius: 5px;
+  width: 50px;
+  margin: 5px;
+}
+
+
+/*
+<div className="home-login">
+  <form onSubmit={ this.handleSubmit }>
+    <h1>Login</h1>
+
+    <div className="username">
+      <label>Username
+        <input
+          valueLink={this.linkState('username')}
+          type="text"
+          name="username"
+          placeholder="Username" />
+      </label>
+    </div>
+
+    <div className="password">
+      <label>Password
+        <input
+          valueLink={this.linkState('password')}
+          type="password"
+          name="password"
+          placeholder="******" />
+      </label>
+    </div>
+
+
+    <button>Sign In</button>
+    <button onClick={this.loginDemoUser}>Sign In As Demo User </button>
+  </form>
+</div>*/

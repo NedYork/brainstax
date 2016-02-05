@@ -1,19 +1,31 @@
 var React = require('react');
+var HomeLogin = require('../session/home_login');
+var HomePageSignUp = require('../user/home_page_sign_up');
 
 module.exports = React.createClass({
   render: function() {
     return (
       <div className="background">
-        <div className="welcome">
-          <h1>The Smartest Way to Study</h1>
-          <hr></hr>
-          <h2>Find, create, and share adaptive flashcards on any device</h2>
+        <div className="flip-container" ontouchstart="this.classList.toggle('hover');">
+        	<div className="flipper">
+        		<div className="front">
+              <div className="welcome">
+                <h1>The Smartest Way to Study</h1>
+                <hr></hr>
+                <h2>Find, create, and share adaptive flashcards on any device</h2>
+              </div>
+              <div className="get-started">
+                <a>Get Started</a>
+              </div>
+        		</div>
+        		<div className="back">
+              <div className="get-started">
+                <HomeLogin></HomeLogin>
+                <HomePageSignUp></HomePageSignUp>
+              </div>
+        		</div>
+        	</div>
         </div>
-
-        <div className="get-started">
-          <a>Get Started</a>
-        </div>
-
       </div>
     );
   }

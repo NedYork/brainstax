@@ -19,7 +19,7 @@ var Navbar = React.createClass({
         <nav className="user-header-nav group">
 
           <div className="user-header-logo">
-            <a href="#"><img src="https://www.brainscape.com/assets/logo.svg"/></a>
+            <a href="#"><img src={window.images.logo}/></a>
           </div>
 
 

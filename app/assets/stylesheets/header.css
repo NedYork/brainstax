@@ -91,6 +91,7 @@
   display: block;
   /*width: 155px;*/
   padding: 19px 20px;
+  width: 60px;
 }
 
 .user-header-list {
@@ -130,8 +131,8 @@
 }
 .user-header-profile img {
   display: block;
-  border: 1px solid white;
   float: left;
+  border-radius: 50%;
   margin: 10px 10px auto auto;
   height: 58px;
   width: 58px;

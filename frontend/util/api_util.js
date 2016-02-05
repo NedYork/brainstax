@@ -2,6 +2,17 @@ var UserActions = require('../actions/user');
 var ApiActions = require('../actions/api_actions');
 
 var ApiUtil = {
+  createUser: function(user) {
+    $.ajax({
+      url: "/api/users",
+      dataType: "json",
+      type: "POST",
+      data: { user: user},
+      success: function(user) {
+        ApiAction.signInAfterSignUp(user);
+      }
+    });
+  },
   deleteDeck: function(deck) {
     $.ajax({
       url: "/api/decks/" + deck.id,

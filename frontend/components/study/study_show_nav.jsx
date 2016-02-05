@@ -1,5 +1,6 @@
 var React = require('react');
 var CardForm = require('../card/card_form.jsx');
+var History = require('react-router').History;
 
 module.exports = React.createClass({
   render: function() {
@@ -23,7 +24,7 @@ module.exports = React.createClass({
           </div>
           <CardForm deckId={this.props.deckId} />
 
-          <a href="">Done</a>
+          <a href="#/">Done</a>
 
           <div className="cards-left">
           </div>
