@@ -65,3 +65,12 @@
    clear: both;
    display: block;
  }
+
+ a:hover {
+   cursor: pointer;
+ }
+
+ @font-face {
+    font-family: "Overpass-Light";
+    src: url("https://github.com/RedHatBrand/overpass/blob/master/Webfonts/Overpass-Light.ttf");
+  }

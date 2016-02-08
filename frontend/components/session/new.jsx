@@ -37,7 +37,7 @@ var SessionForm = React.createClass({
           <form onSubmit={ this.handleSubmit }>
             <h1>Login</h1>
             <hr></hr>
-            
+
             <div>
               <label>Username</label>
                 <input
