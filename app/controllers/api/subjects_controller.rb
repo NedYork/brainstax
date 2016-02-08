@@ -16,6 +16,12 @@ class Api::SubjectsController < ApplicationController
     end
   end
 
+  def destroy
+    @subject = Subject.find(params[:id])
+    @subject.destroy
+    render :show
+  end
+
   def new
     @subject = Subject.new
   end

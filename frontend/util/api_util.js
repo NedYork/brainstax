@@ -2,6 +2,16 @@ var UserActions = require('../actions/user');
 var ApiActions = require('../actions/api_actions');
 
 var ApiUtil = {
+  deleteSubject: function(subject) {
+    $.ajax({
+      url: "/api/subjects/" + subject.id,
+      type: "DELETE",
+      success: function(subject) {
+        ApiActions.removeSubject(subject);
+      }
+    });
+  },
+
   createUser: function(user) {
     $.ajax({
       url: "/api/users",

@@ -1,10 +1,11 @@
 var React = require('react');
 var ApiUtil = require('../../util/api_util');
 var History = require('react-router').History;
+var LinkedStateMixin = require('react-addons-linked-state-mixin');
 
 
 module.exports = React.createClass({
-  mixins: [History],
+  mixins: [History, LinkedStateMixin],
 
   getInitialState: function() {
     return { title: "" };
@@ -24,10 +25,12 @@ module.exports = React.createClass({
       <div className="subject-nav-form">
         <h1>Create New Subject</h1>
         <form onSubmit={this.handleSubmit}>
-          <input type="text" placeholder={'e.g. Biology 101'} onChange={this.handleChange}/>
+          <input type="text" placeholder={'e.g. Biology 101'} valueLink={this.linkState('title')}/>
           <button>Save</button>
         </form>
       </div>
     );
   }
 });
+
+// <input type="text" placeholder={'e.g. Biology 101'} onChange={this.handleChange}/>

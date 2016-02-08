@@ -134,10 +134,17 @@
   border-radius: 10px;
 }
 
+.rating-container {
+
+  width: 565px;
+}
+
 .ratebar {
   color: white;
   float: left;
-  padding-top: 20px;
+  /*padding-top: 20px;*/
+  position: relative;
+  top: 10px;
   background: #0b8ff2;
   height: 40px;
   width: 565px;

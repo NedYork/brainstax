@@ -80,5 +80,6 @@ Links::Application.configure do
   config.serve_static_files = true
   # ...
   config.log_level = :debug
+  config.assets.paths << Rails.root.join("app", "assets", "fonts")
 
 end

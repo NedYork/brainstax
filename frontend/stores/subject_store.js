@@ -49,6 +49,11 @@ var removeDeck = function(payload) {
   }
 };
 
+var removeSubject = function(payload) {
+  var subIdx = SubjectStore.find(payload.subject.id);
+  _subjects.splice(subIdx, 1);
+};
+
 SubjectStore.__onDispatch = function(payload) {
   switch(payload.actionType) {
     case SubjectConstants.ADD_DECK:
@@ -58,6 +63,11 @@ SubjectStore.__onDispatch = function(payload) {
 
     case SubjectConstants.REMOVE_DECK:
     removeDeck(payload);
+    SubjectStore.__emitChange();
+    break;
+
+    case SubjectConstants.REMOVE_SUBJECT:
+    removeSubject(payload);
     SubjectStore.__emitChange();
     break;
 

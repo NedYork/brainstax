@@ -70,7 +70,16 @@
    cursor: pointer;
  }
 
+ /*@import url(//fonts.googleapis.com/css?family=Open+Sans);*/
+
  @font-face {
-    font-family: "Overpass-Light";
-    src: url("https://github.com/RedHatBrand/overpass/blob/master/Webfonts/Overpass-Light.ttf");
-  }
+     font-family: 'Overpass';
+     src:font-url('Overpass-Light.eot'); /* IE9 Compat Modes */
+     src:font-url('Overpass-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         font-url('Overpass-Light.woff') format('woff'), /* Modern Browsers */
+         font-url('Overpass-Light.ttf') format('truetype'), /* Safari, Android, iOS */
+         font-url('Overpass-Light.svg#Overpass-Light') format('svg'); /* Legacy iOS */
+     font-style: normal;
+     font-weight: normal;
+     text-rendering: optimizeLegibility;
+}

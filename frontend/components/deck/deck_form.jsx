@@ -1,7 +1,10 @@
 var React = require('react');
 var ApiUtil = require('../../util/api_util');
+var LinkedStateMixin = require('react-addons-linked-state-mixin');
 
 module.exports = React.createClass({
+  mixins: [LinkedStateMixin],
+
   getInitialState: function() {
     return { name: "" };
   },
@@ -23,7 +26,7 @@ module.exports = React.createClass({
       <div className="deck-form">
         <h1>Create New Deck</h1>
         <form onSubmit={this.handleSubmit}>
-          <input type="text" placeholder={'e.g. Genetics'} onChange={this.handleChange}/>
+          <input type="text" placeholder={'e.g. Genetics'} valueLink={this.linkState('name')}/>
           <button>Save</button>
         </form>
       </div>

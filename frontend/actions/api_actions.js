@@ -3,6 +3,12 @@ var SubjectConstants = require('../constants/subject_constants');
 var CardConstants = require('../constants/card_constants');
 
 var ApiActions = {
+  removeSubject: function(subject) {
+    AppDispatcher.dispatch({
+      actionType: SubjectConstants.REMOVE_SUBJECT,
+      subject: subject
+    });
+  },
   signInAfterSignUp: function(currentUser) {
     AppDispatcher.dispatch({
         actionType: current_user_constants.RECEIVE_CURRENT_USER,

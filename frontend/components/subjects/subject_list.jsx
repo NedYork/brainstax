@@ -1,6 +1,7 @@
 var React = require('react');
 var SubjectItem = require('./subject_item');
 var SubjectStore = require('../../stores/subject_store');
+var ApiUtil = require('../../util/api_util');
 
 
 module.exports = React.createClass({
@@ -19,7 +20,10 @@ module.exports = React.createClass({
 
   handleUpdate: function() {
     this.setState({ subjects: SubjectStore.all() });
-    // this.forceUpdate();
+  },
+
+  deleteSubject: function(subject) {
+    ApiUtil.deleteSubject(subject);
   },
 
   render: function() {
@@ -31,9 +35,10 @@ module.exports = React.createClass({
               return (
                 <li key={subject.id}>
                   <SubjectItem subject={subject}/>
+                  <button className="delete-button" onClick={this.deleteSubject.bind(this, subject)}>Delete</button>
                 </li>
               );
-            })}
+            }.bind(this))}
           </ul>
         }
         {this.props.children}
