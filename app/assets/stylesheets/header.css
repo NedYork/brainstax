@@ -66,13 +66,13 @@
   color: white;
   /*display: block;*/
   padding: 10px 20px;
-  background: #0F6C8F;
+  background: #0E81AD;
   display: inline;
   border-radius: 2px;
 }
 
 .header-begin .get-started:hover {
-  background: #29506D;
+  background: #1B5D8E;
 }
 
 /* LOGGED-IN HEADER */

@@ -5,7 +5,14 @@ var LoginModal = require('../session/login_modal');
 var Navbar = React.createClass({
   toggleLogin: function() {
     document.getElementsByClassName('flipper')[0].classList.toggle('toggle-login');
+    document.getElementsByClassName('home-login')[0].classList.toggle('highlight');
   },
+
+  toggleGetStarted: function() {
+    document.getElementsByClassName('flipper')[0].classList.toggle('toggle-login');
+    document.getElementsByClassName('home-signup')[0].classList.toggle('highlight');
+  },
+
   render: function() {
     return (
       <header className="header">
@@ -24,7 +31,7 @@ var Navbar = React.createClass({
 
           <ul className="header-begin group">
             <li><a onClick={this.toggleLogin}>Login</a></li>
-            <li><a onClick={this.toggleLogin} className="get-started">Get Started</a></li>
+            <li><a onClick={this.toggleGetStarted} className="get-started">Get Started</a></li>
           </ul>
 
         </nav>
