@@ -12,9 +12,6 @@ var Footer = React.createClass({
     return (
       <footer className="footer">
         <section className="footer-wrapper container">
-          <ul className="footer-nav">
-            <a className="logo" onClick={ this.goToHome }>BrainSTAX</a>
-          </ul>
 
           <ul className="footer-nav">
             <h5>COMPANY</h5>
@@ -45,8 +42,8 @@ var Footer = React.createClass({
             </li>
 
             <li>
-              <a target="_blank" href="">
-                Blog
+              <a target="_blank" href="http://www.edwardhe.com">
+                Website
               </a>
             </li>
           </ul>

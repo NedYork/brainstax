@@ -14,7 +14,6 @@
 
   }
 }
-
 /*LEFT SIDE*/
 
 .nav-panel {
@@ -53,7 +52,6 @@
   top: 0;
   bottom: 0;
   background: #292929;
-  width: 280px;
 }
 
 .mastery-header {
@@ -91,11 +89,11 @@
 .study-show-main {
   width: 700px;
   position: relative;
-  left: 0;
+  left: 25%;
   right: 0;
   bottom: 0;
   top: 0;
-  margin: auto;
+  /*margin: auto;*/
 }
 
 .flashcard {

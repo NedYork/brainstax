@@ -10,7 +10,7 @@ BrainSTAX is a personal project by Ned He.
 - User accounts with secure authentication using BCrypt password digests and authenticity tokens.
 - Allows users to create and delete subjects, decks, and cards.
 - CSV file parsing for user uploaded flashcards and persists cards to database.
-- Implements spaced-repetition algorithm on front-end to dynamically re-sequence a user's set of flashcards.
+- Implements spaced-repetition algorithm on React front-end to dynamically re-sequence a user's set of flashcards.
 
 ## Project Design
 

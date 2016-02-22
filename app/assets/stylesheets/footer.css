@@ -4,38 +4,22 @@ footer {
   /*position: absolute;
   bottom: 0px;*/
   /*margin-top: -300px;*/
+
   margin: auto;
   height: 180px;
   clear: both;
   background-color: #222;
-  padding: 40px 0 100px 0;
+  padding-top: 40px;
+  padding-bottom: 100px;
 
 }
 
-.footer section.footer-wrapper {
-  width: 100%;
-  min-width: 970px;
+
+.footer .footer-wrapper {
+  width: 60%;
   display: table;
   table-layout: fixed;
   margin: auto;
-}
-
-.footer a.logo {
-  /*background: asset-url("logo.png") no-repeat 0 0;*/
-  background-image: url(image-path("logo.png"));
-  background-size: contain;
-  display: block;
-  padding-bottom: 80px;
-  height: 0;
-  width: 80px;
-  overflow: hidden;
-  text-indent: 100%;
-  white-space: nowrap;
-  opacity: 0.5;
-}
-
-.footer a.logo:hover {
-  opacity: 1;
 }
 
 .footer ul.footer-nav {
