@@ -19,16 +19,16 @@ class Api::CardsController < ApplicationController
   def sample
     deck = Deck.find(params[:id])
     @cards = []
-    @cards << Card.create!(front: "Abhor", back: "To strongly dislike", deck_id: deck.id)
-    @cards << Card.create!(front: "Bigot", back: "Prejudiced person", deck_id: deck.id)
-    @cards << Card.create!(front: "Counterfeit", back: "False", deck_id: deck.id)
-    @cards << Card.create!(front: "Enfranchise", back: "Give voting rights", deck_id: deck.id)
-    @cards << Card.create!(front: "Hamper", back: "Hinder", deck_id: deck.id)
-    @cards << Card.create!(front: "Kindle", back: "To start a fire", deck_id: deck.id)
-    @cards << Card.create!(front: "Noxious", back: "Harmful", deck_id: deck.id)
-    @cards << Card.create!(front: "Placid", back: "Calm", deck_id: deck.id)
-    @cards << Card.create!(front: "Remuneration", back: "Payment for work done", deck_id: deck.id)
-    @cards << Card.create!(front: "Talisman", back: "Lucky charm", deck_id: deck.id)
+    @cards << Card.create!(front: "What planet is Luke from?", back: "Tatooine", deck_id: deck.id)
+    @cards << Card.create!(front: "Who was Obi Wan's Master?", back: "Qui Gon Jin", deck_id: deck.id)
+    @cards << Card.create!(front: "Who was Leia's adopted father?", back: "Bail Organa", deck_id: deck.id)
+    @cards << Card.create!(front: "Who built C3PO?", back: "Anakin Skywalker", deck_id: deck.id)
+    @cards << Card.create!(front: "What ship was the spiritual predecessor to the X-Wing", back: "Z95-headhunter", deck_id: deck.id)
+    @cards << Card.create!(front: "Who did Han Solo get the Millenium Falcon from?", back: "Lando Calrissian", deck_id: deck.id)
+    @cards << Card.create!(front: "Who was Lando Calrissian co-pilot in the Battle of Endor?", back: "Nien Numb", deck_id: deck.id)
+    @cards << Card.create!(front: "What cackling minion is Jabba the Hutt's court jester?", back: "Sallacious Crumb", deck_id: deck.id)
+    @cards << Card.create!(front: "What space parasites does Han Solo encounter in an asteroid field?", back: "Mynocks", deck_id: deck.id)
+    @cards << Card.create!(front: "What Cell Block is Princess Leia held in 'A New Hope'", back: "Cell Block 1138", deck_id: deck.id)
     render :index
   end
 

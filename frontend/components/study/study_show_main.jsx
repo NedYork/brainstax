@@ -5,7 +5,7 @@ var CardStore = require('../../stores/card_store');
 module.exports = React.createClass({
   // taken from subject store.
   getInitialState: function() {
-    return { currentCard: CardStore.currentCard(), front: true };
+    return { currentCard: CardStore.currentCard(), front: true, empty: false };
   },
 
   componentWillMount: function() {
@@ -18,7 +18,6 @@ module.exports = React.createClass({
   },
 
   handleUpdate: function() {
-    // ApiUtil.fetchCards(this.props.deckId);
     this.setState({ currentCard: CardStore.currentCard(), front: true });
   },
 
@@ -29,10 +28,12 @@ module.exports = React.createClass({
 
   rateCard: function(rating) {
     var efVal = CardStore.rate(rating);
-    // Update EF Value in Database
-    ApiUtil.updateEf(efVal, CardStore.currentCard().id);
-    CardStore.next();
-    this.handleUpdate();
+    // Delay added to not show card
+    setTimeout(function() {
+      ApiUtil.updateEf(efVal, CardStore.currentCard().id);
+      CardStore.next();
+      this.handleUpdate();
+    }.bind(this), 100);
   },
 
   render: function() {
@@ -96,19 +97,16 @@ module.exports = React.createClass({
               <h4>{frontSide}</h4>
               <h3>{frontCardText}</h3>
             </div>
-
             <div className="cardback">
               <h4>{backSide}</h4>
               <h3>{backCardText}</h3>
             </div>
-
           </div>
         </div>
-        
+
         <div className="rating-container group" onClick={this.flip}>
           {ratingbar}
         </div>
-
       </div>
     );
   }

@@ -4,8 +4,8 @@ module.exports = {
   output: {
     path: "./app/assets/javascripts/",
     filename: "bundle.js",
-    devtoolModuleFilenameTemplate: '[resourcePath]',
-    devtoolFallbackModuleFilenameTemplate: '[resourcePath]?[hash]'
+    // devtoolModuleFilenameTemplate: '[resourcePath]',
+    // devtoolFallbackModuleFilenameTemplate: '[resourcePath]?[hash]'
   },
   module: {
     loaders: [
@@ -19,8 +19,7 @@ module.exports = {
       }
     ]
   },
-  devtool: 'source-map',
   resolve: {
-    extensions: ["", ".js", '.jsx']
+    extensions: ["", ".js", '.jsx'],
   }
 };
