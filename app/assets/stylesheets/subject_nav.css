@@ -1,87 +1,93 @@
-.subject-nav { display:none; }
+.subject-nav {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  bottom: 0;
+  display: block;
+  float: left;
+  width: 12%;
+  min-width: 160px;
+  padding: 20px;
+}
 
-@media (min-width: 900px) {
+/* ADD BAR TO ACTIVATE SUBJECT FORM */
 
-  .subject-nav {
-    display: block;
-    float: left;
-    width: 15%;
-    padding: 20px;
-  }
-
-
-
-  /* ADD BAR TO ACTIVATE SUBJECT FORM */
-
-  .subject-nav-add {
-  }
-
-
-  /* TOTAL LIST OF SUBJECTS */
-
-  .subject-nav-list {
-
-  }
+.subject-nav-add {
+}
 
 
-  /* EACH INDIVIDUAL SUBJECT*/
+/* TOTAL LIST OF SUBJECTS */
 
-  .subject-nav-list li {
-    display: block;
-    height: 90px;
-    padding: 10px;
-    /*background: #3498db;*/
-    /*border: 1px solid red;*/
-  }
+.subject-nav-list {
 
-  .subject-nav-topic {
-    display: block;
-  }
-
-  .subject-nav-topic img {
-    float: left;
-    height: 50px;
-    width: 50px;
-    padding-right: 10px;
-  }
-
-  .subject-nav-topic h4 {
-
-  }
+}
 
 
-  .progress-bar {
-    /*display: block;*/
-  }
+/* EACH INDIVIDUAL SUBJECT*/
 
-  /* SUBJECT FORM TO ADD NEW SUBJECT */
+.subject-nav-list li {
+  display: block;
+  height: 90px;
+  width: 90%;
+  padding: 20px;
+  border-bottom: 1px dashed red;
+}
+.subject-nav-list > h3 {
+  margin-bottom: 0;
+}
 
-  .subject-nav-form {
-    background: #eee;
-    padding: 10px;
-    border-radius: 10px;
-    width: 80%;
-    font-size: 12px;
-    margin: auto;
-  }
+.subject-nav-topic {
+  display: block;
+}
 
-  .subject-nav-form > h1 {
-    margin-left: 10%;
-    margin-right: 10%;
-    font-size: 14px;
-  }
+.subject-nav-topic img {
+  float: left;
+  height: 50px;
+  width: 50px;
+  padding-right: 10px;
+}
 
-  .subject-nav-form button {
-    display: block;
-    padding: 5px 10px;
-    margin: 5px auto;
-    background: #2980b9;
-    border-radius: 5px;
-    color: white;
-  }
+.subject-nav-topic h4 {
 
-  .subject-nav-form input {
-    padding: 10px;
-    margin: auto;
-  }
+}
+
+
+.progress-bar {
+  /*display: block;*/
+}
+
+/* SUBJECT FORM TO ADD NEW SUBJECT */
+
+.subject-nav-form {
+  background: #D2D7D3;
+  padding: 10px;
+  border-radius: 10px;
+  width: 80%;
+  font-size: 12px;
+  margin: auto;
+  margin-top: 20px;
+  /*color: white;*/
+}
+
+.subject-nav-form > h1 {
+  margin-left: 10%;
+  margin-right: 10%;
+  font-size: 14px;
+}
+
+.subject-nav-form button {
+  display: block;
+  padding: 5px 10px;
+  margin: 5px auto;
+  background: #2980b9;
+  border-radius: 5px;
+  color: white;
+}
+
+.subject-nav-form input {
+  padding: 10px;
+  margin: auto;
+  border: 1px solid white;
+  opacity: 0.8;
+  width: 80%;
 }

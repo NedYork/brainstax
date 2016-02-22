@@ -29,6 +29,7 @@ module.exports = React.createClass({
   render: function() {
     return (
       <div className='subject-nav-list'>
+        <h3> SUBJECTS </h3>
         {
           <ul>
             {this.state.subjects.map(function (subject) {

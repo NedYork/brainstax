@@ -1,71 +1,77 @@
-/*.subject-detail-background {
+.subject-detail-background {
+  position: absolute;
+  left: 250px;
+  top: 90px;
+  bottom: 0;
+  right: 0;
+  /*border-left: 1px solid #ccc;*/
   background: #ebf9f9;
-  float: left;
-  position:relative;
-}*/
-
-.subject-detail-main {
-  border-left: 1px solid #ccc;
-  background: #ebf9f9;
-  float: left;
-  width: 50%;
+  /*float: left;*/
   padding: 10px;
 }
 
-.subject-detail-main .title {
-  /*color: #34495e;*/
-  font-size: 20px;
+.subject-detail-main {
+
+}
+
+.subject-detail-title {
+
+}
+
+.subject-detail-title .title {
+  font-size: 40px;
   font-weight: bold;
 }
 
-/*.subject-detail-main img { display:none; }
 
-@media (min-width: 500px) {*/
+.subject-detail-title img {
+  display: block;
+  padding-top: 10px;
+  height: 70px;
+  width: 70px;
+}
 
-  .subject-detail-main img {
-    display: block;
-    padding-top: 10px;
-    height: 250px;
-    width: 250px;
-  }
-/*}*/
 
 .subject-detail-main decklist {
+}
+
+.decklist h5 {
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+
+.subject-detail-background ul {
+
+}
+
+.subject-detail-background li {
   padding: 10px;
-  float: right;
 }
 
-.subject-detail-main h5 {
-
-}
-
-.subject-detail-main ul {
-
-}
-
-.subject-detail-main .deck {
-
+.subject-detail-background .deck {
+  max-width: 200px;
 }
 
 .subject-detail-main .deck:first-child {
 }
 
+.delete-button {
+  float: right;
+  color: white;
+  padding: 5px 8px;
+  background: #34495e;
+  border-radius: 5px;
+}
 
 .deck-form {
+  margin-top: 40px;
   background: #eee;
   padding: 10px;
   border-radius: 10px;
   width: 200px;
   font-size: 12px;
   float: left;
-}
-
-.delete-button {
-  color: #454545;
-  padding: 5px 8px;
-  margin: 10px;
-  background: #f56172;
-  border-radius: 5px;
 }
 
 .deck-form > h1 {
@@ -87,4 +93,8 @@
 .deck-form input {
   padding: 10px;
   margin: auto;
+}
+
+@media (max-width: 650px) {
+
 }
