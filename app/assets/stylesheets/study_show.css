@@ -1,77 +1,64 @@
-.study {
-  /*display: block;
-  height: 100%;*/
-}
 /*enclosing container for left panel*/
-.study-show-nav { display:none; }
-
-@media (min-width: 500px) {
-  .study-show-nav {
-    display: block;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-
-  }
+.study-show-nav {
+  background: #333333;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 30%;
+  max-width: 300px;
 }
+
 /*LEFT SIDE*/
 
 .nav-panel {
-  display: block;
-  height: 100%;
-  width: 35px;
-  background: black;
+  background: #0D0D0D;
   position: absolute;
-  top: 0;
   left: 0;
+  top:0;
   bottom: 0;
+  width: 35px;
 }
 
 .nav-panel img {
-  display: block;
-  height: 20px;
-  width: 20px;
-  padding: 5px;
+  height: 25px;
+  width: 25px;
+  margin-left: 4px;
 }
 
 .nav-panel ul {
-  /*margin-left: 5px;*/
 }
 
 .nav-panel li {
-  color: #43adee;
-  margin: auto;
-  padding: 10px 5px;
+  padding-top: 20px;
+  margin-left: 5px;
+  color: #29A5DC;
 }
 
 /*RIGHT SIDE*/
 
 .progress-panel {
-  position: absolute;
-  left: 35px;
-  top: 0;
-  bottom: 0;
-  background: #292929;
+  width: 100%;
 }
 
 .mastery-header {
-  font-size: 14px;
-  background: #3e3e3e;
-  color: #e3e3e3;
   padding: 10px;
+  padding-left: 50px;
+  display: block;
+  background: #4A4A4A;
+  color: white;
 }
 
 .progress-panel > a {
-  color: #e3e3e3;
-  float: left;
-  background: #0b8ff2;
-  border-radius: 5px;
+  margin-left: 17%;
   padding: 10px 20px;
-  margin: 10px;
+  background: #29A5DC;
+  border-radius: 5px;
+  color: white;
 }
 
 .progress-panel > a:hover {
-  background: #0887e5;
+
 }
 
 .progress-percentage {
@@ -87,80 +74,37 @@
 /*STUDY SHOW MAIN*/
 
 .study-show-main {
-  width: 700px;
-  position: relative;
-  left: 25%;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  /*margin: auto;*/
-}
-
-.flashcard {
-  height: 400px;
-  width: 60%;
-  float: left;
-  margin: 5% auto auto 10%;
-  /*margin: auto;*/
-  border-radius: 10px;
-}
-
-.flashcard h4 {
-  color: #ccc;
-  font-weight: lighter;
-  font-size: 12px;
-  margin: 5px;
-}
-
-.flashcard h3 {
-  font-weight: bold;
-  font-size: 18px;
-  color: #292929;
-  text-align: center;
-  margin-top: 30%;
-}
-
-.reveal {
-  color: white;
-  float: left;
-  padding-top: 20px;
-  background: #0b8ff2;
-  height: 40px;
-  width: 565px;
-  margin: 5% auto auto 10%;
-  text-align: center;
-  border-radius: 10px;
+  /*align-items: center;*/
+  position: absolute;
+  left: 33%;
+  top: 5%;
 }
 
 .rating-container {
-
-  width: 565px;
+  min-width: 360px;
+  max-width: 600px;
 }
 
-.ratebar {
-  color: white;
-  float: left;
-  /*padding-top: 20px;*/
-  position: relative;
-  top: 10px;
-  background: #0b8ff2;
-  height: 40px;
-  width: 565px;
-  margin: 5% auto auto 10%;
+.reveal, .ratebar {
+  background: #29A5DC;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+  height: 20px;
+  color: #ffffff;
+}
+
+.reveal {
   text-align: center;
-  border-radius: 10px;
 }
 
 .ratebar ul {
-  padding-left: 70px;
+  padding-left: 5%
 }
 
 .ratebar a {
   float: left;
-  display: block;
-  padding-left: 8%;
-  padding-right: 8%;
-  color: white;
+  padding: 1% 8% 3% 8%;
 }
 
 .ratebar a:hover {
@@ -173,9 +117,12 @@
   background: #eee;
   padding: 10px;
   border-radius: 10px;
-  width: 80%;
+  width: 70%;
+  max-width: 280px;
   font-size: 12px;
-  margin: auto;
+  margin-left: 17%;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .add-card-form > h1 {
@@ -194,8 +141,30 @@
 }
 
 .add-card-form input {
-  /*background: white;*/
   padding: 10px;
   margin: auto;
+}
 
+/*RESPONSIVENESS*/
+
+@media (max-width: 845px) {
+  .study-show-nav {
+    display: none;
+  }
+
+  .study-show-main {
+    width: 100%;
+    margin: 20px;
+    left: 0;
+    top: 0;
+  }
+
+  .rating-container {
+    width: 90%;
+  }
+  .reveal, .ratebar {
+    width: 75%;
+    max-width: 900px;
+    min-width: 320px;
+  }
 }

@@ -77,9 +77,6 @@ module.exports = React.createClass({
             </ul>
           </div>
         );
-        comfortability = (
-            <h4>Please rate your comfortability with this card.</h4>
-        );
     } else {
       ratingbar = (
         <div className="reveal">
@@ -87,11 +84,6 @@ module.exports = React.createClass({
             Reveal Answer
           </button>
         </div>
-      );
-
-      comfortability = (
-        <h4>
-        </h4>
       );
     }
 
@@ -112,9 +104,8 @@ module.exports = React.createClass({
 
           </div>
         </div>
-
+        
         <div className="rating-container group" onClick={this.flip}>
-          {comfortability}
           {ratingbar}
         </div>
 
