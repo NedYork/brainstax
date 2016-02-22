@@ -7,11 +7,22 @@
 	}
 
 .flashcard, .cardfront, .cardback {
+	/*align-items: center;*/
 	width: 100%;
 	height: 100%;
 	min-height: 400px;
 	min-width: 600px;
 	max-width: 600px;
+}
+
+.flashcard h4 {
+	margin-left: 20px;
+}
+
+.flashcard h3 {
+	margin-left: 40%;
+	margin-top: 20%;
+	font-weight: normal;
 }
 
 /* flip speed goes here */
@@ -60,7 +71,7 @@
 	}
 
 	.cardback {
-		left: 10%;
+		left: 6%;
 	}
 }
 

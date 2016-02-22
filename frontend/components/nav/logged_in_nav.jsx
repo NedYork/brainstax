@@ -24,13 +24,7 @@ var Navbar = React.createClass({
 
 
           <ul className="user-header-list group">
-            <li>
-              <a href="#"> <i className="fa fa-database fa-lg"></i> My Library</a>
-            </li>
             <li><a href="#"><i className="fa fa-search fa-lg"></i> Search Stacks</a></li>
-            <li><a href="#"><i className="fa fa-area-chart fa-lg"></i> How It Works</a></li>
-            <li><a href="#"><i className="fa fa-info-circle fa-lg"></i> About</a></li>
-            <li><a href="#"><i className="fa fa-comment-o fa-lg"></i> Blog</a></li>
           </ul>
 
           <div className="user-header-profile">
