@@ -1,3 +1,5 @@
+
+
 .subject-nav {
   position: absolute;
   top: 80px;
@@ -90,4 +92,15 @@
   border: 1px solid white;
   opacity: 0.8;
   width: 80%;
+}
+
+@media (max-width: 800px) {
+  .subject-nav {
+    min-width: 0;
+    display: none;
+  }
+
+  .subject-detail-background {
+    left: 0;
+  }
 }

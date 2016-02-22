@@ -7,7 +7,7 @@ module.exports = React.createClass({
   mixins: [LinkedStateMixin],
 
   getInitialState: function() {
-    return { front: "", back: "", cardFile: null, deck_id: this.props.deckId };
+    return { front: "", back: "", cardFile: null, asd: false, deck_id: this.props.deckId };
   },
 
   handleSubmit: function(e) {
@@ -31,6 +31,12 @@ module.exports = React.createClass({
 
     ApiUtil.massCreateCards(formData);
     ApiUtil.fetchCards(this.props.deckId);
+  },
+
+  uploadSampleDeck: function(e) {
+    e.preventDefault();
+    this.setState({asd: true });
+    ApiUtil.getSampleFor(this.state.deck_id);
   },
 
   changeFile: function(e) {
@@ -72,10 +78,13 @@ module.exports = React.createClass({
           </label>
 
           <input type="file" onChange={this.changeFile} />
-
-
           <button>Submit</button>
         </form>
+
+        <hr></hr>
+
+        <h8> Try out the upload function! Create a CSV file on excel or Click "Let's Play" to upload our StarWars trivia pack to test your StarWars chops.</h8>
+        <button className="sample" onClick={this.uploadSampleDeck} disabled={this.state.asd}> Let's Play </button>
       </div>
     );
   }

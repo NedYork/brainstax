@@ -12,6 +12,7 @@ Links::Application.routes.draw do
     resources :cards, only: [:create, :destroy, :new] do
       collection do
         post 'mass_create', to: "cards#mass_create"
+        post 'sample', to: "cards#sample"
       end
     end
     patch '/usercardratings', to: 'user_card_ratings#update'

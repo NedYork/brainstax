@@ -12,6 +12,19 @@ var ApiUtil = {
     });
   },
 
+  getSampleFor: function(deck_id) {
+    $.ajax({
+      url: "/api/cards/sample",
+      type: "POST",
+      data: { id: deck_id },
+      success: function(data) {
+        data.forEach(function(card) {
+          ApiActions.addCard(card);
+        });
+      }
+    });
+  },
+
   createUser: function(user) {
     $.ajax({
       url: "/api/users",
@@ -19,7 +32,7 @@ var ApiUtil = {
       type: "POST",
       data: { user: user},
       success: function(user) {
-        ApiAction.signInAfterSignUp(user);
+        ApiActions.signInAfterSignUp(user);
       }
     });
   },
@@ -92,7 +105,6 @@ var ApiUtil = {
       dataType: "json",
       type: "GET",
       success: function(deck) {
-        console.log("retreived cards!")
         ApiActions.retrieveCards(deck.cards);
       }
     });

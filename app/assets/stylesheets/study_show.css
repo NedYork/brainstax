@@ -140,6 +140,10 @@
   color: white;
 }
 
+.add-card-form button:disabled {
+  background: grey;
+}
+
 .add-card-form input {
   padding: 10px;
   margin: auto;

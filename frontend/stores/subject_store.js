@@ -6,7 +6,6 @@ var SubjectConstants = require('../constants/subject_constants');
 
 
 SubjectStore.all = function () {
-  // debugger;
   return _subjects.slice();
 };
 
