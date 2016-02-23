@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # BrainSTAX
 
 [BrainSTAX][http://brainstax.herokuapp.com] is a web application for users to study and share flashcards. Inspired by BrainScape, BrainSTAX allows users to upload their own flashcards as an excel spreadsheet, create flashcards, and discover decks by other students. BrainSTAX implements a spaced-repetition algorithm, which reorders a user's set of flashcards causing cards to appear less frequently as user masters each card until all cards are mastered. This [learning method] [https://en.wikipedia.org/wiki/Spaced_repetition] allows a user to maximize retention.
@@ -29,3 +30,10 @@ BrainSTAX in its current stage is an MVP. Ideally, I'd like to implement some of
 
 - Search and subscribe to other user's subjects
 - Can keep subjects private
+=======
+BrainSTAX - The Ultimate Learning Accelerator.
+
+BrainSTAX is a single-page web app built on a Ruby/Rails backend and ReactJS frontend. It's a flash-card study app which implements a unique spaced-repetition algorithm that dynamically resequences a user's set of flashcards based on the user's familiarity with each card.
+
+Check out the App @ http://brainstax.herokuapp.com/
+>>>>>>> 3857f66785c1a3530fc7af2ea677406f0a698f76
