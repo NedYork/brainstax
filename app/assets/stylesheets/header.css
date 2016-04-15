@@ -17,7 +17,7 @@
 
  .header-nav {
    margin: auto;
-   width: 970px;
+   width: 80%;
  }
 
  .header-logo {
@@ -28,9 +28,14 @@
    width: 60px;
  }
 
-.header-list { display: none; }
+.header-list{ display: none; }
 
 @media (min-width: 600px) {
+
+  .header-begin {
+    display: block;
+  }
+
   .header-list {
     display: block;
     float: left;
@@ -46,6 +51,10 @@
 
   .header-list > li > a {
     /*width: 70px;*/
+  }
+
+  .bm-burger-button {
+    display: none;
   }
 }
 
@@ -139,4 +148,53 @@
   width: 70%;
   max-height: 58px;
   max-width: 58px;
+}
+
+/* Header Animation*/
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: fixed;
+  width: 36px;
+  height: 30px;
+  right: 36px;
+  top: 36px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #373a47;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #373a47;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+  padding: 0.8em;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
 }

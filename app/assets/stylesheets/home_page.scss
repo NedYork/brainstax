@@ -47,15 +47,12 @@
 /*SIGNUP ANIMATION HOMEPAGE*/
 
 .home-signup {
-  margin-right: 10px;
-  margin-bottom: 10px;
   float: left;
-  background:#7f7f7f;
-  background:rgba(0,0,0,0.1);
+  background:white;
   height: 250px;
   width: 180px;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 2px;
 }
 
 .home-signup h1 {
@@ -93,12 +90,11 @@
 
 .home-login {
   float: left;
-  background:#7f7f7f;
-  background:rgba(0,0,0,0.1);
+  background:white;
   height: 250px;
   width: 180px;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 2px;
 }
 
 .home-login h1 {
@@ -133,14 +129,14 @@
   margin: 5px;
 }
 
-<<<<<<< HEAD
-.highlight {
-  background: #F5EED5;
-}
-
-
-=======
->>>>>>> 3857f66785c1a3530fc7af2ea677406f0a698f76
+// <<<<<<< HEAD
+// .highlight {
+//   background: #F5EED5;
+// }
+//
+//
+// =======
+// >>>>>>> 3857f66785c1a3530fc7af2ea677406f0a698f76
 #fb-auth {
   font-size: 12px;
   padding: 0 0;

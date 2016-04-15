@@ -10,10 +10,14 @@ var Navbar = React.createClass({
   handleSubmit: function (e) {
     e.preventDefault();
     SessionsApiUtil.logout(function () {
-    this.history.pushState({}, "/");
-  }.bind(this));
+      this.history.pushState(null, "/");
+    }.bind(this));
   },
   render: function() {
+
+          // <ul className="user-header-list group">
+          //   <li><a href="#"><i className="fa fa-search fa-lg"></i> Search Stacks</a></li>
+          // </ul>
     return (
       <header className="header">
         <nav className="user-header-nav group">
@@ -22,16 +26,9 @@ var Navbar = React.createClass({
             <a href="#"><img src={window.images.logo}/></a>
           </div>
 
-
-          <ul className="user-header-list group">
-            <li><a href="#"><i className="fa fa-search fa-lg"></i> Search Stacks</a></li>
-          </ul>
-
           <div className="user-header-profile">
             <h3>
               {this.props.user.username}
-
-
               <button onClick={ this.handleSubmit }>
                 Log Out
                 <i className="fa fa-caret-down"></i>

@@ -1,4 +1,5 @@
 var CurrentUserActions = require("./../actions/current_user_actions");
+
 var SessionsApiUtil = {
   login: function(credentials, success) {
     $.ajax({
@@ -24,15 +25,14 @@ var SessionsApiUtil = {
     });
   },
 
-  fetchCurrentUser: function(cb) {
+  fetchCurrentUser: function(callback) {
     $.ajax({
       url: '/api/session',
       type: 'GET',
       dataType: 'json',
       success: function (currentUser) {
-        console.log("fetched current user!");
         CurrentUserActions.receiveCurrentUser(currentUser);
-        cb && cb(currentUser);
+        callback && callback(currentUser);
       }
     });
   }
