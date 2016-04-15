@@ -70,7 +70,6 @@ var ApiUtil = {
       data: formData,
       success: function(data) {
         // update CardStore from after the ajax request
-        console.log("upload success");
       }
     });
   },
@@ -93,7 +92,6 @@ var ApiUtil = {
       data: { rating: rating, card_id: card_id },
       type: "PATCH",
       success: function(data) {
-        console.log(data);
       }
     });
   },
@@ -121,7 +119,6 @@ var ApiUtil = {
         callback && callback(subject.author_id);
       },
       error: function(subject) {
-        console.log(subject);
       }
     });
   },

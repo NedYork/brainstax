@@ -105,9 +105,7 @@ function getNextCard(card) {
 }
 
 function quizCard(card) {
-  console.log("Side 1: " + card.side1);
   setTimeout(function() {
-    console.log("Side 2: " + card.side2);
     getUserInput("Grade> ", parseCardGrade, card);
   }, quizTimer);
 }
@@ -171,7 +169,6 @@ function calcIntervalEF(card, grade) {
 
 function writeCardFile(cardFile) {
   fs.writeFileSync(cardFile, JSON.stringify(cards, null, 2));
-  console.log("\nProgress saved back to file.");
 }
 
 cards = readCardFile(cardFile);

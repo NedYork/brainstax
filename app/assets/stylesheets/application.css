@@ -32,6 +32,10 @@
    /*border: 1px solid red;*/
  }
 
+ button, a {
+   cursor: pointer;
+ }
+
  /* --- ELEMENTS --- */
 
  body {

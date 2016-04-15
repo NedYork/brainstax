@@ -1,7 +1,7 @@
 <<<<<<< HEAD
 # BrainSTAX
 
-[BrainSTAX][http://brainstax.herokuapp.com] is a web application for users to study and share flashcards. Inspired by BrainScape, BrainSTAX allows users to upload their own flashcards as an excel spreadsheet, create flashcards, and discover decks by other students. BrainSTAX implements a spaced-repetition algorithm, which reorders a user's set of flashcards causing cards to appear less frequently as user masters each card until all cards are mastered. This [learning method] [https://en.wikipedia.org/wiki/Spaced_repetition] allows a user to maximize retention.
+[BrainSTAX](http://brainstax.herokuapp.com) is a web application for users to study and share flashcards. Inspired by BrainScape, BrainSTAX allows users to upload their own flashcards as an excel spreadsheet, create flashcards, and discover decks by other students. BrainSTAX implements a spaced-repetition algorithm, which reorders a user's set of flashcards causing cards to appear less frequently as user masters each card until all cards are mastered. This [learning method] (https://en.wikipedia.org/wiki/Spaced_repetition) allows a user to maximize retention.
 
 BrainSTAX is a personal project by Ned He.
 

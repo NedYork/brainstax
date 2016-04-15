@@ -115,8 +115,9 @@
 .home-login h1 {
   text-align: center;
   opacity: 1;
+  color: orange;
   position: relative;
-  font-weight: bold;
+  // font-weight: bold;
   margin-bottom: 15px;
 }
 
@@ -141,7 +142,7 @@
   color: #ebebeb;
   padding: 10px 60px;
   background: #3ca0e7;
-  border-radius: 5px;
+  border-radius: 2px;
   width: 50px;
   margin: 5px;
 }

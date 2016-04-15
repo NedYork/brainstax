@@ -42,7 +42,6 @@ CardStore.next = function() {
   var currentStack = CardStore.all();
   var first = currentStack.shift();
   if (first.ef_value >= 5) {
-    console.log("should be popped")
   } else {
     var index = first.ef_value * 3;
     if (index > currentStack.length - 1) {
