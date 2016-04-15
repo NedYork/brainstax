@@ -36,30 +36,26 @@ var SessionForm = React.createClass({
           <h1>Login</h1>
 
           <div className="username">
-            <label>Username
               <input
                 valueLink={this.linkState('username')}
                 type="text"
                 name="username"
-                placeholder="Username" />
-            </label>
+                placeholder="you@email.com" />
           </div>
 
           <div className="password">
-            <label>Password
-              <input
-                valueLink={this.linkState('password')}
-                type="password"
-                name="password"
-                placeholder="******" />
-            </label>
+            <input
+              valueLink={this.linkState('password')}
+              type="password"
+              name="password"
+              placeholder="password" />
           </div>
 
 
           <button>Sign In</button>
           <button onClick={this.loginDemoUser}>Demo</button>
         </form>
-        <a id="fb-auth" href="/auth/facebook">LOG IN WITH FACEBOOK</a> 
+        <a id="fb-auth" href="/auth/facebook">LOG IN WITH FACEBOOK</a>
       </div>
     );
   },

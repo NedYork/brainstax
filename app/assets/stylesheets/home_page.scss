@@ -6,17 +6,31 @@
   height: 900px;
 }
 
-.welcome {
-  font-family: 'Poppins', sans-serif;
-  width: 300px;
-  position: relative;
-  top: 30%;
-  left: 60%;
+@media (min-width: 300px) {
+  .welcome {
+    font-family: 'Poppins', sans-serif;
+    width: 300px;
+    position: relative;
+    top: 30%;
+    left: 15%;
+  }
+
+  .welcome hr {
+    width: 90%;
+  }
+}
+@media (min-width: 500px) {
+  .welcome {
+    left: 40%;
+  }
 }
 
-.welcome hr {
-  width: 90%;
+@media (min-width: 700px) {
+  .welcome {
+    left: 60%;
+  }
 }
+
 
 .welcome h1 {
   color: #6ea6a4;
@@ -95,12 +109,15 @@
   width: 180px;
   padding: 20px;
   border-radius: 2px;
+  justify-content: center;
 }
 
 .home-login h1 {
+  text-align: center;
   opacity: 1;
   position: relative;
   font-weight: bold;
+  margin-bottom: 15px;
 }
 
 .home-login .username {

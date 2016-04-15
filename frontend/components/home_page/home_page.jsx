@@ -4,7 +4,6 @@ var Modal = require('react-modal');
 var ApiUtil = require('../../util/api_util');
 // var Navbar = require('../nav/home_page_nav');
 var Footer = require('../footer/footer');
-var HomeBody = require('./home_body.jsx');
 var SessionForm = require('./home_login');
 var HomePageSignUp = require('./home_page_sign_up');
 
@@ -65,8 +64,15 @@ var HomePage = React.createClass({
           <HomePageSignUp></HomePageSignUp>
         </Modal>
 
+        {/*home body*/}
+        <div className="background">
+          <div className="welcome">
+            <h1>The <i>Ultimate</i> Learning Accelerator</h1>
+            <hr></hr>
+            <h2>Maximize your return with our <i>dynamic-sequence technology</i>.</h2>
+          </div>
+        </div>
 
-        <HomeBody></HomeBody>
         {this.props.children}
         <Footer></Footer>
       </main>
@@ -86,9 +92,9 @@ var customStyles = {
   content : {
     position                   : 'absolute',
     top                        : '30%',
-    left                       : '35%',
-    border: 'none',
-    background: 'none',
+    left                       : '24%',
+    border                     : 'none',
+    background                 : 'none',
     overflow                   : 'auto',
     WebkitOverflowScrolling    : 'touch',
     outline                    : 'none',
