@@ -63,25 +63,28 @@
 .home-signup {
   float: left;
   background:white;
-  height: 250px;
+  height: 260px;
   width: 180px;
   padding: 20px;
+  font-size: 15px;
   border-radius: 2px;
+  justify-content: center;
 }
 
 .home-signup h1 {
+  text-align: center;
   opacity: 1;
+  color: orange;
   position: relative;
-  font-weight: bold;
+  // margin-bottom: 5px;
 }
 
 .home-signup .username {
-  padding-top: 10px;
+  padding-top: 5px;
 }
 
 .home-signup .password {
   padding-top: 10px;
-  padding-bottom: 10px;
 }
 
 .home-signup input {
@@ -89,6 +92,7 @@
   border-radius: 2px;
   background: white;
   padding: 3px;
+  margin: 5px 0px 5px 0px;
 }
 
 .home-signup button {
@@ -98,6 +102,8 @@
   border-radius: 5px;
   width: 60px;
   margin: 5px;
+  margin-top: 8px;
+  box-shadow: 0px 3px 4px rgba(0,0,0,0.25);
 }
 
 /*LOGIN ANIMATION HOMEPAGE*/
@@ -134,7 +140,6 @@
 .home-login input {
   border: 1px solid #ccc;
   border-radius: 2px;
-  background: white;
   padding: 3px;
 }
 
@@ -145,19 +150,19 @@
   border-radius: 2px;
   width: 50px;
   margin: 5px;
+  box-shadow: 0px 3px 4px rgba(0,0,0,0.25);
 }
 
-// <<<<<<< HEAD
-// .highlight {
-//   background: #F5EED5;
-// }
-//
-//
-// =======
-// >>>>>>> 3857f66785c1a3530fc7af2ea677406f0a698f76
 #fb-auth {
   font-size: 12px;
   padding: 0 0;
   background: none;
   color: black;
+}
+
+input[type="text"].bsc-input, input[type="email"].bsc-input, input[type="password"].bsc-input, textarea.bsc-input {
+  font-family: "Proxima Nova Light", sans-serif;
+  background: #f2f2f2;
+  border: solid #f2f2f2 1px;
+  box-shadow: none;
 }

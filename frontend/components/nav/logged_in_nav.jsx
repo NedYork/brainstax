@@ -14,10 +14,6 @@ var Navbar = React.createClass({
     }.bind(this));
   },
   render: function() {
-
-          // <ul className="user-header-list group">
-          //   <li><a href="#"><i className="fa fa-search fa-lg"></i> Search Stacks</a></li>
-          // </ul>
     return (
       <header className="header">
         <nav className="user-header-nav group">
@@ -31,7 +27,6 @@ var Navbar = React.createClass({
               {this.props.user.username}
               <button onClick={ this.handleSubmit }>
                 Log Out
-                <i className="fa fa-caret-down"></i>
               </button>
 
             </h3>

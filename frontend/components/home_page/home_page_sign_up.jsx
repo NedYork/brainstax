@@ -20,6 +20,14 @@ var HomePageSignUp = React.createClass({
     }.bind(this));
   },
 
+  loginDemoUser: function (e) {
+    e.preventDefault();
+    var demoUser = { username: "JSAddict", password: "123456" };
+    SessionsApiUtil.login(demoUser, function () {
+      this.history.pushState({}, "/user/:id");
+    }.bind(this));
+  },
+
   render: function() {
 
     return (
@@ -28,35 +36,36 @@ var HomePageSignUp = React.createClass({
           <h1>Sign Up</h1>
 
           <div className="username">
-            <label>Username
+
               <input
                 valueLink={this.linkState('username')}
                 type="text"
                 name="username"
                 placeholder="Username" />
-            </label>
+
           </div>
 
           <div className="password">
-            <label>Password
+
               <input
                 valueLink={this.linkState('password')}
                 type="password"
                 name="password"
-                placeholder="******" />
-            </label>
+                placeholder="Password" />
+
           </div>
 
           <div className="password">
-            <label>Password Confirm
+
               <input
                 type="password"
-                placeholder="******" />
-            </label>
+                placeholder="Password Confirm" />
+
           </div>
 
           <button>Sign Up</button>
         </form>
+        <button onClick={this.loginDemoUser}>Demo</button>
       </div>
     );
   },
