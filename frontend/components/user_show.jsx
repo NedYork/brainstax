@@ -12,19 +12,6 @@ module.exports = React.createClass({
     return { user: 9 };
   },
 
-   componentDidMount: function() {
-     var steps = [
-       {
-         title: 'Your subjects',
-         text: 'You can select your favorite subject here to reveal its decks.',
-         selector: '.subject-nav',
-         position: 'top',
-         type: 'click'
-       }
-     ];
-     this.props.addSteps(steps);
-   },
-
 
 
   // componentDidMount: function() {
@@ -47,14 +34,14 @@ module.exports = React.createClass({
   render: function() {
     if (!this.state.user) {
       return <div></div>;
-    } else {
-      return (
-        <div>
-          <Navbar addSteps={this.addSteps} addTooltip={this.addTooltip} user={this.state.user}></Navbar>
-          <SubjectNav addSteps={this.addSteps} addTooltip={this.addTooltip} subjects={this.state.user.subjects} />
-          {React.cloneElement(this.props.children, { addSteps: this.addSteps, addTooltip: this.addTooltip })}
-        </div>
-      );
     }
+    var that = this;
+    return (
+      <div>
+        <Navbar addSteps={this.props.addSteps} addTooltip={this.props.addTooltip} user={this.state.user}></Navbar>
+        <SubjectNav addSteps={this.props.addSteps} addTooltip={this.props.addTooltip} subjects={this.state.user.subjects} />
+        {this.props.children}
+      </div>
+    );
   }
 });
