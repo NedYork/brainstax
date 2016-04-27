@@ -13,6 +13,16 @@ module.exports = React.createClass({
   componentDidMount: function() {
     this.StoreListener = SubjectStore.addListener(this.handleUpdate);
     ApiUtil.fetchSubjects();
+    var steps = [
+      {
+        title: 'Your subjects',
+        text: 'You can select your favorite subject here to reveal its decks.',
+        selector: '.subject-nav-list ul',
+        position: 'top',
+        type: 'click'
+      }
+    ];
+    this.props.addSteps(steps);
   },
 
   componentWillUnmount: function() {

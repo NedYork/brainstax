@@ -7,14 +7,6 @@ var SubjectStore = require('../../stores/subject_store');
 var DeckForm = require('../deck/deck_form');
 
 module.exports = React.createClass({
-  getStateFromStore: function() {
-    return { subject: SubjectStore.find(parseInt(this.props.params.id)) };
-  },
-
-  _onChange: function() {
-    this.setState(this.getStateFromStore());
-  },
-
   getInitialState: function() {
     return { subject: null };
   },
@@ -30,6 +22,15 @@ module.exports = React.createClass({
 
   componentWillUnmount: function() {
     this.subjectListener.remove();
+  },
+
+  getStateFromStore: function() {
+    return { subject: SubjectStore.find(parseInt(this.props.params.id)) };
+  },
+
+  _onChange: function() {
+    this.setState(this.getStateFromStore());
+
   },
 
   deleteDeck: function(deck) {

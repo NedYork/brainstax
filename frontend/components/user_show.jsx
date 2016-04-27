@@ -35,7 +35,6 @@ module.exports = React.createClass({
     if (!this.state.user) {
       return <div></div>;
     }
-    var that = this;
     return (
       <div>
         <Navbar addSteps={this.props.addSteps} addTooltip={this.props.addTooltip} user={this.state.user}></Navbar>
