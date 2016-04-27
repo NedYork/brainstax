@@ -7,13 +7,13 @@ var IndexRoute = ReactRouter.IndexRoute;
 
 var SubjectDetail = require('./components/subjects/subject_detail');
 var StudyShow = require('./components/study/study_show');
-var SessionForm = require('./components/session/new');
 var SubjectNav = require('./components/subjects/subject_nav');
 var UserShow = require('./components/user_show');
 var App = require('./components/app');
 var CurrentUserStore = require('./stores/current_user_store');
 var HomePage = require('./components/home_page/home_page');
 var SessionsApiUtil = require('./util/sessions_api_util');
+
 
 
 
@@ -37,7 +37,6 @@ var routes = (
     <Route path='/' component={ App }>
       <IndexRoute component={ UserShow } onEnter={ _ensureLoggedIn }/>
       <Route path="home" component={ HomePage }/>
-      <Route path="login" component={ SessionForm }/>
       <Route path="user/:id" component={ UserShow } onEnter={ _ensureLoggedIn }/>
 
       <Route path='subject' component={ UserShow }>

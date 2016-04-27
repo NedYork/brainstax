@@ -5,6 +5,7 @@ var ApiUtil = require('../../util/api_util');
 
 
 module.exports = React.createClass({
+
   getInitialState: function() {
     return { subjects: SubjectStore.all() };
   },
