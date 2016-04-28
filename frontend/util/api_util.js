@@ -136,13 +136,14 @@ var ApiUtil = {
   },
 
 
-  fetchSingleSubject: function(id) {
+  fetchSingleSubject: function(id, cb) {
     $.ajax({
       url: "/api/subjects/" + id,
       type: "GET",
       dataType: "json",
       success: function(data) {
         ApiActions.addSubject(data);
+        cb && cb();
       }
     });
   },

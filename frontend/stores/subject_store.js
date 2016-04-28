@@ -82,6 +82,5 @@ SubjectStore.__onDispatch = function(payload) {
   }
 };
 
-window.SubjectStore = SubjectStore;
 
 module.exports = SubjectStore;

@@ -15,8 +15,8 @@ module.exports = React.createClass({
     ApiUtil.fetchSubjects();
     var steps = [
       {
-        title: 'Your subjects',
-        text: 'You can select your favorite subject here to reveal its decks.',
+        title: 'Start here!',
+        text: 'You can select your favorite subject here to reveal its decks in the right pane.',
         selector: '.subject-nav-list ul',
         position: 'top',
         type: 'click'
@@ -46,7 +46,7 @@ module.exports = React.createClass({
             {this.state.subjects.map(function (subject) {
               return (
                 <li key={subject.id}>
-                  <SubjectItem subject={subject}/>
+                  <SubjectItem changeSubject={this.props.changeSubject} subject={subject}/>
                   <button className="delete-button" onClick={this.deleteSubject.bind(this, subject)}>Delete</button>
                 </li>
               );

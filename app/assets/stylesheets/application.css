@@ -32,7 +32,7 @@
    /*border: 1px solid red;*/
  }
 
- button, a {
+ button, a, .subject-nav-topic {
    cursor: pointer;
  }
 

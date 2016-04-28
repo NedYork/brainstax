@@ -8,7 +8,7 @@ module.exports = React.createClass({
   render: function() {
     return (
       <div className="subject-nav">
-        <SubjectList addSteps={this.props.addSteps} subjects={SubjectStore.all()} />
+        <SubjectList changeSubject={this.props.changeSubject} addSteps={this.props.addSteps} subjects={SubjectStore.all()} />
         <SubjectForm addSteps={this.props.addSteps}/>
         {this.props.children}
       </div>

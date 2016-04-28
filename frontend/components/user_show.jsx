@@ -2,14 +2,25 @@ var React = require('react');
 var UserStore = require('../stores/user');
 var ApiUtil = require('../util/api_util');
 var SubjectList = require('./subjects/subject_list');
+var SubjectStore = require('../stores/subject_store');
 var SubjectNav = require('./subjects/subject_nav');
+var SubjectDetail = require('./subjects/subject_detail');
 var Navbar = require('./nav/logged_in_nav');
 var Footer = require('./footer/footer');
 
 module.exports = React.createClass({
   getInitialState: function() {
     // return {user: UserStore.find(this.props.params.id)};
-    return { user: 9 };
+    return { user: 9, subject: null };
+  },
+
+  changeSubject: function(id) {
+    var that = this;
+    return function() {
+      ApiUtil.fetchSingleSubject(id, function () {
+        that.setState({subject: SubjectStore.find(id)});
+      });
+    };
   },
 
 
@@ -38,7 +49,9 @@ module.exports = React.createClass({
     return (
       <div>
         <Navbar addSteps={this.props.addSteps} addTooltip={this.props.addTooltip} user={this.state.user}></Navbar>
-        <SubjectNav addSteps={this.props.addSteps} addTooltip={this.props.addTooltip} subjects={this.state.user.subjects} />
+        <SubjectNav changeSubject={this.changeSubject} addSteps={this.props.addSteps} addTooltip={this.props.addTooltip} subjects={this.state.user.subjects} />
+        <SubjectDetail subject={this.state.subject}/>
+
         {this.props.children}
       </div>
     );

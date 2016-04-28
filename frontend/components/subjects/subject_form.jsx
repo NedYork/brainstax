@@ -15,15 +15,15 @@ module.exports = React.createClass({
     var steps = [
       {
         title: 'Create a new subject',
-        text: 'You can create a new subject to study here. <br> Go ahead, try it out!',
+        text: 'Or you can create a brand new subject. <br> Go ahead, try it out!',
         selector: '.subject-nav-form',
-        position: 'right',
+        position: 'top',
         type: 'click'
       }
     ];
     this.props.addSteps(steps);
   },
-  
+
   handleSubmit: function(e) {
     e.preventDefault();
     ApiUtil.createSubject(this.state, function(id) {
