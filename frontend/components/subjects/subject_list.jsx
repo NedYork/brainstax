@@ -7,7 +7,7 @@ var ApiUtil = require('../../util/api_util');
 module.exports = React.createClass({
 
   getInitialState: function() {
-    return { subjects: SubjectStore.all() };
+    return { subjects: [] };
   },
 
   componentDidMount: function() {
@@ -46,7 +46,7 @@ module.exports = React.createClass({
             {this.state.subjects.map(function (subject) {
               return (
                 <li key={subject.id}>
-                  <SubjectItem changeSubject={this.props.changeSubject} subject={subject}/>
+                  <SubjectItem changeSubjectAndPopulateDeck={this.props.changeSubjectAndPopulateDeck} subject={subject}/>
                   <button className="delete-button" onClick={this.deleteSubject.bind(this, subject)}>Delete</button>
                 </li>
               );

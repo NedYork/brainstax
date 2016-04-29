@@ -1,11 +1,26 @@
 var React = require('react');
 var ApiUtil = require('../../util/api_util');
 var DeckForm = require('../deck/deck_form');
+var DeckStore = require('../../stores/deck_store');
 var History = require('react-router').History;
-var LinkedStateMixin = require('react-addons-linked-state-mixin');
 
 module.exports = React.createClass({
-  mixins: [History, LinkedStateMixin],
+  mixins: [History],
+  getInitialState: function() {
+    return { decks: [] };
+  },
+
+  componentDidMount: function() {
+    this.StoreListener = DeckStore.addListener(this.handleUpdate);
+  },
+
+  componentWillUnmount: function() {
+    this.StoreListener.remove();
+  },
+
+  handleUpdate: function() {
+    this.setState({ decks: DeckStore.all() });
+  },
 
   deleteDeck: function(deck) {
     ApiUtil.deleteDeck(deck);
@@ -17,7 +32,7 @@ module.exports = React.createClass({
   },
 
   render: function() {
-    if (!(this.props.subject && this.props.subject.decks)) { return <div></div>; }
+    if (!(this.props.subject && this.state.decks)) { return <div></div>; }
     return (
       <div className="subject-detail-background group">
         <div className="subject-detail-title group">
@@ -30,7 +45,7 @@ module.exports = React.createClass({
         <div className="decklist group">
           <h5>DECKS</h5>
           <ol>
-            {this.props.subject.decks.map(function(deck) {
+            {this.state.decks.map(function(deck) {
               return (
                 <li key={deck.id} className="deck">
                   <div onClick={this.enterStudyPage.bind(this, deck.id)}>{deck.name}</div>

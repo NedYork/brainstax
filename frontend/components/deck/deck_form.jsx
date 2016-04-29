@@ -13,14 +13,11 @@ module.exports = React.createClass({
     this.setState({ name: "" });
   },
 
-  handleChange: function(e) {
-    this.setState({ name: e.target.value });
-  },
-
   handleSubmit: function(e) {
     e.preventDefault();
     ApiUtil.addDeck(this.state, this.props.subjectId, this.resetDefaultState);
   },
+
   render: function() {
     return(
       <div className="deck-form">

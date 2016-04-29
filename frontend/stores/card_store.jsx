@@ -84,6 +84,4 @@ CardStore.__onDispatch = function(payload) {
   }
 };
 
-window.CardStore = CardStore;
-
 module.exports = CardStore;

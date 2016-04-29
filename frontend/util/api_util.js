@@ -53,7 +53,6 @@ var ApiUtil = {
       dataType: "json",
       data: { deck: deck, subject_id: subjectId },
       success: function(deck) {
-        // something like this below. fix this
         ApiActions.addDeck(deck, subjectId);
         callback && callback();
       }
@@ -143,6 +142,19 @@ var ApiUtil = {
       dataType: "json",
       success: function(data) {
         ApiActions.addSubject(data);
+        cb && cb();
+      }
+    });
+  },
+
+
+  fetchDecks: function(subjectId, cb) {
+    $.ajax({
+      url: "/api/subjects/" + subjectId,
+      type: "GET",
+      dataType: "json",
+      success: function(data) {
+        ApiActions.fetchDecks(data.decks);
         cb && cb();
       }
     });

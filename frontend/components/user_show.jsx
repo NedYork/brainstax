@@ -14,34 +14,18 @@ module.exports = React.createClass({
     return { user: 9, subject: null };
   },
 
-  changeSubject: function(id) {
+  changeSubjectAndPopulateDeck: function(id) {
     var that = this;
     return function() {
+
       ApiUtil.fetchSingleSubject(id, function () {
         that.setState({subject: SubjectStore.find(id)});
       });
+
+      ApiUtil.fetchDecks(id);
     };
   },
 
-
-
-  // componentDidMount: function() {
-  //   this.userListener = UserStore.addListener(this.updateState);
-  //   ApiUtil.fetchUser(this.props.params.id);
-  // },
-  // componentWillUnmount: function() {
-  //   this.userListener.remove();
-  // },
-  // componentWillReceiveProps: function(newProps) {
-  //   console.log("in componentWillReceiveProps");
-  //   if (!UserStore.find(newProps.params.id)) {
-  //     ApiUtil.fetchUser(newProps.params.id);
-  //   }
-  //   this.setState({user: UserStore.find(newProps.params.id)});
-  // },
-  // updateState: function() {
-  //   this.setState({ user: UserStore.find(this.props.params.id)});
-  // },
   render: function() {
     if (!this.state.user) {
       return <div></div>;
@@ -49,7 +33,7 @@ module.exports = React.createClass({
     return (
       <div>
         <Navbar addSteps={this.props.addSteps} addTooltip={this.props.addTooltip} user={this.state.user}></Navbar>
-        <SubjectNav changeSubject={this.changeSubject} addSteps={this.props.addSteps} addTooltip={this.props.addTooltip} subjects={this.state.user.subjects} />
+        <SubjectNav changeSubjectAndPopulateDeck={this.changeSubjectAndPopulateDeck} addSteps={this.props.addSteps} addTooltip={this.props.addTooltip} subjects={this.state.user.subjects} />
         <SubjectDetail subject={this.state.subject}/>
 
         {this.props.children}

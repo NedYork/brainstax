@@ -32,10 +32,6 @@ module.exports = React.createClass({
 
   },
 
-  handleChange: function(e) {
-    this.setState({ title: e.target.value });
-  },
-
   render: function() {
     return (
       <div className="subject-nav-form">
@@ -48,5 +44,3 @@ module.exports = React.createClass({
     );
   }
 });
-
-// <input type="text" placeholder={'e.g. Biology 101'} onChange={this.handleChange}/>
