@@ -23,14 +23,14 @@ var ApiActions = {
   },
   addDeck: function(deck, subjectId) {
     AppDispatcher.dispatch({
-      actionType: SubjectConstants.ADD_DECK,
+      actionType: DeckConstants.ADD_DECK,
       deck: deck,
       subjectId: subjectId
     });
   },
   removeDeck: function(deck, subjectId) {
     AppDispatcher.dispatch({
-      actionType: SubjectConstants.REMOVE_DECK,
+      actionType: DeckConstants.REMOVE_DECK,
       deck: deck,
       subjectId: subjectId
     });

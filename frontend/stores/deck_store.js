@@ -16,12 +16,22 @@ var resetDecks = function(decks) {
   }
 };
 
-var addDeck = function(deck) {
-
+var addDeck = function(deck, subjectId) {
+  _decks.push(deck);
 };
+// for reference
+// var addDeck = function(payload) {
+//   SubjectStore.find(payload.subjectId).decks.push(payload.deck);
+// };
+
 
 var deleteDeck = function(deck) {
-
+  for (var i = 0; i < _decks.length; i++) {
+    if (_decks[i].id === deck.id) {
+      _decks.splice(i, 1);
+      break;
+    }
+  }
 };
 
 DeckStore.__onDispatch = function(payload) {
@@ -31,12 +41,12 @@ DeckStore.__onDispatch = function(payload) {
     DeckStore.__emitChange();
     break;
 
-    case DeckConstants.ADD_DECKS:
+    case DeckConstants.ADD_DECK:
     addDeck(payload.deck);
     DeckStore.__emitChange();
     break;
 
-    case DeckConstants.DELETE_DECKS:
+    case DeckConstants.REMOVE_DECK:
     deleteDeck(payload.deck);
     DeckStore.__emitChange();
     break;
