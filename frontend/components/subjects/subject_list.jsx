@@ -46,7 +46,7 @@ module.exports = React.createClass({
             {this.state.subjects.map(function (subject) {
               return (
                 <li key={subject.id}>
-                  <SubjectItem changeSubjectAndPopulateDeck={this.props.changeSubjectAndPopulateDeck} subject={subject}/>
+                  <SubjectItem addSteps={this.props.addSteps} changeSubjectAndPopulateDeck={this.props.changeSubjectAndPopulateDeck} subject={subject}/>
                   <button className="delete-button" onClick={this.deleteSubject.bind(this, subject)}>Delete</button>
                 </li>
               );

@@ -44,6 +44,9 @@
   color: 'green';
 }
 
+.deck-list-item {
+  cursor: pointer;
+}
 
 .subject-detail-background ul {
 

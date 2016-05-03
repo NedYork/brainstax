@@ -8,11 +8,13 @@ var Navbar = React.createClass({
   mixins: [History],
 
   handleSubmit: function (e) {
+    this.props.removeAllSteps();
     e.preventDefault();
     SessionsApiUtil.logout(function () {
-      this.history.pushState(null, "/");
+      this.history.pushState(null, "/home");
     }.bind(this));
   },
+
   render: function() {
     return (
       <header className="header">
@@ -28,7 +30,6 @@ var Navbar = React.createClass({
               <button onClick={ this.handleSubmit }>
                 Log Out
               </button>
-
             </h3>
             <a href="#"><img src="http://s3-us-west-2.amazonaws.com/aa-progress-tracker/students/avatars/000/001/023/original/edward-he.jpg?1449089662"/></a>
           </div>

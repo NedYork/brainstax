@@ -57,8 +57,8 @@ module.exports = React.createClass({
   render: function() {
     return (
       <div className="add-card-form">
-        <h1>Add New Card to Deck</h1>
-        <form onSubmit={this.handleSubmit}>
+        <form className="single-new-card-form" onSubmit={this.handleSubmit}>
+          <h1>Add New Card to Deck</h1>
           <label> Front
             <input type="text" placeholder={'e.g. front'} valueLink={this.linkState('front')} />
           </label>
@@ -72,7 +72,7 @@ module.exports = React.createClass({
         </form>
         <hr></hr>
 
-        <form onSubmit={this.handleUpload}>
+        <form className="upload-cards" onSubmit={this.handleUpload}>
           <label>
             <h1>Upload cards</h1>
           </label>
@@ -82,9 +82,10 @@ module.exports = React.createClass({
         </form>
 
         <hr></hr>
-
-        <h8> Try out the upload function! Create a CSV file on excel or Click "Let's Play" to upload our StarWars trivia pack to test your StarWars chops.</h8>
-        <button className="sample" onClick={this.uploadSampleDeck} disabled={this.state.asd}> Let's Play </button>
+        <div className="star-wars-demo">
+          <h8> Try out the upload function! Create a CSV file on excel or Click "Let's Play" to upload our StarWars trivia pack to test your StarWars chops.</h8>
+          <button className="sample" onClick={this.uploadSampleDeck} disabled={this.state.asd}> Let's Play </button>
+        </div>
       </div>
     );
   }

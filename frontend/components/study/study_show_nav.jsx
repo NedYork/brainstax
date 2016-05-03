@@ -4,16 +4,13 @@ var History = require('react-router').History;
 var ProgressBar = require('./study_show_progress');
 
 module.exports = React.createClass({
+  mixins: [History],
+  
+  doDone: function() {
+    this.props.removeAllSteps();
+    this.history.pushState({}, "/user/:id");
+  },
   render: function() {
-    // <div className="nav-panel group">
-    //   <img className="nav-panel-logo" src="https://www.brainscape.com/assets/bsc_icon.svg"/>
-    //   <ul className="panel-links">
-    //     <li><a href="#"><i className="fa fa-search fa-lg"></i></a></li>
-    //     <li><a href="#"><i className="fa fa-area-chart fa-lg"></i></a></li>
-    //     <li><a href="#"><i className="fa fa-info-circle fa-lg"></i></a></li>
-    //     <li><a href="#"><i className="fa fa-comment-o fa-lg"></i></a></li>
-    //   </ul>
-    // </div>
     return(
       <div className="study-show-nav group">
 
@@ -24,7 +21,7 @@ module.exports = React.createClass({
           </div>
           <CardForm deckId={this.props.deckId} />
 
-          <a href="#/">Done</a>
+          <div className="done-button" onClick={this.doDone}>Done</div>
 
           <div className="cards-left">
           </div>

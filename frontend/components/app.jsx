@@ -44,13 +44,15 @@ var App = React.createClass({
         currentState.steps = currentState.steps.concat(joyride.parseSteps(steps));
         return currentState;
     });
+  },
 
+  removeAllSteps: function() {
+    this.setState({steps: []});
   },
 
   addTooltip: function (data) {
-      this.refs.joyride.addTooltip(data);
+    this.refs.joyride.addTooltip(data);
   },
-
 
   stepCallback: function(step) {
     console.log('%cStep Callback', 'color: #2B759E; font-weight: bold', step); //eslint-disable-line no-console
@@ -85,7 +87,6 @@ var App = React.createClass({
 
   render: function() {
     var state = this.state;
-
     return (
       <div>
         <Joyride
@@ -97,7 +98,7 @@ var App = React.createClass({
           showOverlay={state.joyrideOverlay}
           stepCallback={this.stepCallback}
           completeCallback={this.completeCallback} />
-        {React.cloneElement(this.props.children, { addSteps: this.addSteps, addTooltip: this.addTooltip })}
+        {React.cloneElement(this.props.children, { joyride: this.refs.joyride, removeAllSteps: this.removeAllSteps, addSteps: this.addSteps, addTooltip: this.addTooltip })}
       </div>
     );
   }

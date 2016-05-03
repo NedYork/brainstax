@@ -34,11 +34,6 @@ var addSubjects = function(newSubject) {
 
 };
 
-// var removeSubject = function(payload) {
-//   var subIdx = SubjectStore.find(payload.subject.id);
-//   _subjects.splice(subIdx, 1);
-// };
-
 var removeSubject = function(payload) {
   for (var i = 0; i < _subjects.length; i++) {
     if (_subjects[i].id === payload.subject.id) {

@@ -28,6 +28,7 @@ module.exports = React.createClass({
 
   enterStudyPage: function(deckId) {
     var path = "/deck/" + deckId;
+    this.props.removeAllSteps();
     this.history.pushState({}, path);
   },
 
@@ -48,7 +49,7 @@ module.exports = React.createClass({
             {this.state.decks.map(function(deck) {
               return (
                 <li key={deck.id} className="deck">
-                  <div onClick={this.enterStudyPage.bind(this, deck.id)}>{deck.name}</div>
+                  <div className="deck-list-item" onClick={this.enterStudyPage.bind(this, deck.id)}>{deck.name}</div>
                   <button className="delete-button" onClick={this.deleteDeck.bind(this, deck)}>Delete</button>
                 </li>
               );

@@ -49,12 +49,14 @@
   color: white;
 }
 
-.progress-panel > a {
+.progress-panel .done-button {
+  cursor: pointer;
   margin-left: 17%;
   padding: 10px 20px;
   background: #29A5DC;
   border-radius: 5px;
   color: white;
+  width: 40px;
 }
 
 .progress-panel > a:hover {
@@ -74,10 +76,20 @@
 /*STUDY SHOW MAIN*/
 
 .study-show-main {
-  /*align-items: center;*/
   position: absolute;
   left: 33%;
   top: 5%;
+}
+
+.study-show-no-cards {
+  position: absolute;
+  left: 33%;
+  top: 5%;
+}
+
+.no-cards {
+  margin-top: 10%;
+  font-family: monospace;
 }
 
 .rating-container {
@@ -126,7 +138,7 @@
   margin-bottom: 30px;
 }
 
-.add-card-form > h1 {
+.add-card-form h1 {
   margin-left: 10%;
   margin-right: 10%;
   font-size: 14px;

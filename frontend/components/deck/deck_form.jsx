@@ -15,7 +15,9 @@ module.exports = React.createClass({
 
   handleSubmit: function(e) {
     e.preventDefault();
-    ApiUtil.addDeck(this.state, this.props.subjectId, this.resetDefaultState);
+    if (this.state.name !== "") {
+      ApiUtil.addDeck(this.state, this.props.subjectId, this.resetDefaultState);
+    }
   },
 
   render: function() {

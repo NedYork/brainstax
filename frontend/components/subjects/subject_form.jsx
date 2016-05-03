@@ -26,10 +26,11 @@ module.exports = React.createClass({
 
   handleSubmit: function(e) {
     e.preventDefault();
-    ApiUtil.createSubject(this.state, function(id) {
-      this.setState({ title: "" });
-    }.bind(this));
-
+    if (this.state.title !== "") {
+      ApiUtil.createSubject(this.state, function(id) {
+        this.setState({ title: "" });
+      }.bind(this));
+    }
   },
 
   render: function() {

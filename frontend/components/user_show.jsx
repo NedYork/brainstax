@@ -8,35 +8,29 @@ var SubjectDetail = require('./subjects/subject_detail');
 var Navbar = require('./nav/logged_in_nav');
 var Footer = require('./footer/footer');
 
+var CurrentUserStore = require('../stores/current_user_store');
+
 module.exports = React.createClass({
   getInitialState: function() {
-    // return {user: UserStore.find(this.props.params.id)};
-    return { user: 9, subject: null };
+    return { user: CurrentUserStore.currentUser, subject: null };
   },
 
   changeSubjectAndPopulateDeck: function(id) {
     var that = this;
     return function() {
-
       ApiUtil.fetchSingleSubject(id, function () {
         that.setState({subject: SubjectStore.find(id)});
       });
-
       ApiUtil.fetchDecks(id);
     };
   },
 
   render: function() {
-    if (!this.state.user) {
-      return <div></div>;
-    }
     return (
       <div>
-        <Navbar addSteps={this.props.addSteps} addTooltip={this.props.addTooltip} user={this.state.user}></Navbar>
+        <Navbar addSteps={this.props.addSteps} addTooltip={this.props.addTooltip} removeAllSteps={this.props.removeAllSteps} user={this.state.user}></Navbar>
         <SubjectNav changeSubjectAndPopulateDeck={this.changeSubjectAndPopulateDeck} addSteps={this.props.addSteps} addTooltip={this.props.addTooltip} subjects={this.state.user.subjects} />
-        <SubjectDetail subject={this.state.subject}/>
-
-        {this.props.children}
+        <SubjectDetail addSteps={this.props.addSteps} addTooltip={this.props.addTooltip} removeAllSteps={this.props.removeAllSteps} subject={this.state.subject}/>
       </div>
     );
   }
